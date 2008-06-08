@@ -1,4 +1,4 @@
-/* rss-document-private.h - RSS-GLib versioning information
+/* rss-item-private.h - RSS-GLib versioning information
  * 
  * This file is part of RSS-GLib.
  * Copyright (C) 2008  Christian Hergert <chris@dronelabs.com>
@@ -20,45 +20,34 @@
  *   Christian Hergert  <chris@dronelabs.com>
  */
 
-#ifndef __RSS_DOCUMENT_PRIVATE_H__
-#define __RSS_DOCUMENT_PRIVATE_H__
+#ifndef __RSS_ITEM_PRIVATE_H__
+#define __RSS_ITEM_PRIVATE_H__
 
-#include <mrss.h>
+#define ITEM_PRIVATE(o) 			\
+	(G_TYPE_INSTANCE_GET_PRIVATE ((o),	\
+	RSS_TYPE_ITEM,				\
+	RssItemPrivate))
 
-#define DOCUMENT_PRIVATE(o)				\
-	(G_TYPE_INSTANCE_GET_PRIVATE ((o),		\
-	RSS_TYPE_DOCUMENT,				\
-	RssDocumentPrivate))
+typedef struct _RssItemPrivate RssItemPrivate;
 
-typedef struct _RssDocumentPrivate RssDocumentPrivate;
-
-struct _RssDocumentPrivate {
-	gchar *encoding;
+struct _RssItemPrivate {
 	gchar *guid;
 	gchar *title;
-	gchar *description;
 	gchar *link;
-	gchar *language;
-	gchar *rating;
+	gchar *description;
 	gchar *copyright;
-	gchar *pub_date;
-	gchar *editor;
-	gchar *editor_email;
-	gchar *editor_uri;
-	gint   ttl;
-	gchar *about;
+	gchar *author;
+	gchar *author_uri;
+	gchar *author_email;
 	gchar *contributor;
-	gchar *contributor_email;
 	gchar *contributor_uri;
-	gchar *generator;
-	gchar *generator_uri;
-	gchar *generator_version;
-	gchar *image_title;
-	gchar *image_url;
-	gchar *image_link;
+	gchar *contributor_email;
+	gchar *comments;
+	gchar *pub_date;
+	gchar *source;
+	gchar *source_url;
 
-	GList *items;
 	GList *categories;
 };
 
-#endif /* __RSS_DOCUMENT_PRIVATE_H__ */
+#endif /* __RSS_ITEM_PRIVATE_H__ */

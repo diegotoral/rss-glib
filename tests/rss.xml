@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ANSI_X3.4-1968"?>
+<rss version="2.0">
+  <channel>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/</link>
+    <language>en-us</language>
+
+    <title>marina--vala Changelog</title>
+    <description>marina--vala Changelog</description>
+    <item>
+    <title>add proper null checking. this is kinda tough to do in anonymous functions as they exist now.</title>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/rev/b3fea203eff0</link>
+    <description><![CDATA[add proper null checking. this is kinda tough to do in anonymous functions as they exist now.]]></description>
+    <author>&#67;&#104;&#114;&#105;&#115;&#116;&#105;&#97;&#110;&#32;&#72;&#101;&#114;&#103;&#101;&#114;&#116;&#32;&#60;&#99;&#104;&#114;&#105;&#115;&#64;&#112;&#97;&#110;&#116;&#108;&#101;&#115;&#115;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;&#62;</author>
+    <pubDate>Tue, 27 May 2008 02:27:17 -0700</pubDate>
+</item>
+<item>
+    <title>remove extra curly</title>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/rev/7d7618ed3f0d</link>
+    <description><![CDATA[remove extra curly]]></description>
+    <author>&#67;&#104;&#114;&#105;&#115;&#116;&#105;&#97;&#110;&#32;&#72;&#101;&#114;&#103;&#101;&#114;&#116;&#32;&#60;&#99;&#104;&#114;&#105;&#115;&#64;&#112;&#97;&#110;&#116;&#108;&#101;&#115;&#115;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;&#62;</author>
+    <pubDate>Tue, 27 May 2008 02:18:36 -0700</pubDate>
+</item>
+<item>
+    <title>add stub for synchronize</title>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/rev/8698f198395e</link>
+    <description><![CDATA[add stub for synchronize]]></description>
+    <author>&#67;&#104;&#114;&#105;&#115;&#116;&#105;&#97;&#110;&#32;&#72;&#101;&#114;&#103;&#101;&#114;&#116;&#32;&#60;&#99;&#104;&#114;&#105;&#115;&#64;&#112;&#97;&#110;&#116;&#108;&#101;&#115;&#115;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;&#62;</author>
+    <pubDate>Tue, 27 May 2008 02:06:45 -0700</pubDate>
+</item>
+<item>
+    <title>start work on the sync service and runtime integration</title>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/rev/aa77e3158bb3</link>
+    <description><![CDATA[start work on the sync service and runtime integration]]></description>
+    <author>&#67;&#104;&#114;&#105;&#115;&#116;&#105;&#97;&#110;&#32;&#72;&#101;&#114;&#103;&#101;&#114;&#116;&#32;&#60;&#99;&#104;&#114;&#105;&#115;&#64;&#112;&#97;&#110;&#116;&#108;&#101;&#115;&#115;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;&#62;</author>
+    <pubDate>Tue, 27 May 2008 02:03:23 -0700</pubDate>
+</item>
+<item>
+    <title>little work on sources window</title>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/rev/ef1f6544a993</link>
+    <description><![CDATA[little work on sources window]]></description>
+    <author>&#67;&#104;&#114;&#105;&#115;&#116;&#105;&#97;&#110;&#32;&#72;&#101;&#114;&#103;&#101;&#114;&#116;&#32;&#60;&#99;&#104;&#114;&#105;&#115;&#64;&#112;&#97;&#110;&#116;&#108;&#101;&#115;&#115;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;&#62;</author>
+    <pubDate>Tue, 27 May 2008 00:30:59 -0700</pubDate>
+</item>
+<item>
+    <title>Initial commit</title>
+    <link>http://hg.pantlesssoftware.com/hg/source/marina/vala/rev/e4f31decfc24</link>
+    <description><![CDATA[Initial commit]]></description>
+    <author>&#67;&#104;&#114;&#105;&#115;&#116;&#105;&#97;&#110;&#32;&#72;&#101;&#114;&#103;&#101;&#114;&#116;&#32;&#60;&#99;&#104;&#114;&#105;&#115;&#64;&#112;&#97;&#110;&#116;&#108;&#101;&#115;&#115;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;&#62;</author>
+    <pubDate>Mon, 26 May 2008 23:00:46 -0700</pubDate>
+</item>
+
+  </channel>
+</rss>

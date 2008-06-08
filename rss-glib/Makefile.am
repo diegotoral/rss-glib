@@ -25,16 +25,19 @@ STAMP_FILES = stamp-rss-marshal.h
 source_h = \
 	$(top_srcdir)/rss-glib/rss-parser.h \
 	$(top_srcdir)/rss-glib/rss-document.h \
+	$(top_srcdir)/rss-glib/rss-item.h \
 	$(top_srcdir)/rss-glib/rss-version.h \
 	$(NULL)
 
 source_h_private = \
 	$(top_srcdir)/rss-glib/rss-document-private.h \
+	$(top_srcdir)/rss-glib/rss-item-private.h \
 	$(NULL)
 
 source_c = \
 	rss-parser.c \
 	rss-document.c \
+	rss-item.c \
 	$(NULL)
 
 rss-marshal.h: stamp-rss-marshal.h

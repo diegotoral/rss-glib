@@ -9,6 +9,29 @@ print_tag (gchar *tag, gpointer user_data)
 	g_print ("\t%s\n", tag);
 }
 
+void
+print_item (RssItem *item, gpointer user_data)
+{
+	gchar *str, *str2;
+
+	g_object_get (item, "title", &str, NULL);
+	g_print ("\tTitle: %s\n", str);
+	g_free (str);
+
+	g_object_get (item, "pub-date", &str, NULL);
+	g_print ("\tDate: %s\n", str);
+	g_free (str);
+
+	g_object_get (item, "author", &str, "author-email", &str2, NULL);
+	g_print ("\tAuthor: %s", str);
+	if (str2 != NULL)
+		g_print (" <%s>", str2);
+	g_free (str);
+	g_free (str2);
+
+	g_print ("\n\n");
+}
+
 int
 main (int argc, char **argv)
 {
@@ -66,17 +89,17 @@ main (int argc, char **argv)
 	g_object_get (document, "image-url", &str, NULL);
 	g_print ("Image Url:    %s\n", str);
 
-	list = rss_document_get_tags (document);
-	if (list != NULL ) {
-		g_print ("Tags:\n");
+	list = rss_document_get_categories (document);
+	if (list != NULL) {
+		g_print ("\nCategories:\n");
 		g_list_foreach (list, (GFunc) print_tag, NULL);
 		g_list_free (list);
 	}
 
-	list = rss_document_get_categories (document);
-	if (list != NULL ) {
-		g_print ("Categories:\n");
-		g_list_foreach (list, (GFunc) print_tag, NULL);
+	list = rss_document_get_items (document);
+	if (list != NULL) {
+		g_print ("\nItems:\n");
+		g_list_foreach (list, (GFunc) print_item, NULL);
 		g_list_free (list);
 	}
 

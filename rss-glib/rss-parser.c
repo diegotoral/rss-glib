@@ -21,6 +21,11 @@
  */
 
 #include "rss-parser.h"
+
+#include "rss-item.h"
+#include "rss-item-private.h"
+
+#include "rss-document.h"
 #include "rss-document-private.h"
 
 #define PARSER_QUARK g_quark_from_static_string ("RssParser")
@@ -70,9 +75,10 @@ static RssDocument*
 rss_parser_parse (RssParser *self, mrss_t *mrss)
 {
 	RssDocument     *document;
-	GList           *list;
-	mrss_tag_t      *tag;
+	RssItem         *rss_item;
+	GList           *list, *list2;
 	mrss_category_t *cat;
+	mrss_item_t     *item;
 
 	g_return_val_if_fail (RSS_IS_PARSER (self), NULL);
 	g_return_val_if_fail (mrss != NULL, NULL);
@@ -104,15 +110,6 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 		      "image-link",		mrss->image_link,
 		      NULL);
 
-	/* build the list of tags */
-	if (NULL != (tag = mrss->other_tags)) {
-		list = NULL;
-		do {
-			list = g_list_insert (list, g_strdup (tag->name), 0);
-		} while (NULL != (tag = tag->next));
-		DOCUMENT_PRIVATE (document)->tags = list;
-	}
-
 	/* build the list of categories */
 	if (NULL != (cat = mrss->category)) {
 		list = NULL;
@@ -123,6 +120,43 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 	}
 
 	/* build the list of items */
+	if (NULL != (item = mrss->item)) {
+		list = NULL;
+		do {
+			rss_item = rss_item_new ();
+
+			/* set the rss item properties */
+			g_object_set (rss_item,
+				      "guid",			item->guid,
+				      "title",			item->title,
+				      "link",			item->link,
+				      "description",		item->description,
+				      "copyright",		item->copyright,
+				      "author",			item->author,
+				      "author-uri",		item->author_uri,
+				      "author-email",		item->author_email,
+				      "contributor",		item->contributor,
+				      "contributor-uri",	item->contributor_uri,
+				      "contributor-email",	item->contributor_email,
+				      "comments",		item->comments,
+				      "pub-date",		item->pubDate,
+				      "source",			item->source,
+				      "source-url",		item->source_url,
+				      NULL);
+
+			/* parse the items categories */
+			if (NULL != (cat = item->category)) {
+				list2 = NULL;
+				do {
+					list2 = g_list_insert (list2, g_strdup (cat->category), 0);
+				} while (NULL != (cat = cat->next));
+				ITEM_PRIVATE (rss_item)->categories = list2;
+			}
+
+			list = g_list_insert (list, rss_item, 0);
+		} while (NULL != (item = item->next));
+		DOCUMENT_PRIVATE (document)->items = list;
+	}
 
 	return document;
 }
@@ -158,7 +192,11 @@ rss_parser_load_from_data (RssParser  *self,
 		return FALSE;
 	}
 
+	/* keep a copy of our parsed document */
 	PARSER_PRIVATE (self)->document = rss_parser_parse (self, mrss);
+
+	/* free our mrss data */
+	mrss_free (mrss);
 
 	return TRUE;
 }
@@ -192,7 +230,11 @@ rss_parser_load_from_file (RssParser  *self,
 		return FALSE;
 	}
 
+	/* keep a copy of our parsed document */
 	PARSER_PRIVATE (self)->document = rss_parser_parse (self, mrss);
+
+	/* free our mrss data */
+	mrss_free (mrss);
 
 	return TRUE;
 }

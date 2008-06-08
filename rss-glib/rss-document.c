@@ -25,6 +25,35 @@
 
 G_DEFINE_TYPE (RssDocument, rss_document, G_TYPE_OBJECT)
 
+enum {
+	PROP_0,
+
+	ENCODING,
+	GUID,
+	TITLE,
+	DESCRIPTION,
+	LINK,
+	LANGUAGE,
+	RATING,
+	COPYRIGHT,
+	PUB_DATE,
+	PUB_DATE_PARSED,
+	EDITOR,
+	EDITOR_EMAIL,
+	EDITOR_URI,
+	TTL,
+	ABOUT,
+	CONTRIBUTOR,
+	CONTRIBUTOR_EMAIL,
+	CONTRIBUTOR_URI,
+	GENERATOR,
+	GENERATOR_URI,
+	GENERATOR_VERSION,
+	IMAGE_TITLE,
+	IMAGE_URL,
+	IMAGE_LINK
+};
+
 static void
 rss_document_get_property (GObject    *object,
                            guint       property_id,
@@ -358,22 +387,6 @@ GList*
 rss_document_get_items (RssDocument *self)
 {
 	return DOCUMENT_PRIVATE (self)->items;
-}
-
-/**
- * RssDocument::get_tags
- * @self: a #RssDocument
- *
- * Creates a #GList of tags found in the syndication. The objects in the list
- * are weak references. Consumers of those objects should ref them with
- * g_object_ref.
- *
- * Returns: a new #GList owned by the caller.
- */
-GList*
-rss_document_get_tags (RssDocument *self)
-{
-	return DOCUMENT_PRIVATE (self)->tags;
 }
 
 /**
