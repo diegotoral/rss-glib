@@ -13,8 +13,9 @@ INCLUDES = \
 LDADD = \
 	$(RSS_LT_LDFLAGS) \
 	-export-dynamic \
-	-export-symbols-regex "^rss.*" \
 	-rpath $(libdir)
+
+#-export-symbols-regex "^rss.*"
 
 BUILT_SOURCES = rss-marshal.h rss-marshal.c
 
@@ -93,7 +94,7 @@ CLEANFILES = $(STAMP_FILES) $(BUILT_SOURCES)
 
 DISTCLEANFILES = rss-version.h
 
-EXTRA_DIST += \
+EXTRA_DIST = \
 	rss-version.h.in \
 	rss-glib.h \
 	rss-marshal.list

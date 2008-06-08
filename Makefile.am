@@ -1,5 +1,3 @@
-include $(top_srcdir)/Makefile.decl
-
 SUBDIRS = rss-glib doc tests
 
 DIST_SUBDIRS = rss-glib doc tests
@@ -12,8 +10,7 @@ rss-glib-1.0.pc: rss-glib.pc
 pkgconfig_DATA = $(pcfiles)
 pkgconfigdir = $(libdir)/pkgconfig
 
-EXTRA_DIST += rss-glib.pc.in
-
+EXTRA_DIST = rss-glib.pc.in
 CLEANFILES = $(pcfiles)
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --enable-maintainer-flags
