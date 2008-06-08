@@ -64,7 +64,6 @@ GType        rss_document_get_type       (void);
 RssDocument* rss_document_new            (void);
 GList*       rss_document_get_items      (RssDocument *self);
 GList*       rss_document_get_categories (RssDocument *self);
-GList*       rss_document_get_tags       (RssDocument *self);
 
 G_END_DECLS
 

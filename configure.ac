@@ -1,6 +1,6 @@
 m4_define([rss_major_version], [0])
 m4_define([rss_minor_version], [1])
-m4_define([rss_micro_version], [0])
+m4_define([rss_micro_version], [1])
 
 m4_define([rss_version],
           [rss_major_version.rss_minor_version.rss_micro_version])
@@ -67,6 +67,19 @@ PKG_CHECK_MODULES(RSS, gobject-2.0 >= glib_req_version)
 AC_SUBST(RSS_CFLAGS)
 AC_SUBST(RSS_LIBS)
 
+dnl = Enable vala ==========================================================
+has_vala=no
+PKG_CHECK_MODULES(RSS_VALA, vala-1.0, has_vala=yes, has_vala=no)
+
+if test "x$has_vala" = "xyes"; then
+	VAPI_DIR=`pkg-config --variable=vapidir vala-1.0`
+else
+	VAPI_DIR=
+fi
+
+AM_CONDITIONAL(HAVE_VALA, [test "x$has_vala" = "xyes"])
+AC_SUBST(VAPI_DIR)
+
 dnl = Enable debug level ===================================================
 
 m4_define([debug_default],
@@ -116,6 +129,7 @@ AC_CONFIG_FILES([
         rss-glib/rss-version.h
         tests/Makefile
         doc/Makefile
+	vala/Makefile
         rss-glib.pc
 ])
 
@@ -128,4 +142,5 @@ echo "                Prefix: ${prefix}"
 echo "           Debug level: ${enable_debug}"
 echo "        Compiler flags: ${CPPFLAGS}"
 echo "         API reference: ${enable_gtk_doc} (No docs yet)"
+echo " Install vala bindings: ${has_vala} (${VAPI_DIR})"
 echo ""

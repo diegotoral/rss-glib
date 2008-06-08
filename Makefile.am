@@ -1,6 +1,4 @@
-SUBDIRS = rss-glib doc tests
-
-DIST_SUBDIRS = rss-glib doc tests
+SUBDIRS = rss-glib doc tests vala
 
 pcfiles = rss-glib-1.0.pc
 

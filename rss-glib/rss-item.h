@@ -60,8 +60,9 @@ typedef struct {
 	GObjectClass parent_class;
 } RssItemClass;
 
-GType    rss_item_get_type (void);
-RssItem* rss_item_new      (void);
+GType    rss_item_get_type       (void);
+RssItem* rss_item_new            (void);
+GList*   rss_item_get_categories (RssItem *self);
 
 G_END_DECLS
 
