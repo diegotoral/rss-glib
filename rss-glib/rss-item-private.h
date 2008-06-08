@@ -1,4 +1,4 @@
-/* rss-item-private.h - RSS-GLib versioning information
+/* rss-item-private.h
  * 
  * This file is part of RSS-GLib.
  * Copyright (C) 2008  Christian Hergert <chris@dronelabs.com>

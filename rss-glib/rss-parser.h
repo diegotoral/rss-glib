@@ -1,4 +1,4 @@
-/* rss-generator.h - RSS-GLib versioning information
+/* rss-generator.h
  * 
  * This file is part of RSS-GLib.
  * Copyright (C) 2008  Christian Hergert <chris@dronelabs.com>
