@@ -357,7 +357,7 @@ rss_document_new (void)
 GList*
 rss_document_get_items (RssDocument *self)
 {
-	return NULL;
+	return DOCUMENT_PRIVATE (self)->items;
 }
 
 /**
@@ -373,7 +373,7 @@ rss_document_get_items (RssDocument *self)
 GList*
 rss_document_get_tags (RssDocument *self)
 {
-	return NULL;
+	return DOCUMENT_PRIVATE (self)->tags;
 }
 
 /**
@@ -389,5 +389,5 @@ rss_document_get_tags (RssDocument *self)
 GList*
 rss_document_get_categories (RssDocument *self)
 {
-	return NULL;
+	return DOCUMENT_PRIVATE (self)->categories;
 }

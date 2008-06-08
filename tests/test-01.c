@@ -3,6 +3,12 @@
 #include <glib.h>
 #include <rss-glib/rss-glib.h>
 
+void
+print_tag (gchar *tag, gpointer user_data)
+{
+	g_print ("\t%s\n", tag);
+}
+
 int
 main (int argc, char **argv)
 {
@@ -10,6 +16,7 @@ main (int argc, char **argv)
 	RssDocument *document;
 	GError      *error = NULL;
 	gchar       *str;
+	GList       *list;
 
 	g_type_init ();
 
@@ -58,6 +65,20 @@ main (int argc, char **argv)
 
 	g_object_get (document, "image-url", &str, NULL);
 	g_print ("Image Url:    %s\n", str);
+
+	list = rss_document_get_tags (document);
+	if (list != NULL ) {
+		g_print ("Tags:\n");
+		g_list_foreach (list, (GFunc) print_tag, NULL);
+		g_list_free (list);
+	}
+
+	list = rss_document_get_categories (document);
+	if (list != NULL ) {
+		g_print ("Categories:\n");
+		g_list_foreach (list, (GFunc) print_tag, NULL);
+		g_list_free (list);
+	}
 
 	g_print ("\n");
 	return EXIT_SUCCESS;

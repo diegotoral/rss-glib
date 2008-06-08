@@ -69,7 +69,10 @@ rss_parser_new (void)
 static RssDocument*
 rss_parser_parse (RssParser *self, mrss_t *mrss)
 {
-	RssDocument *document;
+	RssDocument     *document;
+	GList           *list;
+	mrss_tag_t      *tag;
+	mrss_category_t *cat;
 
 	g_return_val_if_fail (RSS_IS_PARSER (self), NULL);
 	g_return_val_if_fail (mrss != NULL, NULL);
@@ -102,7 +105,23 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 		      NULL);
 
 	/* build the list of tags */
+	if (NULL != (tag = mrss->other_tags)) {
+		list = NULL;
+		do {
+			list = g_list_insert (list, g_strdup (tag->name), 0);
+		} while (NULL != (tag = tag->next));
+		DOCUMENT_PRIVATE (document)->tags = list;
+	}
+
 	/* build the list of categories */
+	if (NULL != (cat = mrss->category)) {
+		list = NULL;
+		do {
+			list = g_list_insert (list, g_strdup (cat->category), 0);
+		} while (NULL != (cat = cat->next));
+		DOCUMENT_PRIVATE (document)->categories = list;
+	}
+
 	/* build the list of items */
 
 	return document;
