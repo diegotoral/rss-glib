@@ -80,6 +80,7 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 	/* set our document level properties */
 	g_object_set (document,
 		      "encoding",		mrss->encoding,
+		      "guid",			mrss->id,
 		      "title",			mrss->title,
 		      "description",		mrss->description,
 		      "link",			mrss->link,
@@ -181,12 +182,13 @@ rss_parser_load_from_file (RssParser  *self,
  * RssParser::get_document
  *
  * Returns the document result from parsing rss data from either
- * a buffer or a file.
+ * a buffer or a file. The document's ref-count is increased, so
+ * call g_object_unref when you are done.
  *
  * Returns: a #RssDocument
  */
 RssDocument*
 rss_parser_get_document (RssParser *self)
 {
-	return PARSER_PRIVATE (self)->document;
+	return g_object_ref (PARSER_PRIVATE (self)->document);
 }

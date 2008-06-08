@@ -36,6 +36,10 @@ rss_document_get_property (GObject    *object,
 		g_value_set_string (value,
 			DOCUMENT_PRIVATE (object)->encoding);
 		break;
+	case GUID:
+		g_value_set_string (value,
+			DOCUMENT_PRIVATE (object)->guid);
+		break;
 	case TITLE:
 		g_value_set_string (value,
 			DOCUMENT_PRIVATE (object)->title);
@@ -135,6 +139,11 @@ rss_document_set_property (GObject      *object,
 	case ENCODING:
 		g_free (DOCUMENT_PRIVATE (object)->encoding);
 		DOCUMENT_PRIVATE (object)->encoding
+			= g_strdup (g_value_get_string (value));
+		break;
+	case GUID:
+		g_free (DOCUMENT_PRIVATE (object)->guid);
+		DOCUMENT_PRIVATE (object)->guid
 			= g_strdup (g_value_get_string (value));
 		break;
 	case TITLE:
@@ -251,6 +260,7 @@ static void
 rss_document_dispose (GObject *object)
 {
 	g_free (DOCUMENT_PRIVATE (object)->encoding);
+	g_free (DOCUMENT_PRIVATE (object)->guid);
 	g_free (DOCUMENT_PRIVATE (object)->title);
 	g_free (DOCUMENT_PRIVATE (object)->description);
 	g_free (DOCUMENT_PRIVATE (object)->link);
@@ -295,6 +305,7 @@ rss_document_class_init (RssDocumentClass *klass)
 	object_class->dispose = rss_document_dispose;
 
 	string_prop (object_class, ENCODING,		"encoding");
+	string_prop (object_class, GUID,		"guid");
 	string_prop (object_class, TITLE,		"title");
 	string_prop (object_class, DESCRIPTION,		"description");
 	string_prop (object_class, LINK,		"link");

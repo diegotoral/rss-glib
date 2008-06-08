@@ -1,0 +1,2227 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:planet="http://planet.intertwingly.net/" xmlns:indexing="urn:atom-extension:indexing" indexing:index="no"><access:restriction xmlns:access="http://www.bloglines.com/about/specs/fac-1.0" relationship="deny"/>
+  <title>Planet GNOME</title>
+  <updated>2008-06-08T05:11:33Z</updated>
+  <generator uri="http://intertwingly.net/code/venus/">Venus</generator>
+  <author>
+    <name>Jeff Waugh</name>
+    <email>jdub@gnome.org</email>
+  </author>
+  <id>http://planet.gnome.org/atom.xml</id>
+  <link href="http://planet.gnome.org/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://planet.gnome.org/" rel="alternate"/>
+
+  <entry xml:lang="en">
+    <id>http://intr.overt.org/blog/?p=69</id>
+    <link href="http://intr.overt.org/blog/?p=69" rel="alternate" type="text/html"/>
+    <title>MMC Specification now available for free</title>
+    <summary>Wow, it’s been a long time since I’ve written anything, but I figure this is a good enough reason to do so. The SD specification has been available for quite a while now, but up until now, the MMC specification has had a $5000 price tag stuck to it. This has kept it out of [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Wow, it’s been a long time since I’ve written anything, but I figure this is a good enough reason to do so. The SD specification has been <a href="http://www.sdcard.org/about/memory_card/pls/">available</a> for quite a while now, but up until now, the MMC specification has had a $5000 price tag stuck to it. This has kept it out of most people’s hands, although <a href="http://www.nokia.com">Nokia</a> were kind enough to buy a copy for <a href="http://drzeus.cx/">Pierre</a>. However, they have now made the latest version (4.3) <a href="http://www.mmca.org/compliance/buy_spec/mmc_spec_v4_3/">available without charge</a>. I believe this change of heart stems from the standardisation of eMMC through <a href="http://www.jedec.org/">JEDEC</a> (They still charge for their other specs). Despite the focus on eMMC, it is the full specification (minus the section on using MMC over SPI which they have declared obsolete; this isn’t a big deal as there’s enough documentation around explaining how MMC over SPI works).</p>
+<p>What does this mean? Not that much in terms of Linux kernel support for MMC; Pierre already used his copy of the 4.2 spec to fix any problems and 4.3 doesn’t really add anything new that affects us. eMMC (Embedded MMC) is mostly just a new form-factor and doesn’t appear differently from a regular card. The one substantive new feature is the introduction of a special ‘boot partition’ which are accessed in a simplified way - presumably this was added to make it easy for a bootloader to load an OS off an eMMC. I don’t really see much demand emerging for this, so we have no immediate plans to support it (and good luck finding a card with a boot partition!) but if the need arose, we’d be able to do it.</p>
+<p>So, nothing’s changed in practical terms, but it’s still helpful for us that the spec is now freely available; however, it probably won’t do much to help MMC against the SD juggernaut. Anyone seen a high capacity MMC card despite them being ‘available’ for over two years now? Thought so.</p></div>
+    </content>
+    <updated>2008-06-08T01:08:49Z</updated>
+    <category term="SD/MMC"/>
+    <author>
+      <name>Philip Langdale</name>
+    </author>
+    <source>
+      <id>http://intr.overt.org/blog</id>
+      <link href="http://intr.overt.org/blog" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/Wubble" rel="self" type="application/rss+xml"/>
+      <subtitle>Philip Langdale's ramblings on possibly interesting topics</subtitle>
+      <title>Wubble</title>
+      <updated>2008-06-08T01:08:49Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.jonobacon.org/?p=1194</id>
+    <link href="http://www.jonobacon.org/?p=1194" rel="alternate" type="text/html"/>
+    <title>Nearly Ready</title>
+    <summary>Getting the final bits ready for the Severed Fifth announcement on Monday. I would like to thank Aq, Mike, Adam and Scott for all of their excellent work in getting it together. Their work has been incredible, particularly with my life being so busy right now with Ubuntu, LugRadio, LugRadio Live, and various personal things. [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p><img src="http://farm4.static.flickr.com/3133/2558800153_73601a1019.jpg" width="420"/></p>
+
+<p>Getting the final bits ready for the Severed Fifth announcement on Monday. I would like to thank Aq, Mike, Adam and Scott for all of their excellent work in getting it together. Their work has been incredible, particularly with my life being so busy right now with Ubuntu, LugRadio, LugRadio Live, and various personal things. Thanks also for the feedback from a bunch of people I have shared the concept with - lets hope we can stir things up a little bit. <img alt=":)" class="wp-smiley" src="http://www.jonobacon.org/wp-includes/images/smilies/icon_smile.gif"/> </p>
+
+<p>Keep your eyes on <a href="http://www.severedfifth.com/">www.severedfifth.com</a> for the announcement this coming Monday.</p></div>
+    </content>
+    <updated>2008-06-07T22:19:23Z</updated>
+    <category term="Severed Fifth"/>
+    <author>
+      <name>jono</name>
+    </author>
+    <source>
+      <id>http://www.jonobacon.org</id>
+      <link href="http://www.jonobacon.org" rel="alternate" type="text/html"/>
+      <link href="http://jonobacon.org/rss/jonobacondotorg-blog.xml" rel="self" type="application/rss+xml"/>
+      <subtitle>At home with Jono Bacon</subtitle>
+      <title>jonobacon@home</title>
+      <updated>2008-06-07T22:19:23Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://flors.wordpress.com/?p=52</id>
+    <link href="http://flors.wordpress.com/2008/06/08/roll-the-scroll/" rel="alternate" type="text/html"/>
+    <title>lcuk rolls the scrolls</title>
+    <summary>I’m so glad lcuk has published this liqbase overview video. When Gary showed us his stuff in LinuxTag we were impressed.  I told him: the world needs to know. He was totally humble, still calling himself a newbie in maemo development…</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div class="snap_preview"><br/><p style="text-align: center;"><span style="text-align: center; display: block;"><a href="http://flors.wordpress.com/2008/06/08/roll-the-scroll/"><img alt="" src="http://img.youtube.com/vi/PUPp_mE7rwI/2.jpg"/></a></span></p>
+<p style="text-align: left;">I’m so glad <a href="http://liquid.googlepages.com/">lcuk</a> has published this <a href="http://youtube.com/watch?v=PUPp_mE7rwI">liqbase overview video</a>. When Gary showed us his stuff in LinuxTag we were impressed.  I told him: the world needs to know. He was totally humble, still calling himself a newbie in maemo development…</p>
+<img alt="" border="0" src="http://feeds.wordpress.com/1.0/categories/flors.wordpress.com/52/"/> <img alt="" border="0" src="http://feeds.wordpress.com/1.0/tags/flors.wordpress.com/52/"/> <a href="http://feeds.wordpress.com/1.0/gocomments/flors.wordpress.com/52/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/flors.wordpress.com/52/"/></a> <a href="http://feeds.wordpress.com/1.0/godelicious/flors.wordpress.com/52/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/flors.wordpress.com/52/"/></a> <a href="http://feeds.wordpress.com/1.0/gostumble/flors.wordpress.com/52/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/flors.wordpress.com/52/"/></a> <a href="http://feeds.wordpress.com/1.0/godigg/flors.wordpress.com/52/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/flors.wordpress.com/52/"/></a> <a href="http://feeds.wordpress.com/1.0/goreddit/flors.wordpress.com/52/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/flors.wordpress.com/52/"/></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=flors.wordpress.com&amp;blog=1700050&amp;post=52&amp;subd=flors&amp;ref=&amp;feed=1"/></div></div>
+    </content>
+    <updated>2008-06-07T21:51:02Z</updated>
+    <category term="maemo"/>
+    <category term="development"/>
+    <category term="liqbase"/>
+    <category term="scroll"/>
+    <author>
+      <name>qgil</name>
+    </author>
+    <source>
+      <id>http://flors.wordpress.com</id>
+      <link href="http://flors.wordpress.com" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/flors" rel="self" type="application/atom+xml"/>
+      <subtitle>by Quim Gil</subtitle>
+      <title>flors</title>
+      <updated>2008-06-07T21:51:58Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/ovitters/2008/06/07/using-moderated-messages-to-train-the-bayes-classifier/</id>
+    <link href="http://blogs.gnome.org/ovitters/2008/06/07/using-moderated-messages-to-train-the-bayes-classifier/" rel="alternate" type="text/html"/>
+    <title>Using moderated messages to train the bayes classifier</title>
+    <summary>This week I took a look at the moderation queue of a GNOME mailing list. There were loads of messages in it. There is a moderation team who looks at these queues and cleans it up, by discarding the spam and accepting the valid messages. The moderation queue of the mailing list I looked at [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>This week I took a look at the moderation queue of a GNOME mailing list. There were loads of messages in it. There is a moderation team who looks at these queues and cleans it up, by discarding the spam and accepting the valid messages. The moderation queue of the mailing list I looked at had lots of similar spam messages over various days. To avoid newer type of spam messages, every day/hour (forgot how often) the Spamassassin rules are updated. These rules includes the ones from <a href="http://wiki.apache.org/spamassassin/SareChannels">Sare</a>. There is a big anti-spam gap in this as the new rules might not catch the things the moderators have classified as spam/ham.</p>
+<p>To make the process more intelligent, I’ve added a patch to Mailman to allow moderators to use the discarded/accepted messages to train the Bayes classifier used by Spamassassin. The way it works is hackish, but very simple to implement. I’ve added a patch to our Mailman package which forwards all discarded and accepted messages to a special user. This user has a ~/.procmailrc file to divide these messages in two maildir folders. A script runs via cron to train sa-learn on the spam and ham folders. Sa-learn understands directories, avoiding the need to start sa-learn per spam/ham message.</p>
+<p>Hopefully this will result in less spam messages for the moderators to classify.</p>
+<p>A screenshot of the new functionality:<br/>
+<img src="http://blogs.gnome.org/ovitters/files/2008/06/bayes.png"/></p></div>
+    </content>
+    <updated>2008-06-07T21:47:37Z</updated>
+    <category term="General"/>
+    <author>
+      <name>ovitters</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/ovitters</id>
+      <link href="http://blogs.gnome.org/ovitters" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/ovitters/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Just another GNOME Blogs weblog</subtitle>
+      <title>Olav Vitters</title>
+      <updated>2008-06-07T21:47:37Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en-GB">
+    <id>http://www.gnome.org/~michael/blog/2008/06/07/2008-06-07</id>
+    <link href="http://www.gnome.org/~michael/blog/2008-06-07.html" rel="alternate" type="text/html"/>
+    <title xml:lang="en-GB">2008-06-07: Saturday</title>
+    <content type="xhtml" xml:lang="en-GB"><div xmlns="http://www.w3.org/1999/xhtml"><ul> <!-- -->
+    <li>
+	Off to the market with the babes in the rain; back - bought new
+pair of Opterons - that will hopefully work in my motherboard, and have
+a power save mode (as well as being faster); hopefully will save the
+world, and some fan noise.
+    </li>
+    <li>
+	Finally got downstairs connected to up-stairs via ethernet.
+Lunch - pork spare ribs: unexpectedly good. More teaching of small
+children to balance on bicycles, scooters etc. in the light drizzle.
+    </li>
+    <li>
+	Watched Howel's Moving Castle again with the babes in the
+afternoon; hopefully they understood just a bit more. Tea, lightning
+shower for children, put them to bed; poked mail briefly.
+    </li>
+</ul></div>
+    </content>
+    <updated>2008-06-07T18:34:13Z</updated>
+    <published>2008-06-07T18:34:13Z</published>
+    <source>
+      <id>http://www.gnome.org/~michael/blog/index.atom</id>
+      <author>
+        <name>Michael Meeks</name>
+        <email>michael.meeks@novell.com</email>
+        <uri>http://www.gnome.org/~michael/blog/index.atom</uri>
+      </author>
+      <link href="http://www.gnome.org/~michael/blog" rel="alternate" type="text/html"/>
+      <link href="http://www.gnome.org/~michael/blog/index.atom" rel="self" type="application/atom+xml"/>
+      <rights xml:lang="en-GB">Copyright 1999-2008 Michael Meeks</rights>
+      <subtitle xml:lang="en-GB">things, of varying degrees of uselessness, that I did</subtitle>
+      <title xml:lang="en-GB">Stuff Michael Meeks is doing</title>
+      <updated>2008-06-07T18:34:13Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://davyd.livejournal.com/251620.html</id>
+    <link href="http://davyd.livejournal.com/251620.html" rel="alternate" type="text/html"/>
+    <title>if you think there is no ogg/theora porn, why is there a version optimised for fleshtones?</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Based on someone's recommendation for photography software, I am trying out <a href="http://bibblelabs.com/">Bibble Lite</a>, which is available as a Linux RPM. I'll write up my thoughts in a few days, but before that I had to share this preferences dialog:<br/><br/><center><img src="http://davyd.ucc.asn.au/images/bibble-cats.png"/><br/><i>sorry what?</i></center><br/>In my excitement to enter the Crumpler store on Friday night I discovered that what I thought was an open doorway was really a pane of floor to ceiling glass. I was walking pretty quickly at the time and managed to smack into it pretty damned hard. In my defence, it was very clean glass with no markings on it, right next to what I then discovered was the closed door. In my impact-induced daze it then took me an unreasonable length of time to work out how to actually enter the store. The clerk didn't actually move from his desk until I came up to him and he saw I was bleeding a little. My forehead and nose are still sore. Anybody who has ever laboured under the misapprehension that I was a cool operator, who never did anything amazingly uncoordinated, should now reevaluate that opinion.<br/><br/><center><a href="http://www.flickr.com/photos/penguincakes/2558756720/" title="heart muffins by penguincakes, on Flickr"><img alt="heart muffins" height="337" src="http://farm4.static.flickr.com/3032/2558756720_853091ce6c.jpg" width="500"/></a></center></div>
+    </summary>
+    <updated>2008-06-07T17:58:45Z</updated>
+    <source>
+      <id>http://davyd.livejournal.com/</id>
+      <logo>http://p-userpic.livejournal.com/27602973/544381</logo>
+      <author>
+        <name>Davyd Madeley</name>
+      </author>
+      <link href="http://davyd.livejournal.com/" rel="alternate" type="text/html"/>
+      <link href="http://davyd.livejournal.com/data/rss" rel="self" type="application/rss+xml"/>
+      <subtitle>Weblog - LiveJournal.com</subtitle>
+      <title>Weblog</title>
+      <updated>2008-06-08T05:07:05Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://danilo.segan.org/blog/openstreetmap/starting-with-openstreetmap</id>
+    <link href="http://danilo.segan.org/blog/openstreetmap/starting-with-openstreetmap" rel="alternate" type="text/html"/>
+    <title>Starting with OpenStreetMap</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I recently got a <a href="http://www.blu-max.eu">blu-max</a>/<a href="http://www.eurotronic.net">Eurotronic</a> <a href="http://www.eurotronic.net/products/produktdetails/gps_receiver.html">GPS 101</a> bluetooth device, hooked it up with my
+Nokia N800 and started playing with <a href="http://www.openstreetmap.org">OpenStreetMap</a>.</p>
+
+<center>
+  <img src="http://danilo.segan.org/slike/osm/bluemax-gps101.jpg"/>
+</center>
+
+<h3>Mapping</h3>
+
+<p><a href="http://gnuite.com:8080/nokia770/maemo-mapper/">Maemo
+Mapper</a> is pretty cool. However, I have not found a way to
+diferentiate between nodes made with <em>'Insert break'</em> in
+GPX editing tools like <a href="http://josm.openstreetmap.de/">JOSM</a> or
+<a href="http://www.irule.be/bvh/c++/merkaartor/">Merkaartor</a>: they
+are completely like any other nodes automatically inserted when
+<em>'Enable tracking'</em> is on.  Any clue about what am I doing wrong
+is very welcome.</p>
+
+<center>
+  <img src="http://danilo.segan.org/slike/osm/nokia-n800-gps.jpg"/>
+</center>
+
+<p>Also, I am not really sure what the value of inserting breaks into
+tracks is: neither Merkaartor nor JOSM seem to make any distinction,
+or am I being clueless?  Any hints are welcome :)</p>
+
+
+<h3>Editing</h3>
+
+<p>I started importing my GPX files into Merkaartor first, because it
+was easier to import Yahoo satellite imagery as the background, thus
+making it easier to confirm I am choosing right points to end roads at
+(because of the problem of not being able to separate 'breaks' from
+other nodes in Maemo Mapper).  However, I can't upload anything (and I
+am using Qt 4.3.4), so I am suspecting the 0.6 OSM API change might be
+the one to blame, though I am still totally clueless about what's
+going on.</p>
+
+<center>
+  <img src="http://danilo.segan.org/slike/osm/josm.jpg"/>
+</center>
+
+<p>So, I decided to switch over to JOSM, however, I didn't want to
+lose streets I already marked up.  However, JOSM doesn't accept same
+form of IDs used on <code>&lt;node&gt;</code>s—it expects integer IDs,
+or at least something that looks like it, and Merkaartor produces a
+string of hex numbers separated by dashes (it's a standard format, but
+can't remember the name from the top of my head).  So, I hacked up a
+<a href="http://kvota.net/hacks/openstreetmap/simplify-ids-in-osm-files.py">quick
+script</a> to "normalize" (or <em>simplify</em>) IDs on all
+<code>&lt;node&gt;</code> tags, and also remove all nodes not
+otherwise used in any of the <code>&lt;way&gt;</code>s (though,
+removal is commented out since it was really slow in
+<code>xml.dom.minidom</code>).</p>
+
+<h3>Uploading</h3>
+
+<p>So, I was finally able to open OSM files in JOSM, but I still
+couldn't upload them to the server: whenever I open an OSM file, it's
+considered as it's completely in sync with OpenStreetMap, yet I want
+to push all the streets as new data.</p>
+
+<p><strong>Anybody got a solution to that one?</strong>  I.e. how to
+make JOSM consider all imported OSM files as "new" data?</p></div>
+    </summary>
+    <updated>2008-06-07T17:25:09Z</updated>
+    <source>
+      <id>http://danilo.segan.org/blog</id>
+      <author>
+        <name>Danilo Šegan</name>
+      </author>
+      <link href="http://danilo.segan.org/blog" rel="alternate" type="text/html"/>
+      <link href="http://danilo.segan.org/blog/rss.en.xml" rel="self" type="application/rss+xml"/>
+      <subtitle>Данилово блогче</subtitle>
+      <title>Блогчетање</title>
+      <updated>2008-06-08T05:10:23Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.figuiere.net/hub/blog/?2008/06/07/615-new-packages</id>
+    <link href="http://www.figuiere.net/hub/blog/?2008/06/07/615-new-packages" rel="alternate" type="text/html"/>
+    <title>New packages</title>
+    <summary>Lately I packaged the following in the openSUSE build service:
+
+
+Nemiver 0.5.3. The debugger for GNOME. Just an update over 0.5.2 (that is in openSUSE 11). openSUSE 10.3 and 11
+Twitux 0.62. A twitter client for GNOME. Took the package for 0.60 from Packman and updated it. openSUSE 11 only as it...</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Lately I packaged the following in the openSUSE build service:</p>
+
+<ul>
+<li>Nemiver 0.5.3. The debugger for GNOME. Just an update over 0.5.2 (that is in openSUSE 11). openSUSE 10.3 and 11</li>
+<li>Twitux 0.62. A twitter client for GNOME. Took the package for 0.60 from Packman and updated it. openSUSE 11 only as it requires gio.</li>
+<li>Google Gadgets 0.9.2. The version of Google Gadget for the Free Desktops, released as Free Software under Apache v2 (the right way unlike some other Google stuff). openSUSE 10.3 and 11 with both KDE and GNOME support.</li>
+</ul></div>
+    </content>
+    <updated>2008-06-07T16:52:47Z</updated>
+    <category term="SuSE"/>
+    <author>
+      <name>hub</name>
+    </author>
+    <source>
+      <id>http://www.figuiere.net/hub/blog/</id>
+      <link href="http://www.figuiere.net/hub/blog/" rel="alternate" type="text/html"/>
+      <link href="http://www.figuiere.net/hub/blog/rss.php" rel="self" type="application/rdf+xml"/>
+      <title>Diary of a CrazyFrench</title>
+      <updated>2008-06-07T16:52:47Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blog.ekiga.net/?p=91</id>
+    <link href="http://blog.ekiga.net/?p=91" rel="alternate" type="text/html"/>
+    <title/>
+    <summary>Andy, I’m sure there are more than 100 new features in Ekiga 3.00. I’m ready to write them down.
+However, I’m not sure to have enough spare time (yes, I’m not paid to work on Ekiga) to finish everything at perfection for the next release of GNOME. Do you want to join forces ?</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p><a href="http://wingolog.org/archives/2008/06/07/gnome-in-the-age-of-decadence">Andy</a>, I’m sure there are more than 100 new features in Ekiga 3.00. I’m ready to write them down.</p>
+<p>However, I’m not sure to have enough spare time (yes, I’m not paid to work on Ekiga) to finish everything at perfection for the next release of GNOME. Do you want to join forces ?</p></div>
+    </content>
+    <updated>2008-06-07T16:43:11Z</updated>
+    <category term="Ekiga"/>
+    <author>
+      <name>Damien Sandras</name>
+    </author>
+    <source>
+      <id>http://blog.ekiga.net</id>
+      <link href="http://blog.ekiga.net" rel="alternate" type="text/html"/>
+      <link href="http://blog.ekiga.net/wp-rss2.php" rel="self" type="application/rss+xml"/>
+      <subtitle>Damien Sandras' VoIP Blog</subtitle>
+      <title>Free your Speech</title>
+      <updated>2008-06-07T16:43:11Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-203063759820106893.post-3721960420607258675</id>
+    <link href="http://jeffreystedfast.blogspot.com/2008/06/gmime-232.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=203063759820106893&amp;postID=3721960420607258675" rel="replies" type="text/html"/>
+    <link href="http://jeffreystedfast.blogspot.com/feeds/3721960420607258675/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default/3721960420607258675" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/203063759820106893/posts/default/3721960420607258675" rel="edit" type="application/atom+xml"/>
+    <title>GMime 2.3.2</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Just released GMime 2.3.2 last night which took some comments about the <i>GMimeHeaderIter</i> API into consideration (like allowing iters to be on the stack).<br/></p><p>It also now has support for multipart/encrypted PGP/MIME parts that have been both signed and encrypted in a single pass (support for this exists for both encrypting and decrypting).<br/></p><p>Many more .NET API improvements as well.<br/></p><p>Check it out!</p></div>
+    </content>
+    <updated>2008-06-07T16:24:02Z</updated>
+    <published>2008-06-07T16:18:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="gmime"/>
+    <author>
+      <name>Jeffrey Stedfast</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/12271561115384429651</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-203063759820106893</id>
+      <author>
+        <name>Jeffrey Stedfast</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/12271561115384429651</uri>
+      </author>
+      <link href="http://jeffreystedfast.blogspot.com/" rel="alternate" type="text/html"/>
+      <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default?start-index=26&amp;max-results=25" rel="next" type="application/atom+xml"/>
+      <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>A Moment of Zen</title>
+      <updated>2008-06-08T03:00:46Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/snark/2008/06/07/decadence-ekiga-in-the-same-post/</id>
+    <link href="http://blogs.gnome.org/snark/2008/06/07/decadence-ekiga-in-the-same-post/" rel="alternate" type="text/html"/>
+    <title>Decadence &amp; ekiga in the same post!?</title>
+    <summary>I have been pretty surprised (and somewhat disgusted) to see ekiga listed as an example of a project trying “not to bite too much” : ekiga 3.00 isn’t just a new release, it’s a new major release!
+And it’s not because we changed the version number that it’s a major version, but rather the reverse : [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I have been pretty surprised (and somewhat disgusted) to see ekiga listed as an example of a project trying “not to bite too much” : ekiga 3.00 isn’t just a new release, it’s a new major release!</p>
+<p>And it’s not because we changed the version number that it’s a major version, but rather the reverse : many things have been changed and improved, the code structure has been heavily modified. The codecs have been improved by so many order of magnitudes the video output needed rewriting, for instance!</p></div>
+    </content>
+    <updated>2008-06-07T15:59:55Z</updated>
+    <category term="General"/>
+    <author>
+      <name>Snark</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/snark</id>
+      <link href="http://blogs.gnome.org/snark" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/snark/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Snark's gnome blog</subtitle>
+      <title>Abstract nonsense</title>
+      <updated>2008-06-07T15:59:55Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/brunobol/2008/06/07/the-story-of-stuff/</id>
+    <link href="http://blogs.gnome.org/brunobol/2008/06/07/the-story-of-stuff/" rel="alternate" type="text/html"/>
+    <title>The Story of Stuff</title>
+    <summary>Take a look at “The Story of Stuff” and see how we are destroying our planet and how important is we change our life’s style.</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Take a look at <a href="http://www.storyofstuff.com/">“The Story of Stuff”</a> and see how we are destroying our planet and how important is we change our life’s style.</p></div>
+    </content>
+    <updated>2008-06-07T15:54:46Z</updated>
+    <category term="General"/>
+    <author>
+      <name>brunobol</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/brunobol</id>
+      <link href="http://blogs.gnome.org/brunobol" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/brunobol/feed/" rel="self" type="application/rss+xml"/>
+      <title>Bruno Boaventura (brunobol)</title>
+      <updated>2008-06-07T15:59:25Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/calum/2008/06/07/rockstars-and-decadence/</id>
+    <link href="http://blogs.gnome.org/calum/2008/06/07/rockstars-and-decadence/" rel="alternate" type="text/html"/>
+    <title>Rockstars and decadence</title>
+    <summary>I started writing this as a comment on Andy’s post, but it ended up quite long so I decided to blog it instead  
+From a user’s perspective, I’m inclined to agree—to put it bluntly, I can’t really recall the last major innovation I saw on my GNOME desktop.  After all these years, we’re [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I started writing this as a comment on <a href="http://wingolog.org/archives/2008/06/07/gnome-in-the-age-of-decadence">Andy’s post</a>, but it ended up quite long so I decided to blog it instead <img alt=":)" class="wp-smiley" height="16" src="http://blogs.gnome.org/calum/wp-content/mu-plugins/tango-smilies/face-smile.png" width="16"/> </p>
+<p>From a user’s perspective, I’m inclined to agree—to put it bluntly, I can’t really recall the last major innovation I saw on my GNOME desktop.  After all these years, we’re still mostly working on things that Windows and, more recently, OS X, can do for us already if we’re prepared to pay Apple or Microsoft for the privilege.</p>
+<p><a href="http://clutter-project.org/">Clutter</a> is one such example—it’s a promising technology for developers, and maybe it will turn out to be a “way out” of the “decadence” Andy describes.  But if we just use it to write clones of Front Row or CoverFlow or any of Apple’s other CoreAnimation-based apps, then Apple will have moved on again by the time we’re finished and we’ll just be playing catch-up again.</p>
+<p>In any case, Clutter is just a toolkit, and toolkits don’t help us with the vague lack of coherence and integration on some parts of our desktop today, or the need for more clarity of purpose going forward. For that I applaud Havoc et al.’s <a href="http://live.gnome.org/OnlineDesktop/Vision">vision of an online desktop</a>—while it’s not one that desperately excites me personally, I don’t have anything better to propose, and having everybody focusing on something is surely better than nobody focusing on anything <img alt=":)" class="wp-smiley" height="16" src="http://blogs.gnome.org/calum/wp-content/mu-plugins/tango-smilies/face-smile.png" width="16"/> </p>
+<p>As for the <a href="http://library.gnome.org/devel/hig-book/stable/">HIG</a>—I really don’t believe that it stifles creativity any more than (say) <a href="http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGIntro/chapter_1_section_1.html">Apple’s HIG</a> stifles theirs, but it probably has been a victim of it’s own success to some extent.  It was written six years ago, and as such, it describes the best practices for six-year-old GNOME apps.  We do have plans to substantially revamp it, but it won’t happen overnight.</p>
+<p>That said, the HIG shouldn’t drive major changes in GNOME’s UI, it should reflect them.  But at the same time, the gtk guys (and others) need to know what changes to make for 3.0 that will support the sort of changes we might want to make going forward.</p>
+<p>Everybody probably just needs to get talking and generate ideas to move that process along again, but I also wonder if maybe we don’t have enough rockstars in our community right at the moment—it’s much easier to reach a goal when two or three people are driving you there, than when a hundred people are all trying to make their own way.</p></div>
+    </content>
+    <updated>2008-06-07T15:30:34Z</updated>
+    <category term="GNOME"/>
+    <category term="Usability"/>
+    <category term="clutter"/>
+    <category term="decadence"/>
+    <category term="hig"/>
+    <category term="online desktop"/>
+    <category term="vision"/>
+    <author>
+      <name>calum</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/calum</id>
+      <link href="http://blogs.gnome.org/calum" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/calum/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Usability an' that</subtitle>
+      <title>Calum's Wee GNOME Blog</title>
+      <updated>2008-06-07T16:07:04Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-977684764667858073.post-7342440715431822363</id>
+    <link href="http://www.hadess.net/2008/06/best-meme-ever.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=977684764667858073&amp;postID=7342440715431822363" rel="replies" type="text/html"/>
+    <link href="http://www.hadess.net/feeds/7342440715431822363/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://www.hadess.net/feeds/posts/default/7342440715431822363" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/977684764667858073/posts/default/7342440715431822363" rel="edit" type="application/atom+xml"/>
+    <title>Best meme ever</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><a href="http://users.livejournal.com/deviant_/81618.html">pjones</a> says:<br/><i/><blockquote><i>You are in a mall when zombies attack. You have:<br/>1. One weapon<br/>2. One song blasting on the speakers<br/>3. One famous person to fight along side you.</i></blockquote>Pretty straight forward:<br/><ol><li>Pump-action shotgun, plenty of ammo</li><li>Could have been Rob Zombie, or Zombie by the Cranberries, but it's <a href="http://en.wikipedia.org/wiki/The_One_%28White_Zombie_song%29">White Zombie's The One</a> (from the <a href="http://www.imdb.com/title/tt0116225/">Escape from L.A.</a> soundtrack)</li><li><a href="http://www.imdb.com/character/ch0005442/quotes">Seth Gecko</a>, Clooney's character in <a href="http://www.imdb.com/title/tt0116367/">From Dusk Till Dawn</a> (even though he killed vampires then, he looks like he could handle it)</li></ol><span style="font-style: italic;">Update</span>: Planets seem to be removing the nice little video. So here goes <a href="http://www.youtube.com/watch?v=cDGJTyCLc04">the direct link</a> to enjoy White Zombie's fury.</div>
+    </content>
+    <updated>2008-06-07T15:20:46Z</updated>
+    <published>2008-06-07T14:30:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="meme"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="films"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="movie"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="zombies"/>
+    <author>
+      <name>hadess</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/14621847888418739807</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-977684764667858073</id>
+      <author>
+        <name>hadess</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/14621847888418739807</uri>
+      </author>
+      <link href="http://www.hadess.net/" rel="alternate" type="text/html"/>
+      <link href="http://www.hadess.net/feeds/posts/default?start-index=26&amp;max-results=25" rel="next" type="application/atom+xml"/>
+      <link href="http://www.hadess.net/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://www.hadess.net/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>بستيان نوصر  (hadess) | News</title>
+      <updated>2008-06-07T21:31:56Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.qdh.org.uk/wordpress/?p=228</id>
+    <link href="http://www.qdh.org.uk/wordpress/?p=228" rel="alternate" type="text/html"/>
+    <title>Lies damned lies…</title>
+    <summary>and “scientists” banging on about climate change. Its getting to the point where people who call themselves scientists are exploting the government fear mongering over climate change in order to get the research grants they want. One particular story I seem to recall involved the breeding patterns of Gerbils, which was rejected, and resubmitted, the [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>and “scientists” <a href="http://www.theregister.co.uk/2008/05/02/a_tale_of_two_thermometers/">banging</a> <a href="http://www.theregister.co.uk/2008/06/05/goddard_nasa_thermometer/">on</a> about climate change. Its getting to the point where people who call themselves scientists are exploting the government fear mongering over climate change in order to get the research grants they want. One particular story I seem to recall involved the breeding patterns of Gerbils, which was rejected, and resubmitted, the breeding patterns of Gerbils and the effect of climate change on them, which was accepted . . .</p>
+<p>This series of articles on the register explores the lies nasa have been putting out over climate change, and using their adjustments to falsify the facts. Where the true measurements are showing we’re in a cooling trend that started in 1998 and will continue until around 2018 or so, in which case it will begin to warm again.</p>
+<p>My view on the climate change thing is broken down into two individual aspects.</p>
+<p>The first is the “Energy crisis” which I believe can be simply replaced with the words “Third world war” in most places. Where Oil, Gas and other potential fuel sources are in places that we’d need to have big ass wars with if we were to continue our way of life. And by way of life I mean continuous consumation of raw materials. For instance bottled water, a single litre of water can take as much as 1/4 of a litre of Oil to produce. So put that evian down, because it will cause war.</p>
+<p>The second is the actual changing climate, which shouldn’t be confused with fear mongering, higher oil prices and general scare tactics the world over. The climate is changing, and sensible climatologists have expected this for a while, we’re having these weird behaviours in the climate, and don’t think for a second its anything to do with the amount of oil we consume. The oil as previously mentioned is more related to war than anything else, you’ve only got to delve into what was happening in Turkey/Iraq in the early 20th century to understand that. So the reason for the climate changing, well for a start I find the whole CO2 argument impossible to believe partially because of the last major climate change event caused by CO2 was in <a href="http://travel.mongabay.com/indonesia/Krakatoa.html">535-536</a> possibly caused by the Krakatoa eruption, that account was even mentioned in Arthurian legend apparently as flaming rocks fell from the sky on Camelot. The amount of CO2 dumped into the air for that episode of climatological change was massive! More than 100 years of human consummation, and the immediate effect was 9 years of sustained blackout for most of the world, failing crops etc… Apparently this eruption coined the term “dark ages” it is recorded in tree records, and there’s an episode of <a href="http://www.bbc.co.uk/sn/tvradio/programmes/horizon/broadband/index.shtml">Horizon</a> about it if you’re interested. Interestingly the rate of eruption in that event couldn’t be matched by people (although an episode of Futurama suggests robots might manage it, with a whole hell of a lot of liquer), and cumulative expulsion of gasses is pretty much a dead duck of an idea because the more CO2 the more the algae on the sea thrive and convert the CO2 into O2 (which is why after the 535-536 change things returned in only 9 years), and yes, the rain forests have little to do with oxygen production, its more or less completely down to the oceans. So what is causing climate change, I’ve read a lot of rambling about sun phases, changes in the magnetic field of earth, El Nino, La Nina, a possible build up to an ice age etc… but to be honest, nobody seems 100% sure, what we can be sure about is that we’re currently living in a cool phase of earth, <a href="http://www.scotese.com/climate.htm">shown by the long term climate records</a>, and we’re probably going to have some kind of fluctuation as we approach the next tropical phase (ala the Jurassic Era).</p>
+<p>So before blindly listening to the climate scare mongering, remember, you’re saving fuel to prevent or minimize a war and the climate is going to change anyway.</p>
+<p>Life sucks sometimes.</p></div>
+    </content>
+    <updated>2008-06-07T14:36:18Z</updated>
+    <category term="Various"/>
+    <author>
+      <name>Karl Lattimer</name>
+    </author>
+    <source>
+      <id>http://www.qdh.org.uk/wordpress</id>
+      <link href="http://www.qdh.org.uk/wordpress/?feed=rss2" rel="self" type="application/atom+xml"/>
+      <link href="http://www.qdh.org.uk/wordpress" rel="alternate" type="text/html"/>
+      <subtitle>Hacks, code, etc...</subtitle>
+      <title>Quick and Dirty Hacks</title>
+      <updated>2008-06-07T14:36:18Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://wingolog.org/2008/06/07/gnome-in-the-age-of-decadence</id>
+    <link href="http://wingolog.org/archives/2008/06/07/gnome-in-the-age-of-decadence" rel="alternate" type="text/html"/>
+    <title>gnome in the age of decadence</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div><p>It is with some trepidation that I go to buy my ticket to this year's european GNOME conference, GUADEC.</p><blockquote><p>Decadence \De*ca"dence\, Decadency \De*ca"den*cy\, n.<br/>[LL. decadentia; L. de- + cadere to fall: cf. F. décadence. See <i>Decay</i>.]</p><p>A falling away; decay; deterioration; declension. "The old castle, where the family lived in their decadence." --Sir W. Scott.<br/>[1913 Webster]</p></blockquote><p>Take a look at the list of <a href="http://guadec.expectnation.com/guadec08/public/schedule/full">slated talks</a>. What is your general impression?</p><p>Mine is of a large project in a state of marginal returns, in which a larger and larger part of the effort goes to maintenance. On the one hand you have the large deployments, the integration with other software projects. On the other hand the new developments that we have are very careful not to bite off too much: a printing dialog; another revision of ekiga; a new image library.</p><p>The problem, as I see it, is that GNOME is in a state of decadence -- we largely achieved what we set out to achieve, insofar as it was possible. Now our hands are full with dealing with entropic decay. Take, for example, Evolution's random walk to improvement. In most releases it's better, in a few it's worse, but basically it still works fine, and has been that way since about 3 or 4 years ago.</p><p>It's like, welcome back to 1984's Macintosh plus interweb. We did it!</p><p>Seriously though, it does not seem to me that GNOME is on a healthy evolutionary track. By that I mean to say that there is no way there from here, if "there" is universal use of free software, and "here" is our existing GNOME software stack. The evolutionary thing to do would be to do something web-like, because that's where all of the programmers are these days. But that's not part of our culture. Until recently, with WebKit/GTK, it wasn't part of our software stack either -- all of the new web platform bits were dribbled to us over the wall from Mozilla, or embedded within GNOME as Firefox.</p><p>The other side of that is that while the web will be a core part of the computing future, it's not clear that swallowing it wholesale is the best strategy for client development. There are too many things that local computing offers: other software paradigms (emacs, unix, independence), unmediated input (sound, video, alternate input devices), direct access to powerful output devices (control part or the entirety of a screen, access the underused GPU).</p><p>But even if we eschew "going with the flow"-style evolution, it's not like GNOME is on a revolutionary track which will win in the end with its compelling UI or programming-linguistic metaphors. The screen is still constructed as a static landing strip on which the mouse pointer might alight, an array of possibilities necessarily constricted by decontextualized space. The metaphors are the same: file, folder, desktop, even as these things cease to exist for many people. And techologically, we don't even have a way of considering how the visual elements of space might be anything other than static, much less have any way of interacting with those elements other than the impoverished point and click. What we're left with is the GUI equivalent of chartjunk.</p><p>There are exceptions to this story. There's <a href="http://clutter-project.org/">Clutter</a>, which I expect will be the "way out" both for GTK+ and for GNOME. (I know there are technological differences with other canvas models, but at least they have the hackers and the maintenance resources.) There's Moonlight, which is interesting and hacked by very smart folk, but whose fortunes are too bound to Microsoft. There are heroic retrofix efforts like MPX, not really a part of GNOME. But other than that, we have the decay of slavish adherence to the HIG, the logout dialog, the wallpaper chooser, the last-percent efforts of refining an increasingly irrelevant stack of software.</p><p>The GTK+ maintainers are well aware of the decadent state of GTK+, and are moving as much as possible to plug the leaks. But it is no longer a nimble codebase, and will take at least 6 and possibly 12 months before a 3.0 release can come out. And that's just stopping retrograde motion; actual construction must take place outside of the "core" until the core is ready for it.</p><p>This disenchantment is personal as well: among other things, I've spent thousands of hours on <a href="http://www.gnu.org/software/guile-gnome">bindings to GNOME libraries</a>, and just now when I am ready to make an API and ABI stable release, I just don't feel like packing another button into another hbox.</p><p>Anyway, I'm buying my ticket, but mostly for the hallway track -- GNOME folks are smart and kind, and I want to see what's going on, what people are really thinking about. Istanbul ho!</p></div></div>
+    </content>
+    <updated>2008-06-07T11:25:49Z</updated>
+    <published>2008-06-07T11:25:49Z</published>
+    <author>
+      <name>Andy Wingo</name>
+      <uri>http://wingolog.org/</uri>
+    </author>
+    <source>
+      <id>http://wingolog.org/feed/atom</id>
+      <link href="http://wingolog.org/" rel="alternate" type="text/html"/>
+      <link href="http://wingolog.org/feed/atom" rel="self" type="application/atom+xml"/>
+      <subtitle>A mostly dorky weblog by Andy Wingo</subtitle>
+      <title>wingolog</title>
+      <updated>2008-06-07T11:25:49Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.qdh.org.uk/wordpress/?p=227</id>
+    <link href="http://www.qdh.org.uk/wordpress/?p=227" rel="alternate" type="text/html"/>
+    <title>The horse is dead</title>
+    <summary>Better stop flogging it
+That is all</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p><a href="http://news.bbc.co.uk/1/hi/world/americas/7440602.stm">Better stop flogging it</a></p>
+<p>That is all</p></div>
+    </content>
+    <updated>2008-06-07T10:16:24Z</updated>
+    <category term="Various"/>
+    <author>
+      <name>Karl Lattimer</name>
+    </author>
+    <source>
+      <id>http://www.qdh.org.uk/wordpress</id>
+      <link href="http://www.qdh.org.uk/wordpress/?feed=rss2" rel="self" type="application/atom+xml"/>
+      <link href="http://www.qdh.org.uk/wordpress" rel="alternate" type="text/html"/>
+      <subtitle>Hacks, code, etc...</subtitle>
+      <title>Quick and Dirty Hacks</title>
+      <updated>2008-06-07T14:36:18Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/ovitters/2008/06/07/new-mailman-version/</id>
+    <link href="http://blogs.gnome.org/ovitters/2008/06/07/new-mailman-version/" rel="alternate" type="text/html"/>
+    <title>New mailman version</title>
+    <summary>I’ve upgraded the Mailman version on mail.gnome.org to 2.1.10. In this version I redid the post-only patch. Basically, if the default action for new subscribers is to moderate them (done on e.g. metacity-devel-list), then members subscribed to post-only won’t be automatically accepted. In 2.1.10 Mailman supports something like post-only by default (see NEWS). I found [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I’ve upgraded the Mailman version on mail.gnome.org to 2.1.10. In this version I redid the post-only patch. Basically, if the default action for new subscribers is to moderate them (done on e.g. metacity-devel-list), then members subscribed to post-only won’t be automatically accepted. In 2.1.10 Mailman supports something like post-only by default (see NEWS). I found it easier to patch this logic in than to change existing lists and to ensure new lists would get the post-only setting as well.</p>
+<p>If you see any problems, please email gnome-sysadmin. Note that yesterdays email backlog wasn’t caused by the Mailman upgrade. I waited until it cleared.</p></div>
+    </content>
+    <updated>2008-06-07T10:12:55Z</updated>
+    <category term="General"/>
+    <author>
+      <name>ovitters</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/ovitters</id>
+      <link href="http://blogs.gnome.org/ovitters" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/ovitters/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Just another GNOME Blogs weblog</subtitle>
+      <title>Olav Vitters</title>
+      <updated>2008-06-07T21:47:37Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en-GB">
+    <id>http://www.gnome.org/~michael/blog/2008/06/06/2008-06-06</id>
+    <link href="http://www.gnome.org/~michael/blog/2008-06-06.html" rel="alternate" type="text/html"/>
+    <title xml:lang="en-GB">2008-06-06: Friday</title>
+    <content type="xhtml" xml:lang="en-GB"><div xmlns="http://www.w3.org/1999/xhtml"><ul> <!-- ljm -->
+    <li>
+	Up early, tried to file Xen bugs, but got side-tracked by a cracking
+memory leak in nautilus: apparently piling up (26Mb) of duplicate status bar
+messages on the (invisible) desktop window status-bar; in parallel with finally
+being able to repeat the "package updating the theme / icon cache crashes
+firefox" (seemingly a GtkPlug issue), hopefully all the detours result in a
+far better OpenSUSE 11.0.
+    </li>
+    <li>
+	Filed many virt-manager bugs; that beastie needs some usability love.
+Long lunch break to make up for last night - picked up H. from school, chatted
+with Janine &amp; watched her boys play. Call with Patrick. Discovered the
+<code>ftw</code> glibc call - I wonder how efficient it's I/O is.
+    </li>
+</ul></div>
+    </content>
+    <updated>2008-06-06T18:31:06Z</updated>
+    <published>2008-06-06T18:31:06Z</published>
+    <source>
+      <id>http://www.gnome.org/~michael/blog/index.atom</id>
+      <author>
+        <name>Michael Meeks</name>
+        <email>michael.meeks@novell.com</email>
+        <uri>http://www.gnome.org/~michael/blog/index.atom</uri>
+      </author>
+      <link href="http://www.gnome.org/~michael/blog" rel="alternate" type="text/html"/>
+      <link href="http://www.gnome.org/~michael/blog/index.atom" rel="self" type="application/atom+xml"/>
+      <rights xml:lang="en-GB">Copyright 1999-2008 Michael Meeks</rights>
+      <subtitle xml:lang="en-GB">things, of varying degrees of uselessness, that I did</subtitle>
+      <title xml:lang="en-GB">Stuff Michael Meeks is doing</title>
+      <updated>2008-06-07T18:34:13Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-1497451738703327403.post-7362173229105750227</id>
+    <link href="http://mkestner.blogspot.com/2008/06/gobject-property-registration.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=1497451738703327403&amp;postID=7362173229105750227" rel="replies" type="text/html"/>
+    <link href="http://mkestner.blogspot.com/feeds/7362173229105750227/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://mkestner.blogspot.com/feeds/posts/default/7362173229105750227" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/1497451738703327403/posts/default/7362173229105750227" rel="edit" type="application/atom+xml"/>
+    <title>GObject Property Registration</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Christian Hoff submitted a nice patch to <a href="http://mono-project.com/GtkSharp">Gtk#</a> supporting GObject property registration on managed subclasses.  This is a feature request we've seen off and on for a while now, especially from people writing Custom CellRenderers.  Until this patch, it was necessary to use a CellDataFunc with custom cell renderers instead of using the SetAttributes mechanism exposed by Gtk.<br/><br/>I committed <a href="http://anonsvn.mono-project.com/viewcvs/trunk/gtk-sharp/sample/PropertyRegistration.cs?view=markup">a little sample</a> along with the patch to demonstrate its use.</div>
+    </content>
+    <updated>2008-06-06T17:22:08Z</updated>
+    <published>2008-06-06T17:13:00Z</published>
+    <author>
+      <name>Mike Kestner</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/08052527685396071752</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-1497451738703327403</id>
+      <author>
+        <name>Mike Kestner</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/08052527685396071752</uri>
+      </author>
+      <link href="http://mkestner.blogspot.com/" rel="alternate" type="text/html"/>
+      <link href="http://mkestner.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://mkestner.blogspot.com/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>According to Mike</title>
+      <updated>2008-06-06T17:22:08Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/thos/2008/06/06/contacts-09-released/</id>
+    <link href="http://blogs.gnome.org/thos/2008/06/06/contacts-09-released/" rel="alternate" type="text/html"/>
+    <title>Contacts 0.9 Released</title>
+    <summary>Plenty of bugs fixed in this version. I am hoping to use this as the release candidate for version 1.0, so please send in any updated translations either to me (thomas at openedhand.com) or attach them straight to bugzilla. Also, I haven’t fixed many Maemo issues because we don’t really support the Maemo version (Maemo [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p><img align="right" alt="contacts.png" src="http://blogs.gnome.org/thos/files/2008/06/contacts.png"/><br/>
+Plenty of bugs fixed in this version. I am hoping to use this as the release candidate for version 1.0, so please send in any updated translations either to me (thomas at openedhand.com) or attach them straight to bugzilla. Also, I haven’t fixed many Maemo issues because we don’t really support the Maemo version (Maemo already has an address book anyway…). However, I’m more than willing to apply patches if people are able to supply them.</p>
+<p>I’d like to add a special thanks to Adrien Bustany and Gilles Dartiguelongue for their patches that I’ve included in this release. If anyone else has any (small) feature of bug fix they would like to see done before 1.0, now is the time to start working on your patches!</p>
+<p><strong>Overview of Changes in 0.9 (since 0.8)</strong></p>
+<p>Bugs fixed:</p>
+<ul>
+<li> 139: Contacts does not exit cleanly, leaves socket behind</li>
+<li> 169: horrificially non-obvious choices of field names</li>
+<li> 224: Search chokes on non-ascii chars</li>
+<li> 275: tab key behavior inconsistent</li>
+<li> 305: Available labels for email are insane</li>
+<li> 306: Better location labels for us stupid Americans</li>
+<li> 308: No way to view “unfiled” contacts</li>
+<li> 309: Groups dropdown in main window not alpha-sorted</li>
+<li> 310: Contacts does not create “file under” field, not usable in Evolution</li>
+<li> 318: Do not show fields that are blank</li>
+<li> 338: Possible to add duplicate groups to a contact</li>
+<li> 339: Keyboard shortcut conflicts</li>
+<li> 341: Unexpected triple-click behavior in Name/Groups display</li>
+<li> 368: Should import concatenated vcards</li>
+<li>489: Missing field definitions in Contacts.</li>
+<li>492: Only installing 26×26 icons when building for Maemo platforms.</li>
+<li>659: New contacts do not have a N: field - my mobile reject them</li>
+<li>774: Fails to build from source under Ubuntu Hardy</li>
+<li>808: All vcards for companies are displayed as ‘Unnamed’</li>
+<li>885, 42: Attributes not sorted in view mode</li>
+<li>888: Contacts segfaults when provided with incomplete options on command line</li>
+<li>890: Typos in source code</li>
+<li>893: Remove recursive function</li>
+<li>896: Simple DBus interface</li>
+</ul>
+<p><strong>Sources</strong></p>
+<p>Tarballs: <a href="http://pimlico-project.org/sources/contacts/">http://pimlico-project.org/sources/contacts/</a><br/>
+Subversion: <a href="http://svn.o-hand.com/repos/contacts/trunk/">http://svn.o-hand.com/repos/contacts/trunk/</a></p>
+<p><strong>Reporting Bugs</strong></p>
+<p>Please report any bugs using the bugzilla bug tracker at:<br/>
+<a href="http://bugzilla.o-hand.com/"> http://bugzilla.o-hand.com/</a></p>
+<p><strong>Website</strong></p>
+<p>Screenshots and more information available at:<br/>
+<a href="http://pimlico-project.org/contacts.html"> http://pimlico-project.org/contacts.html</a></p></div>
+    </content>
+    <updated>2008-06-06T16:38:34Z</updated>
+    <category term="GNOME"/>
+    <category term="OpenMoko"/>
+    <category term="OpenedHand"/>
+    <author>
+      <name>thos</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/thos</id>
+      <link href="http://blogs.gnome.org/thos" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/thos/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>My Weblog</subtitle>
+      <title>Thomas Wood</title>
+      <updated>2008-06-06T16:48:38Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.burtonini.com/blog/life/baby-2008-06-06-17-38</id>
+    <link href="http://www.burtonini.com/blog/life/baby-2008-06-06-17-38" rel="alternate" type="text/html"/>
+    <title>Week 21</title>
+    <summary>Growing nicely.</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>
+  <a class="noline" href="http://www.flickr.com/photos/rossburton/2556272648/" title="Week 21 by Ross Burton, on Flickr">
+    <img alt="Week 21" class="thumbnail" height="361" src="http://farm4.static.flickr.com/3143/2556272648_02283b484e.jpg" width="500"/>
+  </a>
+</p>
+<p>
+  Growing nicely.
+</p></div>
+    </content>
+    <updated>2008-06-06T16:38:00Z</updated>
+    <category scheme="http://www.burtonini.com" term="life"/>
+    <source>
+      <id>http://www.burtonini.com/blog</id>
+      <author>
+        <name>Ross Burton</name>
+      </author>
+      <link href="http://www.burtonini.com/blog" rel="alternate" type="text/html"/>
+      <link href="http://www.burtonini.com/blog/index.rss2" rel="self" type="application/rss+xml"/>
+      <subtitle>A potted account of Ross' life</subtitle>
+      <title>Ross Burton</title>
+      <updated>2008-06-08T05:06:33Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://inverted-tree.livejournal.com/59283.html</id>
+    <link href="http://inverted-tree.livejournal.com/59283.html" rel="alternate" type="text/html"/>
+    <title>Finally getting things done</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">I've been meaning to blog again for a long while, and I finally managed to sit down and do it.  The last few months have been very, very busy.  I got inspired in some way and started studying three times as hard, which is a good thing since I finally manage to get a lot of things done there.  This week I finished two more master courses, for both of which we did some interesting stuff.  For the first one I have been looking at very low-level cache optimizations (esp. strip lining/loop blocking) with somebody else; learnt a great deal of new stuff and gained experience.  The other course was about grid computing; for the presentation and project part I have been focussing on data storage in grids.  I've been looking at <a href="http://www.irods.org/">iRODS</a>, which is an open source system for building data grids.  It is a very interesting and promising project, but not yet ready for production deployments.  I should probably put my report on this online at some point.  Furthermore, my thesis is finally almost done.  In the coming weeks I will be working on finishing another course which I had to leave behind for a while at the end of last year.  At least the end is coming in sight, I hope to have my BSc and MSc degrees before mid next-year.<br/><br/>Being very busy with studying is nice and all, but it means I had zero time left for spare time (GTK+) hacking.  I hope this will change in the coming weeks and get my "getting things done" attitude from University work also applied to GTK+ hacking ;)  I am going to look into:<br/><ul><br/><li>Getting the column resizing with &gt; 1 expand=TRUE columns patch updated, fixed and committed in trunk. (finally)</li><br/><br/><li>Design and implement a proper API for doing DnD (with multiple rows) in GtkTreeView. This should include making it possible to DnD between tree views and apps. (finally)</li><br/><br/><li>Look into improving the rubber banding behavior as Christian Neumair talked about in his blog.  As is stated in the related tree view bugzilla bug about this, probably need to move over the cell_process_action() refactorings from my experimental branch to trunk and then this might be much easier to fix.  Moving that refactoring over means writing a good automated layouting test.</li><br/><br/><li>Look into properly fixing the editing mess.  We need a better means to distinguish between committed/cancelled editings.</li><br/><br/><li>Actually write about the plans for a simple tree view wrapper that I've discussed with Johan and Emmanuele during the hack fest.</li><br/><br/><li>Continue hacking on my experimental tree view branch.  More on this later.</li><br/></ul><br/>I thought I had more for this list, but this will keep me busy for a good while anyway ;)</div>
+    </summary>
+    <updated>2008-06-06T13:52:27Z</updated>
+    <source>
+      <id>http://inverted-tree.livejournal.com/</id>
+      <logo>http://p-userpic.livejournal.com/8496134/848655</logo>
+      <author>
+        <name>Kristian Rietveld</name>
+      </author>
+      <link href="http://inverted-tree.livejournal.com/" rel="alternate" type="text/html"/>
+      <link href="http://inverted-tree.livejournal.com/data/rss" rel="self" type="application/rss+xml"/>
+      <subtitle>Kris' journal - LiveJournal.com</subtitle>
+      <title>Kris' journal</title>
+      <updated>2008-06-08T05:09:26Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.grillbar.org/wordpress/?p=277</id>
+    <link href="http://www.grillbar.org/wordpress/?p=277" rel="alternate" type="text/html"/>
+    <link href="http://www.grillbar.org/wordpress/?p=277#comments" rel="replies" type="text/html"/>
+    <link href="http://www.grillbar.org/wordpress/?feed=atom&amp;p=277" rel="replies" type="appication/atom+xml"/>
+    <title xml:lang="en">Three Simple Questions</title>
+    <summary xml:lang="en">There are three simple questions that one should always ask one self when writing emails. Especially when writing mails to (public) mailing lists. Most importantly:
+Would I say this to a person face to face?
+And when writing to public mailing lists or a group of people:
+Would I say this to a stranger?
+Would I say this in [...]</summary>
+    <content type="xhtml" xml:lang="en"><div xmlns="http://www.w3.org/1999/xhtml"><p>There are three simple questions that one should always ask one self when writing emails. Especially when writing mails to (public) mailing lists. Most importantly:</p>
+<blockquote><p>Would I say this to a person face to face?</p></blockquote>
+<p>And when writing to public mailing lists or a group of people:</p>
+<blockquote><p>Would I say this to a stranger?</p></blockquote>
+<blockquote><p>Would I say this in public?</p></blockquote>
+<p>If the answer is <em>no</em> to any one of the questions, then don’t write that mail, or at the very least change it so that you can answer <em>yes</em> on all questions above.</p>
+<p>These points does (obviously) not apply to blog comments. You are supposed to be loathful and derogatory in those. Feel free to fill the comments with obnoxious ranting <img alt=":-)" class="wp-smiley" src="http://www.grillbar.org/wordpress/wp-includes/images/smilies/icon_smile.gif"/></p></div>
+    </content>
+    <updated>2008-06-06T12:42:37Z</updated>
+    <published>2008-06-06T12:42:37Z</published>
+    <category scheme="http://www.grillbar.org/wordpress" term="Hacking"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="Uncategorized"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="communication"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="culture"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="email"/>
+    <author>
+      <name>kamstrup</name>
+      <uri>http://grillbar.org</uri>
+    </author>
+    <source>
+      <id>http://www.grillbar.org/wordpress/?feed=atom</id>
+      <link href="http://www.grillbar.org/wordpress" rel="alternate" type="text/html"/>
+      <link href="http://www.grillbar.org/wordpress/?feed=atom" rel="self" type="application/atom+xml"/>
+      <subtitle xml:lang="en">the infernal output of Mikkel Kamstrup Erlandsen</subtitle>
+      <title xml:lang="en">The Evil Blog</title>
+      <updated>2008-06-06T12:42:37Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.grillbar.org/wordpress/?p=276</id>
+    <link href="http://www.grillbar.org/wordpress/?p=276" rel="alternate" type="text/html"/>
+    <link href="http://www.grillbar.org/wordpress/?p=276#comments" rel="replies" type="text/html"/>
+    <link href="http://www.grillbar.org/wordpress/?feed=atom&amp;p=276" rel="replies" type="appication/atom+xml"/>
+    <title xml:lang="en">Twitter and Deskbar : Revived</title>
+    <summary xml:lang="en">A good while ago Phil Wilson wrote a very simple deskbar-applet backend to post updates to Twitter. I always thought it was a very cool idea, and now that I have jumped on the micro-blogging-band-wagon, even more cool.
+Sadly it does not work in the new Deskbar API. So what will a hacker do? I was [...]</summary>
+    <content type="xhtml" xml:lang="en"><div xmlns="http://www.w3.org/1999/xhtml"><p>A good while ago <a href="http://www.philwilson.org/blog/2007/03/post-to-twitter-from-ubuntu-deskbar.html">Phil Wilson wrote a very simple deskbar-applet backend to post updates to Twitter</a>. I always thought it was a very cool idea, and now that <a href="http://www.grillbar.org/wordpress/?p=274">I have jumped on the micro-blogging-band-wagon</a>, even more cool.</p>
+<p>Sadly it does not work in the new Deskbar API. So what will a hacker do? I was already in desparate needd for some quick bang-for-the-buck because hacking on xesam-glib can sometimes feel like working in an ivory tower (listen to the monkey whine…).</p>
+<p>Without further ado</p>
+<p><img alt="Screenshot of deskbar's new twitter handler in action" src="http://www.grillbar.org/files/deskbar-twitter.png" style="vertical-align: middle;"/></p>
+<p>Of course if works with gnome keyring integration, async posting, and all that.</p>
+<p><a href="http://grillbar.org/files/twitter.py">The deskbar twitter handler can be downloaded here</a></p>
+<p>I will massage it a bit and submit it to deskbar trunk if it is deemed worthy. It contains a few tricks that might be handy for other deskbar backends too. Namely a generic urllib.URLopener that integrates with gnome keyring (<a href="http://www.rittau.org/blog/20070726-00">thanks Sebastian Rittau</a>!) and has an async open() variant that integrates with a GMainLoop.</p></div>
+    </content>
+    <updated>2008-06-06T10:31:54Z</updated>
+    <published>2008-06-06T10:31:54Z</published>
+    <category scheme="http://www.grillbar.org/wordpress" term="Gnome"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="Micro Blogging"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="Twitter"/>
+    <category scheme="http://www.grillbar.org/wordpress" term="deskbar"/>
+    <author>
+      <name>kamstrup</name>
+      <uri>http://grillbar.org</uri>
+    </author>
+    <source>
+      <id>http://www.grillbar.org/wordpress/?feed=atom</id>
+      <link href="http://www.grillbar.org/wordpress" rel="alternate" type="text/html"/>
+      <link href="http://www.grillbar.org/wordpress/?feed=atom" rel="self" type="application/atom+xml"/>
+      <subtitle xml:lang="en">the infernal output of Mikkel Kamstrup Erlandsen</subtitle>
+      <title xml:lang="en">The Evil Blog</title>
+      <updated>2008-06-06T12:42:37Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/bolsh/2008/06/06/brothers-separated-at-birth/</id>
+    <link href="http://blogs.gnome.org/bolsh/2008/06/06/brothers-separated-at-birth/" rel="alternate" type="text/html"/>
+    <title>Brothers separated at birth?</title>
+    <summary>I only noticed this after finally meeting him in the flesh at LinuxTag - Aaron Seigo bears an uncanny resemblance to Franck Ribéry, French footballer extraordinaire (except for the scars that Franck got going through a windshield as a kid and the funky hairdo).
+The proof?
+ 
+
+Aaron Seigo
+ 
+
+
+Franck Ribery</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I only noticed this after finally meeting him in the flesh at LinuxTag - <a href="http://aseigo.blogspot.com/">Aaron Seigo</a> bears an uncanny resemblance to <a href="http://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry">Franck Ribé</a><a href="http://en.wikipedia.org/wiki/Franck_Rib%C3%A9ry">ry</a>, French footballer extraordinaire (except for the scars that Franck got going through a windshield as a kid and the funky hairdo).</p>
+<p>The proof?</p>
+<p style="text-align: center; font-style: italic; font-size: smaller; text-indent: 0pt;"> <a href="http://blogs.gnome.org/bolsh/files/2008/06/ribery.jpg" title="Aaron Seigo"><br/>
+<img alt="Aaron Seigo" src="http://blogs.gnome.org/bolsh/files/2008/06/ribery.jpg"/></a></p>
+<p style="text-align: center; font-style: italic; font-size: smaller; text-indent: 0pt;">Aaron Seigo</p>
+<p style="text-align: center; font-style: italic; font-size: smaller; text-indent: 0pt;"> <a href="http://blogs.gnome.org/bolsh/files/2008/06/seigo.jpg" title="Franck Ribery"><br/>
+<img alt="Franck Ribery" src="http://blogs.gnome.org/bolsh/files/2008/06/seigo.jpg"/><br/>
+</a></p>
+<p style="text-align: center; font-style: italic; font-size: smaller; text-indent: 0pt;">Franck Ribery</p></div>
+    </content>
+    <updated>2008-06-06T09:04:08Z</updated>
+    <category term="General"/>
+    <category term="freesoftware"/>
+    <category term="humour"/>
+    <author>
+      <name>Dave Neary</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/bolsh</id>
+      <link href="http://blogs.gnome.org/bolsh" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/bolsh/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Dave Neary's view of the world</subtitle>
+      <title>Safe as Milk</title>
+      <updated>2008-06-06T09:05:20Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://tieguy.org/blog/?p=1238</id>
+    <link href="http://tieguy.org/blog/2008/06/06/observation-on-my-office-and-the-dominance-of-word/" rel="alternate" type="text/html"/>
+    <title>observation on my office and the dominance of Word</title>
+    <summary>blogger discussing how his lawyer used the Open Document Format instead of .doc:
+The type of documents they produce in that [law] office, as in many other offices if not most I’m sure, is just pure text with a little formatting. They really have no reason to keep buying licenses for MS Office for this.
+Now, [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p><a href="http://lehors.wordpress.com/2008/06/03/a-sign-of-changing-times/"> blogger discussing how his lawyer used the Open Document Format instead of .doc:</a></p>
+<blockquote><p>The type of documents they produce in that [law] office, as in many other offices if not most I’m sure, is just pure text with a little formatting. They really have no reason to keep buying licenses for MS Office for this.</p></blockquote>
+<p>Now, disclaimer: this guy’s law firm is different than my firm. He says it is basically three lawyers plus some assistants; the firm I’m at this summer is around 1,000 lawyers with significant offices in the US, Europe, and Asia.<sup>1</sup></p>
+<p>So there is a bit of apples and oranges here, but… for better or for worse, what we do isn’t just ‘pure text with a little formatting’. That means we’re pretty deeply tied to Word. First, the tools around what we do are pretty sophisticated. The modern law firm has a suite of tools for document management. Among other things, these tools save all files to a central server automatically, provide <a href="http://en.wikipedia.org/wiki/Revision_control">revision control</a>, automatically scrub documents to remove comments (<a href="http://techdirt.com/articles/20080601/1449121278.shtml">albeit not always well</a>), etc. These tools are not standalone- they integrate into Office.<sup>2</sup> Second, it isn’t just ‘a little formatting’. Courts can be very picky- they’re perfectly happy to reject your documents if the margin or spacing is wrong. So, again, the tools are very important. Finally, time is quite literally money for lawyers- every moment usually counts. I don’t want to waste time thinking about formatting, and the client doesn’t want to pay me to waste that time either.</p>
+<p>This isn’t to say you couldn’t replace Word. Obviously, some firms have done it, and many more will do so- not just for ODF, but also for markup languages or hosted software where no one ever sees a “file” in the old fashioned sense. But the switch isn’t nearly as easy as it might seem at first glance- lawyers often do fairly complicated things with text and are loathe to switch tools, often with good reason. So don’t expect that an overnight change is in the offing any more than you might expect all the vi users to switch to emacs tomorrow :)</p>
+<ol class="footnotes"><li class="footnote" id="footnote_0_1238">Larger firms are a global trend- people tend to like them because you can get many services and specialties under one roof.</li><li class="footnote" id="footnote_1_1238">If anyone knows of a way to tie OpenOffice/ODF to an RCS automagically, I’m all ears.</li></ol></div>
+    </content>
+    <updated>2008-06-06T07:19:17Z</updated>
+    <category term="law"/>
+    <category term="software"/>
+    <category term="work"/>
+    <author>
+      <name>Luis</name>
+    </author>
+    <source>
+      <id>http://tieguy.org/blog</id>
+      <link href="http://tieguy.org/blog/feed/" rel="self" type="application/atom+xml"/>
+      <link href="http://tieguy.org/blog" rel="alternate" type="text/html"/>
+      <link href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+      <subtitle>Ramblings on law school in New York, free software, and the spaces in between.</subtitle>
+      <title>Luis Villa's Blog</title>
+      <updated>2008-06-06T07:19:17Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://wfarr.org,2008-06-06:7/</id>
+    <link href="http://wfarr.org/posts/7-meh-bah-eh" rel="alternate" type="text/html"/>
+    <title>Meh, Bah, Eh</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Life is kind of a royal pain in the backside.</p>
+      
+      
+      	<p>Not unlike sitting on poison oak, really. Except without the itching.</p>
+      
+      
+      	<p>All in all, there really aren’t nearly enough onomatopoeic sounds
+      to reflect life in general.</p></div>
+    </content>
+    <updated>2008-06-06T07:14:08Z</updated>
+    <published>2008-06-06T07:14:08Z</published>
+    <category label="Life" term="life"/>
+    <author>
+      <name>Will Farrington</name>
+      <email>wcfarrington@gmail.com</email>
+      <uri>http://wfarr.org/</uri>
+    </author>
+    <source>
+      <id>http://wfarr.org/</id>
+      <icon>http://wfarr.org/images/favicon.png</icon>
+      <author>
+        <name>Will Farrington</name>
+        <email>wcfarrington@gmail.com</email>
+        <uri>http://wfarr.org/</uri>
+      </author>
+      <link href="http://wfarr.org/posts.atom" rel="self" type="application/atom+xml"/>
+      <link href="http://wfarr.org/posts" rel="alternate" type="text/html"/>
+      <title>Blog Posts : wfarr</title>
+      <updated>2008-06-06T07:14:08Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://flors.wordpress.com/?p=51</id>
+    <link href="http://flors.wordpress.com/2008/06/06/maemoorg-brainstorm-evolution-summit-and-future/" rel="alternate" type="text/html"/>
+    <title>maemo.org brainstorm, evolution, summit and future</title>
+    <summary>Some concrete steps after the invitation to bring the maemo community to a next level:
+
+10 Days of maemo brainstorm. Open invitation to put many dreams and rants into a single plan. Deadline for fast and direct impact: end of this week.
+100 Days action plan. A joint exercise between the maemo community and Nokia. maemo.org will [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div class="snap_preview"><br/><p style="text-align: center;"><a href="http://flickr.com/photos/believekevin/402878297/"><img alt="" class="aligncenter" height="107" src="http://farm1.static.flickr.com/133/402878297_ffacc1d228.jpg?v=0" style="border: 0 none;" width="500"/></a></p>
+<p style="text-align: left;">Some concrete steps after the <a href="http://flors.wordpress.com/2008/06/01/maemo-linuxtag-update/">invitation</a> to bring the maemo community to a next level:</p>
+<ul>
+<li><a href="http://maemo.org/news/announcements/view/maemo-brainstorm.html">10 Days of maemo brainstorm</a>. Open invitation to put many dreams and rants into a single plan. Deadline for fast and direct impact: end of this week.</li>
+<li><a href="https://wiki.maemo.org/index.php/100Days">100 Days action plan</a>. A joint exercise between the maemo community and Nokia. maemo.org will be something different when the cycle is completed.</li>
+<li><a href="https://wiki.maemo.org/Maemo_summit_2008">maemo summit</a>, the first ever. Berlin, September 19. This is a general call to maemo contributors, hobbyists and professionals. There is budget to sponsor the right people.</li>
+<li><a href="https://wiki.maemo.org/index.php/2010_Agenda">maemo.org 2010 Agenda</a>, for the website but especially for the community around it. Propose now and you won’t regret in the future.</li>
+</ul>
+<p style="text-align: right;"><em>Image: <a href="http://flickr.com/photos/believekevin/402878297/">Free Culture Timeline Chalkboard</a>, by <a href="http://flickr.com/people/believekevin/">believekevin</a> (<a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en_GB">CC</a>)</em></p>
+<img alt="" border="0" src="http://feeds.wordpress.com/1.0/categories/flors.wordpress.com/51/"/> <img alt="" border="0" src="http://feeds.wordpress.com/1.0/tags/flors.wordpress.com/51/"/> <a href="http://feeds.wordpress.com/1.0/gocomments/flors.wordpress.com/51/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/flors.wordpress.com/51/"/></a> <a href="http://feeds.wordpress.com/1.0/godelicious/flors.wordpress.com/51/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/flors.wordpress.com/51/"/></a> <a href="http://feeds.wordpress.com/1.0/gostumble/flors.wordpress.com/51/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/flors.wordpress.com/51/"/></a> <a href="http://feeds.wordpress.com/1.0/godigg/flors.wordpress.com/51/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/flors.wordpress.com/51/"/></a> <a href="http://feeds.wordpress.com/1.0/goreddit/flors.wordpress.com/51/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/flors.wordpress.com/51/"/></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=flors.wordpress.com&amp;blog=1700050&amp;post=51&amp;subd=flors&amp;ref=&amp;feed=1"/></div></div>
+    </content>
+    <updated>2008-06-06T05:41:00Z</updated>
+    <category term="maemo"/>
+    <category term="maemo.org brainstorm community summit"/>
+    <author>
+      <name>qgil</name>
+    </author>
+    <source>
+      <id>http://flors.wordpress.com</id>
+      <link href="http://flors.wordpress.com" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/flors" rel="self" type="application/atom+xml"/>
+      <subtitle>by Quim Gil</subtitle>
+      <title>flors</title>
+      <updated>2008-06-07T21:51:58Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-3704595882782557193.post-1340510990553433191</id>
+    <link href="http://undamped.blogspot.com/2008/06/quad-core-goodness.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=3704595882782557193&amp;postID=1340510990553433191" rel="replies" type="text/html"/>
+    <link href="http://undamped.blogspot.com/feeds/1340510990553433191/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://undamped.blogspot.com/feeds/posts/default/1340510990553433191" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/3704595882782557193/posts/default/1340510990553433191" rel="edit" type="application/atom+xml"/>
+    <title>Quad core goodness</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Bad news: cpu overheated and expired.  Good news: new cpu kicks old cpu's ass.</p>
+<p>I know I could have gone out and bought a "new" P4 for $40 or so.  But then I'd have to wait for shipping, which would probably take forever because delivery people can't seem to figure out that I live in a house that's split into five apartments.  Also, I just got this nice little paycheque from Google, and wouldn't you know it, it's almost exactly the right amount for 3/4 of a new computer.  So Google, here's what you bought me:</p>
+<ul><li>Asus P5K/EPU - I know the EPU stuff is useless in Linux, but they were the same price and I figured it'd save updating the BIOS since it's newer.</li>
+<li>Intel Q6600 - I debated between this one and the E8400 for a while, but I figured the multi-tasking and possibly better future-proofing won over reduced power consumption and faster clock speed.</li>
+<li>Mushkin EM2-6400 DDR2-800 4GB - Sure, I'm only running a 32 bit OS... maybe I'll compile a custom kernel when I need to, but for now 3.2 GB should be enough.</li>
+<li>GeForce 8400GS (Asus Silent Magic) - I don't game, and this was dirt cheap.  Plus, it's passively cooled for better sleep-in-the-same-room-ability.</li>
+</ul>
+<p>All of this would have actually come in under $500 (amazing how cheap stuff is these days), but I decided to get me a new case/psu combo, the Antec Sonata III.  Sweet, sweet silence.</p>
+<p>I was pretty surprised when I fired up into Ubuntu and aside from running a whole lot faster, it didn't even seem to notice the hardware change.  When I tried out my windows partition, it started to boot up, then froze in the middle of "loading XP", and promptly crashed.  Ah well - it's getting retired in favour of an OS X partition for the few things that Linux can't quite do.</p>
+<p>Despite an apparently functional system, I can't bring myself to put in new hardware without a new OS.  I fired up the Hardy Live CD (still on my old IDE DVD drive, so I wasn't expecting much in the way of speed), partitioned my drive, etc, and it started installing.  I took this opportunity to shower, and when I got back it was nearly finished.  Well, golly, I'm impressed.</p>
+<p>In any case, I've had a pretty unproductive week as far as my GSoC project is concerned.  However, now I should be four times as efficient...</p></div>
+    </content>
+    <updated>2008-06-06T03:30:23Z</updated>
+    <published>2008-06-06T02:16:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="Personal"/>
+    <author>
+      <name>Charbucks</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/08063527056034358987</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-3704595882782557193</id>
+      <author>
+        <name>Charbucks</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/08063527056034358987</uri>
+      </author>
+      <link href="http://undamped.blogspot.com/" rel="alternate" type="text/html"/>
+      <link href="http://undamped.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://undamped.blogspot.com/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>Undamped</title>
+      <updated>2008-06-06T16:14:23Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://gsocblog.jsharpe.net/?p=12</id>
+    <link href="http://gsocblog.jsharpe.net/archives/12" rel="alternate" type="text/html"/>
+    <title>Git-svn bare mirrors</title>
+    <summary>I’ve been trying to automate the updating of my git-svn repos on my server via cron and I’ve finally succeeded in getting something working so I thought I’d share how I’ve got things setup since there seems to be a lack of information about how to do this.
+First hurdle was git-svn doesn’t understand about bare [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I’ve been trying to automate the updating of my git-svn repos on my server via cron and I’ve finally succeeded in getting something working so I thought I’d share how I’ve got things setup since there seems to be a lack of information about how to do this.</p>
+<p>First hurdle was git-svn doesn’t understand about bare repositories - it always looks for a .git directory. Fortunately this is easily solved since git-svn does support the $GIT_DIR environment variable. So I simply set this to . and run the git-svn commands from within the repository directory. So I initialise the repository with the appropriate git-svn init command and then call fetch to retrieve the svn history.</p>
+<p>The next problem is that the refs fetched using git-svn are placed in refs/remotes which isn’t cloned when you do a regular git clone. So we need to plugin to the hooks to update the refs after we update the repository; an example script of how to this is provided below (Taken from <a href="http://repo.or.cz/w/git/dscho.git?a=blob;f=my-copy-svn-refs.sh;h=c59eb378df717a60a1ecefdba7c2ff9409ffec1e;hb=796428469a17406793bd567d07f9a8c6ed4408fb">dscho.git</a>):<br/>
+<code>#!/bin/sh</code></p>
+<p>git for-each-ref –format=”%(refname)” refs/remotes |<br/>
+sed “s/refs\/remotes\///” |<br/>
+while read ref<br/>
+do<br/>
+git update-ref refs/heads/svn/$ref refs/remotes/$ref<br/>
+done</p>
+<p>git for-each-ref –format=”%(refname)” refs/heads/svn |<br/>
+sed “s/refs\/heads\/svn\///” |<br/>
+while read ref<br/>
+do<br/>
+if ! git-rev-parse refs/remotes/$ref &gt; /dev/null 2&gt;&amp;1<br/>
+then<br/>
+git update-ref -d refs/heads/svn/$ref refs/heads/svn/$ref<br/>
+fi<br/>
+done<br/>
+I call the script from the post-update script (which you should make executable by running chmod +x hooks/post-update). This script suffices but doesn’t quite do what I’d like; I’d like the tags to be placed in refs/tags/svn rather than refs/heads/svn, but the script linked will do for me for now.<br/>
+My cloned repositories are available at <a href="http://git.jsharpe.net">http://git.jsharpe.net/</a>, unfortunately I can’t offer the git protocol since my host doesn’t allow it. As I get time I’ll convert more of the Gnome repositories; I’ve only converted the ones I know I’m going to be working on for the moment.</p>
+<img height="1" src="http://feeds.feedburner.com/~r/JamesSocBlog/~4/305501055" width="1"/></div>
+    </content>
+    <updated>2008-06-06T00:27:57Z</updated>
+    <category term="Google Summer of Code"/>
+    <category term="git"/>
+    <category term="svn"/>
+    <author>
+      <name>James Sharpe</name>
+    </author>
+    <source>
+      <id>http://gsocblog.jsharpe.net</id>
+      <link href="http://gsocblog.jsharpe.net" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/JamesSocBlog" rel="self" type="application/atom+xml"/>
+      <subtitle>James Sharpe's Google Summer of Code Blog</subtitle>
+      <title>James' SOC Blog</title>
+      <updated>2008-06-05T18:27:57Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/bolsh/2008/06/05/links-for-2008-06-05/</id>
+    <link href="http://blogs.gnome.org/bolsh/2008/06/05/links-for-2008-06-05/" rel="alternate" type="text/html"/>
+    <title>links for 2008-06-05</title>
+    <summary>Does an atmosphere generator like this exist? - Internet Tablet Talk Forums
+This would be a great plug-in for rhythmbox - generate pink noise like the wind in the willows, a mountain stream, birds signing in the trees… I don’t know how you’d do it, mixing different samples + some randomisation?
+(tags: pink noise audio music sounds)
+
+
+Relaxing [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><ul class="delicious">
+<li>
+<div class="delicious-link"><a href="http://www.internettablettalk.com/forums/showthread.php?t=20712">Does an atmosphere generator like this exist? - Internet Tablet Talk Forums</a></div>
+<div class="delicious-extended">This would be a great plug-in for rhythmbox - generate pink noise like the wind in the willows, a mountain stream, birds signing in the trees… I don’t know how you’d do it, mixing different samples + some randomisation?</div>
+<div class="delicious-tags">(tags: <a href="http://del.icio.us/bolsh/pink">pink</a> <a href="http://del.icio.us/bolsh/noise">noise</a> <a href="http://del.icio.us/bolsh/audio">audio</a> <a href="http://del.icio.us/bolsh/music">music</a> <a href="http://del.icio.us/bolsh/sounds">sounds</a>)</div>
+</li>
+<li>
+<div class="delicious-link"><a href="http://www.soundsleeping.com/">Relaxing music, sleep-aids, anxiety reduction, relaxation tools</a></div>
+<div class="delicious-extended">A decent source for samples for the relaxing sound generator plug-in?
+</div>
+<div class="delicious-tags">(tags: <a href="http://del.icio.us/bolsh/rhythmbox">rhythmbox</a> <a href="http://del.icio.us/bolsh/relaxing">relaxing</a> <a href="http://del.icio.us/bolsh/sounds">sounds</a> <a href="http://del.icio.us/bolsh/pink">pink</a> <a href="http://del.icio.us/bolsh/noise">noise</a>)</div>
+</li>
+<li>
+<div class="delicious-link"><a href="http://freesound.iua.upf.edu/index.php">freesound :: home page</a></div>
+<div class="delicious-extended">Another possible source of free sound samples</div>
+<div class="delicious-tags">(tags: <a href="http://del.icio.us/bolsh/sound">sound</a> <a href="http://del.icio.us/bolsh/samples">samples</a> <a href="http://del.icio.us/bolsh/pink">pink</a> <a href="http://del.icio.us/bolsh/noise">noise</a> <a href="http://del.icio.us/bolsh/relaxing">relaxing</a> <a href="http://del.icio.us/bolsh/rhythmbox">rhythmbox</a>)</div>
+</li>
+</ul></div>
+    </content>
+    <updated>2008-06-05T23:31:38Z</updated>
+    <category term="General"/>
+    <author>
+      <name>Dave Neary</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/bolsh</id>
+      <link href="http://blogs.gnome.org/bolsh" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/bolsh/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Dave Neary's view of the world</subtitle>
+      <title>Safe as Milk</title>
+      <updated>2008-06-06T09:05:20Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://bomahy.nl/hylke/blog/?p=61</id>
+    <link href="http://bomahy.nl/hylke/blog/yes-its-coming/" rel="alternate" type="text/html"/>
+    <title>Yes, it’s coming</title>
+    <summary>Be patient…</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Be patient…</p>
+<p style="text-align: center;"><a href="http://developer.pidgin.im/wiki/GSoC2008/VoiceAndVideo" target="_blank"><img alt="Pidgin Voice Video Support Google Summer of Code 2008" height="130" src="http://www.bomahy.nl/hylke/wip/pidgin-vv.png" width="330"/></a></p>
+<img height="1" src="http://feeds.feedburner.com/~r/HbonsHome/~4/305652035" width="1"/></div>
+    </content>
+    <updated>2008-06-05T23:22:28Z</updated>
+    <category term="Artwork"/>
+    <category term="Pidgin"/>
+    <author>
+      <name>Hylke</name>
+    </author>
+    <source>
+      <id>http://bomahy.nl/hylke/blog</id>
+      <link href="http://bomahy.nl/hylke/blog" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/HbonsHome" rel="self" type="application/atom+xml"/>
+      <subtitle>your weekly Tango and Pidgin propaganda</subtitle>
+      <title>hbons' Home</title>
+      <updated>2008-06-07T22:48:19Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en-us">
+    <id>http://www.advogato.org/person/ensonic/diary.html?start=80</id>
+    <link href="http://www.advogato.org/person/ensonic/diary.html?start=80" rel="alternate" type="text/html"/>
+    <title>5 Jun 2008</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><b>buzztard</b>
+
+<p> In the previous month I worked further on sample support.
+Samples are played now
+from memory and can be transposed. Also the buzz song import
+plugin got sample
+support added. This means I can load now a big share of my
+existing songs. While
+testing those I could fix some more issues with plugin
+initialisation and those
+song sound like in original buzz now. Yah, we're getting there.
+
+</p><p> The current version also brings some eye-candy, Marc (aka
+deloun) drew us great
+icons in tango style. I reworked the code to load all icons
+via theme mechanism.
+I also allocate other color based on chosen theme now. One
+thing left for June
+is to start using the svg on the canvas.
+
+</p><p> <b>gtk-doc</b>
+
+</p><p> Current version in svn should give much better warning
+messages. They are now gcc style and tell you filename and
+line. That should help to jump to the right place from your
+favourite editor. Now go and fix your docs :)</p></div>
+    </summary>
+    <updated>2008-06-05T19:45:52Z</updated>
+    <source>
+      <id>http://www.advogato.org/person/ensonic/</id>
+      <author>
+        <name>Stefan Kost</name>
+      </author>
+      <link href="http://www.advogato.org/person/ensonic/" rel="alternate" type="text/html"/>
+      <link href="http://www.advogato.org/person/ensonic/rss.xml" rel="self" type="application/rss+xml"/>
+      <subtitle>Advogato blog for ensonic</subtitle>
+      <title>Advogato blog for ensonic</title>
+      <updated>2008-06-08T05:07:35Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blog.ekiga.net/?p=90</id>
+    <link href="http://blog.ekiga.net/?p=90" rel="alternate" type="text/html"/>
+    <title>Ekiga Snapshots Resurrected</title>
+    <summary>Thank to Eugen Dedu and Yannick Defais, we now have again packages allowing easy testing of our bleeding edge Ekiga.
+Thank you to Kilian for having maintained them during all those years…
+Check them out:
+http://snapshots.ekiga.net.
+It includes Debian Unstable (i386 and amd64) and Ubuntu Hardy and Gutsy
+(i386 and amd64).
+Those packages feature the presence indicator, new and advanced video
+codecs, [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Thank to Eugen Dedu and Yannick Defais, we now have again packages allowing easy testing of our bleeding edge Ekiga.</p>
+<p>Thank you to Kilian for having maintained them during all those years…</p>
+<p>Check them out:<br/>
+<a href="http://snapshots.ekiga.net/">http://snapshots.ekiga.net</a>.</p>
+<p>It includes Debian Unstable (i386 and amd64) and Ubuntu Hardy and Gutsy<br/>
+(i386 and amd64).</p>
+<p>Those packages feature the presence indicator, new and advanced video<br/>
+codecs, a roster like you can find in most Instant Messenger clients, a<br/>
+quality indicator, an easier setup and many other things. </p>
+<p>Last but not least, we have hidden many bugs to hunt here and there!<br/>
+Please, be kind enough to help us test and improve the software.</p></div>
+    </content>
+    <updated>2008-06-05T19:20:47Z</updated>
+    <category term="Weblog"/>
+    <author>
+      <name>Damien Sandras</name>
+    </author>
+    <source>
+      <id>http://blog.ekiga.net</id>
+      <link href="http://blog.ekiga.net" rel="alternate" type="text/html"/>
+      <link href="http://blog.ekiga.net/wp-rss2.php" rel="self" type="application/rss+xml"/>
+      <subtitle>Damien Sandras' VoIP Blog</subtitle>
+      <title>Free your Speech</title>
+      <updated>2008-06-07T16:43:11Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://tirania.org/blog/archive/2008/Jun-05.html</id>
+    <link href="http://tirania.org/blog/archive/2008/Jun-05.html" rel="alternate" type="text/html"/>
+    <title>Unity3D now available for the Wii</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p><a href="http://unity3d.com">Unity3D</a> has announced that
+	their game creation tool is now available for Wii developers.
+	Unity lets
+	you <a href="http://unity3d.com/unity/features/scripting">script
+	your games</a> in Boo, Javascript or C# with Mono.
+
+	</p><center>
+	<img src="http://tirania.org/tmp/xxsslh.png"/>
+	</center>
+
+	<p>Congratulations to Joachim, David and the rest of the team
+	at Unity3D for getting this working.</p></div>
+    </summary>
+    <updated>2008-06-05T17:44:00Z</updated>
+    <author>
+      <name>Miguel de Icaza</name>
+      <email>miguel@gnome.org</email>
+    </author>
+    <source>
+      <id>http://tirania.org/blog/index.html</id>
+      <author>
+        <name/>
+        <email>miguel@gnome.org</email>
+      </author>
+      <link href="http://tirania.org/blog/index.html" rel="alternate" type="text/html"/>
+      <link href="http://www.tirania.org/blog/miguel.rss2" rel="self" type="application/rss+xml"/>
+      <rights>Miguel de Icaza</rights>
+      <subtitle>Miguel de Icaza's web log</subtitle>
+      <title>Miguel de Icaza</title>
+      <updated>2008-06-05T13:44:00Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="fr">
+    <id>http://abderrahim.arablug.org/blog/archives/2-guid.html</id>
+    <link href="http://abderrahim.arablug.org/blog/archives/2-Writing-Anjuta-plugins-in-Vala.html" rel="alternate" type="text/html"/>
+    <title>Writing Anjuta plugins in Vala</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Since I had a break from my exams (next is on monday), I wrote a little tutorial about writing Anjuta plugins in Vala, it is still incomplete.<br/>
+I'm posting it here before sending a patch to have more visibility and hopefully someone can proofread it. I'm not really confident about it's quality (and this is the first time I'm writing a software documentation).<br/>
+Enough speaking, Here you go : <div>
+<h2>Writing plugins in Vala</h2>
+    Before writing an Anjuta plugin, please read
+    <i>Anjuta Architecture</i> for general concepts about how Anjuta 
+    plugins interact with Anjuta Shell and other plugins.
+
+    Anjuta API is divided in two namespaces : Anjuta and IAnjuta. Anjuta
+    contains API to interact with the IDE, and IAnjuta contains interfaces that
+    plugins implement to be able to interact with each other.
+    Writing a plugin for Anjuta is as simple as subclassing Anjuta.Plugin,
+    overriding activate and deactivate, and writing a .plugin file to let Anjuta
+    know about your plugin.
+
+    This tutorial is still uncomplete. However most of the documentation
+    regarding C plugins is still applicable, so you can always refer to
+    <i>Writing plugins</i>.
+
+    In this tutorial, we will write a basic <em>Hello world</em>
+    plugin that does nothing but adding a "Hello World" label to Anjuta.
+    
+<h2>Writing the plugin code </h2>
+      As said earlier, we will need to subclass Anjuta.Plugin and override some
+      methods, so here is Anjuta.Plugin :
+</div><br/>
+<div class="csharp" style="text-align: left;"><ol><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #0600FF;">public</span> <span style="color: #FF0000;">class</span> Anjuta.<span style="color: #0000FF;">Plugin</span> : GLib.<span style="color: #FF0000;">Object</span> <span style="color: #000000;">{</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> <span style="color: #FF0000;">uint</span> add_watch <span style="color: #000000;">(</span><span style="color: #FF0000;">string</span> name, Anjuta.<span style="color: #0000FF;">PluginValueAdded</span> added, Anjuta.<span style="color: #0000FF;">PluginValueRemoved</span> removed<span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> <span style="color: #FF0000;">bool</span> is_active <span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> <span style="color: #0600FF;">void</span> remove_watch <span style="color: #000000;">(</span><span style="color: #FF0000;">uint</span> id, <span style="color: #FF0000;">bool</span> send_remove<span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> <span style="color: #0600FF;">virtual</span> <span style="color: #FF0000;">bool</span> activate <span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> <span style="color: #0600FF;">virtual</span> <span style="color: #FF0000;">bool</span> deactivate <span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> weak Anjuta.<span style="color: #0000FF;">Shell</span> shell <span style="color: #000000;">{</span> get; set; <span style="color: #000000;">}</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> signal <span style="color: #0600FF;">void</span> activated <span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">public</span> signal <span style="color: #0600FF;">void</span> deactivated <span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #000000;">}</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li></ol></div><br/>
+<div>
+      The methods we'll need to override are activate and deactivate, the shell
+      property is what we'll use to interact with Anjuta. <code>add_watch</code>
+      and <code>remove_watch</code> are used to interface with the
+      <span><em>Values System</em> see <i>Anjuta Architecture</i>
+      for more information. The rest is pretty self explanatory, and we generally won't need it.
+
+      We will only use the <code>add_widget</code> method of 
+      Anjuta.Shell in this tutorial. For more informations, you can see
+      the C API documentation.
+
+      This plugin does nothing more than showing a "Hello World" widget in
+      Anjuta 
+</span></div><br/>
+<div class="csharp" style="text-align: left;"><ol><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #0600FF;">using</span> Gtk;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #0600FF;">using</span> Anjuta;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #0600FF;">public</span> <span style="color: #FF0000;">class</span> HelloWorldPlugin: Plugin <span style="color: #000000;">{</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #008080; font-style: italic;">/* The hello world widget */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    Widget widget;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #008080; font-style: italic;">/* We use the "override" keyword to override the virtual methods activate and deactivate */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #0600FF;">public</span> <span style="color: #0600FF;">override</span> <span style="color: #FF0000;">bool</span> activate <span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        widget = <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span style="color: #008000;">new</span></a> Label<span style="color: #000000;">(</span><span style="color: #808080;">"Hello World"</span><span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #008080; font-style: italic;">/* adding the widget */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        shell.<span style="color: #0000FF;">add_widget</span><span style="color: #000000;">(</span>widget, <span style="color: #008080; font-style: italic;">/* the widget to add */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">                         <span style="color: #808080;">"AnjutaHelloWorldPlugin"</span>, <span style="color: #008080; font-style: italic;">/* name of the widget */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">                         <span style="color: #808080;">"HelloWorldPlugin"</span>, <span style="color: #008080; font-style: italic;">/* title, should be translated */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">                         Gtk.<span style="color: #0000FF;">STOCK_ABOUT</span>, <span style="color: #008080; font-style: italic;">/* icon stock id */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">                         ShellPlacement.<span style="color: #0000FF;">CENTER</span><span style="color: #000000;">)</span>; <span style="color: #008080; font-style: italic;">/* placement in in the shell */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">return</span> <span style="color: #0600FF;">true</span>; <span style="color: #008080; font-style: italic;">/* false if activation failed */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #000000;">}</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #0600FF;">public</span> <span style="color: #0600FF;">override</span> <span style="color: #FF0000;">bool</span> deactivate <span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #008080; font-style: italic;">/* remove the widget we've added */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        shell.<span style="color: #0000FF;">remove_widget</span><span style="color: #000000;">(</span>widget<span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">        <span style="color: #0600FF;">return</span> <span style="color: #0600FF;">true</span>; <span style="color: #008080; font-style: italic;">/* false if plugin doesn't want to deactivate */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #000000;">}</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #000000;">}</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #008080; font-style: italic;">/* Initialization function, in C this would be automatically generated by the</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #008080; font-style: italic;">   ANJUTA_SIMPLE_PLUGIN macro */</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #000000;">[</span>ModuleInit<span style="color: #000000;">]</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #0600FF;">public</span> GLib.<span style="color: #0000FF;">Type</span> anjuta_glue_register_components <span style="color: #000000;">(</span>GLib.<span style="color: #0000FF;">TypeModule</span> module<span style="color: #000000;">)</span> <span style="color: #000000;">{</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">    <span style="color: #0600FF;">return</span> <a href="http://www.google.com/search?q=typeof+msdn.microsoft.com"><span style="color: #008000;">typeof</span></a> <span style="color: #000000;">(</span>HelloWorldPlugin<span style="color: #000000;">)</span>;</div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"><span style="color: #000000;">}</span></div></li><li style="font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;"><div style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> </div></li></ol></div><br/>
+<div>
+<h2>Writing a plugin description</h2>
+    Anjuta needs a file with a plugin extension to know about our plugin, its name
+    and description, where it is located, when to load it. Here is an example for our
+    basic plugin :
+</div><br/>
+<div class="ini" style="text-align: left;"><br/><span style="color: #000066; font-weight: bold;"><span>[</span>Anjuta Plugin<span>]</span></span><br/><span style="color: #000099;">Name</span>=<span style="color: #660066;">Hello World</span><br/><span style="color: #000099;">Description</span>=<span style="color: #660066;">An example hello world plugin.</span><br/><span style="color: #000099;">Location</span>=<span style="color: #660066;">anjuta-hello-world:HelloWorldPlugin</span><br/><span style="color: #000099;">Icon</span>=<span style="color: #660066;">anjuta-sample-plugin-<span>48</span>.png</span><br/> </div><br/>
+<div>
+    Generally, Name and Description should be translated. Using intltool, you can
+    do this by prefixing them with _.
+    Location is of the form libraryname:ClassName : libraryname is the name of the
+    library file (without the lib prefix and .so suffix), and ClassName is the full
+    class name including the namespace (and not separated by a period as you would 
+    write it in Vala).
+    Icon is the icon to be used by the plugin, here we put sample plugin icon which
+    is distributed along with Anjuta, but you could put your own icon instead.
+      For more information about plugin description files, refer to
+      <i>Plugin description file</i>.
+
+<h2>
+Compiling and installing the plugin</h2>
+<h3>Manual compilation</h3>
+      Assuming you saved the plugin as hello-plugin.vala, you can compile it with :
+      <pre>valac --ccode --pkg libanjuta-1.0 hello-plugin.vala
+gcc -shared -o libanjuta-hello-world.so hello-plugin.c
+      </pre>
+<h3>
+Using autotools</h3>
+      Coming soon.
+</div><br/>
+<br/>
+You can get the vapi (and deps) for Anjuta from my <a href="http://freehg.org/u/abderrahim/anjuta-vala-plugin">mercurial repository</a> (direct links : <a href="http://freehg.org/u/abderrahim/anjuta-vala-plugin/raw-file/tip/anjuta-vapi/libanjuta-1.0.vapi">vapi</a>, <a href="http://freehg.org/u/abderrahim/anjuta-vala-plugin/raw-file/tip/anjuta-vapi/libanjuta/libanjuta-1.0.deps">deps</a>), add <code>--vapidir /path/to/libanjuta-1.0.vapi</code> to valac command line.</div>
+    </content>
+    <updated>2008-06-05T16:50:00Z</updated>
+    <category term="GNOME"/>
+    <author>
+      <name>Abderrahim Kitouni</name>
+      <email>nospam@example.com</email>
+    </author>
+    <source>
+      <id>http://abderrahim.arablug.org/blog/</id>
+      <logo>http://abderrahim.arablug.org/blog/templates/default/img/s9y_banner_small.png</logo>
+      <link href="http://abderrahim.arablug.org/blog/" rel="alternate" type="text/html"/>
+      <link href="http://abderrahim.arablug.org/blog/feeds/categories/1-english.rss" rel="self" type="application/rss+xml"/>
+      <title>- english</title>
+      <updated>2008-06-05T16:50:45Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://wingolog.org/2008/06/05/bounce</id>
+    <link href="http://wingolog.org/archives/2008/06/05/bounce" rel="alternate" type="text/html"/>
+    <title>bounce!</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div><p>For the first time in more than five years, I have hit zero messages in my inbox. What an exhausting relief!</p></div></div>
+    </content>
+    <updated>2008-06-05T14:38:45Z</updated>
+    <published>2008-06-05T14:38:45Z</published>
+    <author>
+      <name>Andy Wingo</name>
+      <uri>http://wingolog.org/</uri>
+    </author>
+    <source>
+      <id>http://wingolog.org/feed/atom</id>
+      <link href="http://wingolog.org/" rel="alternate" type="text/html"/>
+      <link href="http://wingolog.org/feed/atom" rel="self" type="application/atom+xml"/>
+      <subtitle>A mostly dorky weblog by Andy Wingo</subtitle>
+      <title>wingolog</title>
+      <updated>2008-06-07T11:25:49Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.kryogenix.org/days/?p=1511</id>
+    <link href="http://www.kryogenix.org/days/2008/06/05/not-going-to-guadec" rel="alternate" type="text/html"/>
+    <title>Not going to Guadec</title>
+    <summary>This year, for the first time in a few years, I’m not going to be able to make it to Guadec. I’m pretty sad about this — it’s always a fantastic time — but I’m not going to be there. It looks like it’s going to be insanely great, though, as ever, so have a [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>This year, for the first time in a few years, I’m not going to be able to make it to Guadec. I’m pretty sad about this — it’s always a fantastic time — but I’m not going to be there. It looks like it’s going to be insanely great, though, as ever, so have a laugh, all. I shall try and write up the things I was going to talk about into a guide to cool things that you can do in gedit (which I was planning to do anyway, before deciding to turn it into a Guadec talk!)</p></div>
+    </content>
+    <updated>2008-06-05T13:13:29Z</updated>
+    <category term="Web"/>
+    <author>
+      <name>sil</name>
+    </author>
+    <source>
+      <id>http://www.kryogenix.org/days</id>
+      <link href="http://www.kryogenix.org/days/feed/" rel="self" type="application/atom+xml"/>
+      <link href="http://www.kryogenix.org/days" rel="alternate" type="text/html"/>
+      <subtitle>scratched tallies on the prison wall</subtitle>
+      <title>as days pass by, by Stuart Langridge</title>
+      <updated>2008-06-05T13:13:29Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.burtonini.com/blog/computers/sound-juicer/sj-2.23.0</id>
+    <link href="http://www.burtonini.com/blog/computers/sound-juicer/sj-2.23.0" rel="alternate" type="text/html"/>
+    <title>Sound Juicer "Harder Now With Higher Speed" 2.23.0</title>
+    <summary>Sound Juicer "Harder Now With Higher Speed" 2.23.0 has finally been released.. Tarballs are available on burtonini.com , or from ...</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>
+  Sound Juicer "Harder Now With Higher Speed" 2.23.0 has finally been released..  Tarballs
+  are available <a href="http://www.burtonini.com/computing/sound-juicer-2.23.0.tar.bz2">on
+    <tt>burtonini.com</tt></a>, or from
+  the <a href="ftp://ftp.gnome.org/pub/gnome/sources/sound-juicer/2.23/">GNOME
+  FTP servers</a>.  Hot new features!
+</p>
+<ul>
+  <li>Port to GIO (Michael Terry)</li>
+  <li>Update URL handling for New GIO World Order (Bastien Nocera)</li>
+  <li>Fix display problems with the cluebar (Pekka Vuorela)</li>
+  <li>Add audio preview when overwriting (Luca Cavalli)</li>
+  <li>Use GtkVolmeButton instead of BaconVolume (MT)</li>
+  <li>Fix crash when no profile is selected (Matthew Martin)</li>
+  <li>Add []</li><li> to the special character list (MM)</li>
+  <li>Make the year and disc entries a11y (Patrick Wade)</li>
+  <li>Fix error handling in CD playback (Tim-Philipp Müller)</li>
+  <li>Require intltool 0.40</li>
+</ul>
+<p>
+  I really need some heavy testing on the GIO rewrite, so please try and extract
+  tracks to as many different targets as possible.  Although I expect
+  confirmation that using an unmounted remote location currently fails, it
+  should be possible to use this to write to Samba, OBEX-FTP, and so on.
+</p></div>
+    </content>
+    <updated>2008-06-05T12:34:03Z</updated>
+    <category scheme="http://www.burtonini.com" term="computers/sound-juicer"/>
+    <source>
+      <id>http://www.burtonini.com/blog</id>
+      <author>
+        <name>Ross Burton</name>
+      </author>
+      <link href="http://www.burtonini.com/blog" rel="alternate" type="text/html"/>
+      <link href="http://www.burtonini.com/blog/index.rss2" rel="self" type="application/rss+xml"/>
+      <subtitle>A potted account of Ross' life</subtitle>
+      <title>Ross Burton</title>
+      <updated>2008-06-08T05:06:33Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.robot101.net/?p=61</id>
+    <link href="http://www.robot101.net/2008/06/05/surstromming/" rel="alternate" type="text/html"/>
+    <title>Surströmming</title>
+    <summary>In the office, Christian has just unwrapped a very carefully packed box containing a bulging tin of Surströmming. Apparently due to the “unique” smell you have to open it outside, and he’s invited people to come to his house to try it. Now, I’m not keen on various types of fish even at the best [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>In the office, <a href="http://blogs.gnome.org/uraeus/">Christian</a> has just unwrapped a <i>very</i> carefully packed box containing a bulging tin of <a href="http://en.wikipedia.org/wiki/Surstromming">Surströmming</a>. Apparently due to the “unique” smell you have to open it outside, and he’s invited people to come to his house to try it. Now, I’m not keen on various types of fish even at the best of times, so add a year or so of fermentation, and I am very, very scared. In unrelated news, some people in the office have decided to take up vegetarianism.</p></div>
+    </content>
+    <updated>2008-06-05T11:08:34Z</updated>
+    <category term="General"/>
+    <author>
+      <name>robot101</name>
+    </author>
+    <source>
+      <id>http://www.robot101.net</id>
+      <link href="http://www.robot101.net/feed/" rel="self" type="application/atom+xml"/>
+      <link href="http://www.robot101.net" rel="alternate" type="text/html"/>
+      <subtitle>The personal blog of Robert McQueen</subtitle>
+      <title>Robotic Tendencies</title>
+      <updated>2008-06-05T13:33:15Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/rodrigo/2008/06/05/pulseaudio-in-opensuse/</id>
+    <link href="http://blogs.gnome.org/rodrigo/2008/06/05/pulseaudio-in-opensuse/" rel="alternate" type="text/html"/>
+    <title>PulseAudio in openSUSE</title>
+    <summary>After several bugs fixed and lots of debugging, I can say now PulseAudio should be working almost perfectly (still some problems with stuttering sound on low-end machines) in openSUSE 11.0. So, here’s a summary of the things we have done, which I should have bloged about before.
+First, we tried to replace the GNOME-upstream volume control [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>After several bugs fixed and lots of debugging, I can say now PulseAudio should be working almost perfectly (still some problems with stuttering sound on low-end machines) in <a href="http://opensuse.org">openSUSE 11.0</a>. So, here’s a summary of the things we have done, which I should have bloged about before.</p>
+<p>First, we tried to replace the GNOME-upstream volume control with <a href="http://0pointer.de/lennart/projects/padevchooser/">padevchooser</a> (a system tray icon that gives access to all PulseAudio tools), but people complained loudly about the difficulty of just setting the volume with this, they just wanted a volume slider. So, we got back to the upstream volume applet, but changed it to open the PulseAudio volume control instead of gnome-volume-control.</p>
+<p><a href="http://blogs.gnome.org/rodrigo/files/2008/06/volume-control.png" title="volume applet using PA volume control"><img alt="volume applet using PA volume control" src="http://blogs.gnome.org/rodrigo/files/2008/06/volume-control.thumbnail.png"/></a></p>
+<p>Another problem we found early was PA not working correctly on 5.1 (or other) speaker setups. There was an easy fix, just changing the number of channels in the config file, but there was no GUI, so we added one to <a href="http://0pointer.de/lennart/projects/paprefs/">paprefs</a>:</p>
+<p><a href="http://blogs.gnome.org/rodrigo/files/2008/06/paprefs-speaker-setup.png" title="paprefs-speaker-setup.png"><img alt="paprefs-speaker-setup.png" src="http://blogs.gnome.org/rodrigo/files/2008/06/paprefs-speaker-setup.thumbnail.png"/></a></p>
+<p>With this, you can now control all your speakers individually:</p>
+<p><a href="http://blogs.gnome.org/rodrigo/files/2008/06/speaker-setup-on-volume-control.png" title="Speaker setup on volume control"><img alt="Speaker setup on volume control" src="http://blogs.gnome.org/rodrigo/files/2008/06/speaker-setup-on-volume-control.thumbnail.png"/></a></p>
+<p>Apart from that, we had to tweak ALSA and SDL configurations to just use PulseAudio when on GNOME, since KDE is not using it, but I think everything should now be ok.</p></div>
+    </content>
+    <updated>2008-06-05T11:04:09Z</updated>
+    <category term="GNOME"/>
+    <category term="openSUSE"/>
+    <category term="alsa"/>
+    <category term="gnome-mixer-applet"/>
+    <category term="pulseaudio"/>
+    <category term="sdl"/>
+    <author>
+      <name>rodrigo</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/rodrigo</id>
+      <link href="http://blogs.gnome.org/rodrigo" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/rodrigo/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>From lost to the river</subtitle>
+      <title>Rodrigo Moya</title>
+      <updated>2008-06-05T11:10:47Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://thomas.apestaart.org/log/?p=630</id>
+    <link href="http://thomas.apestaart.org/log/?p=630" rel="alternate" type="text/html"/>
+    <title>GNOME’s fast user switching</title>
+    <summary>is a great feature for my home computer, where Kristien uses it when I’m not there.
+But the applet insists on taking up 20% of my top bar just because there is no way to have it not display my full name.  I’m pretty sure this used to be configurable somewhere and I could ask [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>is a great feature for my home computer, where Kristien uses it when I’m not there.</p>
+<p>But the applet insists on taking up 20% of my top bar just because there is no way to have it not display my full name.  I’m pretty sure this used to be configurable somewhere and I could ask to only show the pictures - really, that’s quite enough for the two of us, Kristien can tell the difference between me and her from the picture.</p>
+<p>But even besides that, who the hell needs their name in the panel ??? If it were to change as often as the time did, I could see the logic.  But.  It’s.  My. Name.  If I ever get to forgetting it, I’m sure I’ ll be more busy wondering why I am holding an oval object with buttons in my right hand, and banging my head against the rectangle with knobs because I’ve forgotten how to type.</p></div>
+    </content>
+    <updated>2008-06-05T10:52:54Z</updated>
+    <category term="GNOME"/>
+    <author>
+      <name>Thomas</name>
+    </author>
+    <source>
+      <id>http://thomas.apestaart.org/log</id>
+      <link href="http://thomas.apestaart.org/log" rel="alternate" type="text/html"/>
+      <link href="http://thomas.apestaart.org/log/wp-rss2.php" rel="self" type="application/rss+xml"/>
+      <subtitle>Present Perfect</subtitle>
+      <title>thomas.apestaart.org</title>
+      <updated>2008-06-05T10:52:54Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://spooky-possum.org/cgi-bin/pyblosxom.cgi/anya-photos2.html</id>
+    <link href="http://spooky-possum.org/cgi-bin/pyblosxom.cgi/anya-photos2.html" rel="alternate" type="text/html"/>
+    <title>Anya's photos: updated</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>For my family, <a href="http://www.spooky-possum.org/anya/pics/">more photos</a>. The photos are now in two sections, the first part is the same as the photo-set that was previously there, the new photos are all in part II.</p></div>
+    </summary>
+    <updated>2008-06-05T10:31:00Z</updated>
+    <source>
+      <id>http://spooky-possum.org/cgi-bin/pyblosxom.cgi/</id>
+      <author>
+        <name>Callum McKenzie</name>
+      </author>
+      <link href="http://spooky-possum.org/cgi-bin/pyblosxom.cgi/" rel="alternate" type="text/html"/>
+      <link href="http://spooky-possum.org/cgi-bin/pyblosxom.cgi?flav=rss" rel="self" type="application/rss+xml"/>
+      <subtitle>Ramblings of a Spooky Possum</subtitle>
+      <title>Spooky's World</title>
+      <updated>2008-06-08T05:11:14Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.murrayc.com/blog/permalink/2008/06/05/680/</id>
+    <link href="http://www.murrayc.com/blog/permalink/2008/06/05/680/" rel="alternate" type="text/html"/>
+    <title>On holiday, laptop down</title>
+    <summary>I’m currently on holiday in North Berwick. It’s been fun but not quite as relaxing as hoped. Liam has started waking at night again after two months of sleeping through the night.
+I’ve been getting up early to do a couple of hours work each morning, but this laptop’s hard drive has started hard crashing after [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>I’m currently on holiday in North Berwick. It’s been fun but not quite as relaxing as hoped. Liam has started waking at night again after two months of sleeping through the night.</p>
+<p>I’ve been getting up early to do a couple of hours work each morning, but this laptop’s hard drive has started hard crashing after a few minutes. Hard drives fail too often. Hopefully it will give me time to finish this blog entry and hit Publish. I guess I’ll be offline until I get back on Monday.</p></div>
+    </content>
+    <updated>2008-06-05T10:16:20Z</updated>
+    <category term="Glom"/>
+    <category term="Gnome"/>
+    <category term="London"/>
+    <category term="Openismus"/>
+    <category term="Tech"/>
+    <category term="Ubuntu"/>
+    <author>
+      <name>murrayc</name>
+    </author>
+    <source>
+      <id>http://www.murrayc.com/blog</id>
+      <link href="http://www.murrayc.com/blog/feed" rel="self" type="application/atom+xml"/>
+      <link href="http://www.murrayc.com/blog" rel="alternate" type="text/html"/>
+      <title>Murray's Blog</title>
+      <updated>2008-06-05T10:17:39Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/hughsie/2008/06/05/packagekit-bundles/</id>
+    <link href="http://blogs.gnome.org/hughsie/2008/06/05/packagekit-bundles/" rel="alternate" type="text/html"/>
+    <title>PackageKit bundles?</title>
+    <summary>There’s one use case that I’m very interested in, and that is getting new users with the correct environment to build and start hacking on software or using other software tools. For instance, on www.packagekit.org in the FAQ section, we can have a link to install build files to start hacking on PackageKit.
+Now, this .bundle [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>There’s one use case that I’m very interested in, and that is getting new users with the correct environment to build and start hacking on software or using other software tools. For instance, on www.packagekit.org in the FAQ section, we can have a link to install build files to start hacking on PackageKit.</p>
+<p>Now, this .bundle file is handled by gpk-install-bundle that parses this file and causes the appropriate packages to be installed if they are not already installed. This rocks as we can get GTK+, Xorg hackers up to speed with the minimum of fuss and confusion. It also lets people put links on webpages to “install all the stuff you need” when writing a “how to use a scanner in GIMP” howto.</p>
+<p>So, what does a .bundle file look like?</p>
+<p><strong>[PackageKit Bundle]</strong></p>
+<p><strong># Just a package on all versions of fedora that can provide the dependency.<br/>
+# If there are multiple packages then the user will be asked to choose<br/>
+InstallProvides(fedora)=audio/QCELP</strong></p>
+<p><strong># Just for Fedora 9, install two development files<br/>
+InstallPackages(fedora-9)=glib2-devel;PolicyKit-gnome-devel</strong></p>
+<p><strong># On any distro, install the package with this file<br/>
+InstallFiles=/usr/bin/fontinst</strong></p>
+<p><strong># For each architecture on Fedora 8, install one of the two different compat files<br/>
+InstallFiles(fedora-8-i686)=/usr/lib/pango/1.6.0/modules/pango-arabic-fc.so<br/>
+InstallFiles(fedora-8-x64)=/usr/lib64/pango/1.6.0/modules/pango-arabic-fc.so</strong></p>
+<p>You’ll notice the distro-id in between the ()’s - this lets a packager fine tune the package name, where for instance in Debian the package is called policykit and Fedora PolicyKit. You can specify a granularity of distribution, distribution-version or distribution-version-architecture - PackageKit will process all the entries that apply. It’s of course better to not specify a () if possible, as this lets the file work on as many distributions as possible out of the box.</p>
+<p>There’s also no version checking - intentionally - the distro should be specified and have the correct data. If there’s an optional package not in earlier versions then you can do something like this:</p>
+<p><strong>[PackageKit Bundle]</strong></p>
+<p><strong># Fedora 9 does not have Unique<br/>
+InstallPackages(fedora-9)=glib2-devel;PolicyKit-gnome-devel</strong></p>
+<p><strong># Rawhide is fedora 9.90<br/>
+InstallPackages(fedora-9.90)=glib2-devel;PolicyKit-gnome-devel;unique-devel<br/>
+</strong></p>
+<p>There’s also no description of the bundle that needs translating and verifying - they are just lists of packages, files and provides that might be useful. All the translations come from the distributions metadata, and it’s up to the user to verify the package lists that are asked to be installed, so there are no signing or trust issues.</p>
+<p>Note: this isn’t designed to replace one click install, it just does something that is similar in a different way.</p>
+<p>Comments? Suggestions?</p></div>
+    </content>
+    <updated>2008-06-05T08:38:20Z</updated>
+    <category term="Uncategorized"/>
+    <author>
+      <name>hughsie</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/hughsie</id>
+      <link href="http://blogs.gnome.org/hughsie" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/hughsie/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>My fiancee is like Windows Vista: Looks pretty, difficult to understand and sometimes unpredictable...</subtitle>
+      <title>Technical Blog of Richard Hughes</title>
+      <updated>2008-06-05T08:38:20Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-3575421168816814786.post-8703290471984459785</id>
+    <link href="http://zee-nix.blogspot.com/2008/06/ohman-unleashed.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=3575421168816814786&amp;postID=8703290471984459785" rel="replies" type="text/html"/>
+    <link href="http://zee-nix.blogspot.com/feeds/8703290471984459785/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://zee-nix.blogspot.com/feeds/posts/default/8703290471984459785" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/3575421168816814786/posts/default/8703290471984459785" rel="edit" type="application/atom+xml"/>
+    <title>OHMan unleashed</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><a href="http://bp2.blogger.com/_1DfgV78FIK4/SEeiUINpAVI/AAAAAAAAAH4/kAyfJk3qOqU/s1600-h/o-man-leader.jpg"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5208309960763048274" src="http://bp2.blogger.com/_1DfgV78FIK4/SEeiUINpAVI/AAAAAAAAAH4/kAyfJk3qOqU/s400/o-man-leader.jpg" style="display: block; margin: 0px auto 10px; text-align: center; cursor: pointer; cursor: hand;"/></a><br/><a href="http://bp3.blogger.com/_1DfgV78FIK4/SEeiLHiO6AI/AAAAAAAAAHw/C4gHCyMEZwg/s1600-h/o-man-equal.jpg"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5208309805962160130" src="http://bp3.blogger.com/_1DfgV78FIK4/SEeiLHiO6AI/AAAAAAAAAHw/C4gHCyMEZwg/s400/o-man-equal.jpg" style="display: block; margin: 0px auto 10px; text-align: center; cursor: pointer; cursor: hand;"/></a></div>
+    </content>
+    <updated>2008-06-05T08:23:18Z</updated>
+    <published>2008-06-05T08:20:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="OHMan"/>
+    <author>
+      <name>zeenix</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/04142631863736897222</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-3575421168816814786</id>
+      <author>
+        <name>zeenix</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/04142631863736897222</uri>
+      </author>
+      <link href="http://zee-nix.blogspot.com/" rel="alternate" type="text/html"/>
+      <link href="http://zee-nix.blogspot.com/feeds/posts/default?start-index=26&amp;max-results=25" rel="next" type="application/atom+xml"/>
+      <link href="http://zee-nix.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://zee-nix.blogspot.com/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>Coder's Log</title>
+      <updated>2008-06-05T09:07:03Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://lmedinas.livejournal.com/7153.html</id>
+    <link href="http://lmedinas.livejournal.com/7153.html" rel="alternate" type="text/html"/>
+    <title>Gnome and Brasero Part 1:</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Ok some state of the art...<br/><br/><a href="http://www.gnome.org/projects/brasero">Brasero</a> relationship with Gnome starts with using <a href="http://www.gnome.org/projects/totem/">totem</a> for parse playlists and <a href="http://beagle-project.org/Main_Page">beagle</a> to search for files (we are currently waiting for xesam to be ready so we can support tracker as well). Nautilus and Gnome Volume Manager can start Brasero depends of what the user want to do. So everything except the famous CD/DVD Creator in Places menu <a href="http://bugzilla.gnome.org/show_bug.cgi?id=347648">bug</a> is fixed. I would like to bring this problem to devel mailing list soon and make a plan of what should be done for Gnome. This means that we should propose Brasero to official inclusion in Gnome 2.26.  <br/>If k3b is on KDE why shouldn't Gnome have his own default burning application ?<br/><br/>Now i'm very happy to know that <a href="http://www.exaile.org/">exaile</a> and <a href="http://banshee-project.org/Main_Page">banshee</a> are using brasero to burn audio-cds. What about a <a href="http://www.gnome.org/projects/rhythmbox/">Rhythmbox</a> plugin and a <a href="http://f-spot.org/Main_Page">F-spot</a> add-in to burn files...<br/><br/>Like ubuntu, opensuse, mandriva and foresight are shipping this burning application by default (lot's of distros ship it too but not by default) i can imagine that FreeBSD will also recommend Brasero now that it's supported and Solaris is on the <a href="http://bugzilla.gnome.org/show_bug.cgi?id=347648">way</a>.<br/><br/>Why Fedora is still missing to ship brasero by default ? <br/><br/>Yes we want to take the whole world :)<br/><br/>(I'm sorry if i miss some application or distro)</div>
+    </summary>
+    <updated>2008-06-05T04:19:21Z</updated>
+    <source>
+      <id>http://lmedinas.livejournal.com/</id>
+      <author>
+        <name>Luis Medinas</name>
+      </author>
+      <link href="http://lmedinas.livejournal.com/" rel="alternate" type="text/html"/>
+      <link href="http://lmedinas.livejournal.com/data/rss" rel="self" type="application/rss+xml"/>
+      <subtitle>Energy, time and space - LiveJournal.com</subtitle>
+      <title>Energy, time and space</title>
+      <updated>2008-06-08T05:06:19Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>http://lmedinas.livejournal.com/6828.html</id>
+    <link href="http://lmedinas.livejournal.com/6828.html" rel="alternate" type="text/html"/>
+    <title>Something bad turning into a nice thing</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Brasero got a bug when i recently created project was removed or moved from the path<br/>it crashed.<br/><br/>I did a nice way<img alt="" src="http://www.gnome.org/~lmedinas/newdialog.png"/> to fix the bug.</div>
+    </summary>
+    <updated>2008-06-05T03:50:25Z</updated>
+    <source>
+      <id>http://lmedinas.livejournal.com/</id>
+      <author>
+        <name>Luis Medinas</name>
+      </author>
+      <link href="http://lmedinas.livejournal.com/" rel="alternate" type="text/html"/>
+      <link href="http://lmedinas.livejournal.com/data/rss" rel="self" type="application/rss+xml"/>
+      <subtitle>Energy, time and space - LiveJournal.com</subtitle>
+      <title>Energy, time and space</title>
+      <updated>2008-06-08T05:06:20Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.ogmaciel.com/?p=485</id>
+    <link href="http://feeds.feedburner.com/~r/JournalOfAnOpenSourcee/~3/305002563/" rel="alternate" type="text/html"/>
+    <title>Introducing PyLyglot</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">As everyone knows I’m very involved with the translation efforts of several upstream projects and try to keep up with what’s going on with every single one of them. Starting about 3 weeks ago I realized that I relied too much on statistical information that wasn’t always up to date and sometimes there would be [...]
+<p><a href="http://feeds.feedburner.com/~a/JournalOfAnOpenSourcee?a=OIfPsl"><img border="0" src="http://feeds.feedburner.com/~a/JournalOfAnOpenSourcee?i=OIfPsl"/></a></p><img height="1" src="http://feeds.feedburner.com/~r/JournalOfAnOpenSourcee/~4/305002563" width="1"/></div>
+    </summary>
+    <updated>2008-06-05T03:20:15Z</updated>
+    <category term="Uncategorized"/>
+    <category term="i18n"/>
+    <category term="Programming"/>
+    <category term="PyLyglot"/>
+    <category term="Python"/><feedburner:origLink xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">http://www.ogmaciel.com/?p=485</feedburner:origLink>
+    <author>
+      <name>OgMaciel</name>
+    </author>
+    <source>
+      <id>http://www.ogmaciel.com</id>
+      <link href="http://www.ogmaciel.com" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/JournalOfAnOpenSourcee" rel="self" type="application/atom+xml"/>
+      <subtitle>The senseless thoughts of an open source advocate</subtitle>
+      <title>Journal of an Open Sourcee</title>
+      <updated>2008-06-05T03:20:15Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://www.gnome.org/~csaavedra/news-2008-06.html#D04</id>
+    <link href="http://www.gnome.org/~csaavedra/news-2008-06.html#D04" rel="alternate" type="text/html"/>
+    <title>Wed 2008/Jun/04</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><ul>
+	    <li>
+	      <p>
+		Can you trust the tracking systems of your local postal service?
+	      </p>
+
+	      <p>
+		<img src="http://www.gnome.org/~csaavedra/images/2008-06-04-correoscl-tnt.png"/>
+	      </p>
+
+	      <p>
+		I don't get how could it be possible that the documents left
+		Curicó one hour <em>after</em> they arrived in Santiago.
+	      </p>
+
+	      <p>
+		And we pay for this kind of service. Oh, dear...
+	      </p>
+	    </li>
+	  </ul></div>
+    </summary>
+    <updated>2008-06-05T01:56:00Z</updated>
+    <source>
+      <id>http://www.gnome.org/~csaavedra/news.html</id>
+      <author>
+        <name>Claudio Saavedra</name>
+        <email>claudio@codemonkey.cl</email>
+      </author>
+      <link href="http://www.gnome.org/~csaavedra/news.html" rel="alternate" type="text/html"/>
+      <link href="http://www.gnome.org/~csaavedra/rss.xml" rel="self" type="application/rss+xml"/>
+      <rights>2008 Claudio Saavedra</rights>
+      <subtitle>Claudio's day to day</subtitle>
+      <title>Claudio's ChangeLog</title>
+      <updated>2008-06-05T02:08:21Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-203063759820106893.post-4815412173962703426</id>
+    <link href="http://jeffreystedfast.blogspot.com/2008/06/netscape-plugin-tips-tricks.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=203063759820106893&amp;postID=4815412173962703426" rel="replies" type="text/html"/>
+    <link href="http://jeffreystedfast.blogspot.com/feeds/4815412173962703426/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default/4815412173962703426" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/203063759820106893/posts/default/4815412173962703426" rel="edit" type="application/atom+xml"/>
+    <title>Netscape Plugin Tips &amp; Tricks</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">If your Firefox plugin is scriptable, you should probably be validating the NPVariant arguments that you are passed in your <i>invoke()</i> callback. Unfortunately, this gets tedious and error-prone if you allow arguments to your methods to be of more than a single type (e.g. you accept a date as either a string or integer) or if you have optional arguments.<br/><br/>As I was debugging a crash in Moonlight, I discovered that we weren't properly checking argument-types properly in all cases (this particular bug was caused because the javascript had passed a bad argument to one of our methods which accepted either a string or null). To protect against this in a more robust way, I came up with the following helper functions:<br/><pre style="font-family: courier new; font-size: 85%;"><br/>typedef enum {<br/>    MethodArgTypeNone   = (0),<br/>    MethodArgTypeVoid   = (1 &lt;&lt; NPVariantType_Void),<br/>    MethodArgTypeNull   = (1 &lt;&lt; NPVariantType_Null),<br/>    MethodArgTypeBool   = (1 &lt;&lt; NPVariantType_Bool),<br/>    MethodArgTypeInt32  = (1 &lt;&lt; NPVariantType_Int32),<br/>    MethodArgTypeDouble = (1 &lt;&lt; NPVariantType_Double),<br/>    MethodArgTypeString = (1 &lt;&lt; NPVariantType_String),<br/>    MethodArgTypeObject = (1 &lt;&lt; NPVariantType_Object),<br/>    MethodArgTypeAny    = (0xff)<br/>} MethodArgType;<br/><br/>static MethodArgType<br/>decode_arg_ctype (char c)<br/>{<br/>    switch (c) {<br/>    case 'v': return MethodArgTypeVoid;<br/>    case 'n': return MethodArgTypeNull;<br/>    case 'b': return MethodArgTypeBool;<br/>    case 'i': return MethodArgTypeInt32;<br/>    case 'd': return MethodArgTypeDouble;<br/>    case 's': return MethodArgTypeString;<br/>    case 'o': return MethodArgTypeObject;<br/>    case '*': return MethodArgTypeAny;<br/>    default:<br/>        return MethodArgTypeNone;<br/>    }<br/>}<br/><br/>static MethodArgType<br/>decode_arg_type (const char **in)<br/>{<br/>    MethodArgType type = MethodArgTypeNone;<br/>    register const char *inptr = *in;<br/>    <br/>    if (*inptr == '(') {<br/>        inptr++;<br/>        while (*inptr &amp;&amp; *inptr != ')') {<br/>            type |= decode_arg_ctype (*inptr);<br/>            inptr++;<br/>        }<br/>    } else {<br/>        type = decode_arg_ctype (*inptr);<br/>    }<br/>    <br/>    inptr++;<br/>    *in = inptr;<br/>    <br/>    return type;<br/>}<br/><br/>/**<br/> * check_arg_list:<br/> * @arglist: a string representing an arg-list token (see grammar below)<br/> * @args: NPVariant argument count<br/> * @argv: NPVariant argument vector<br/> *<br/> * Checks that the NPVariant arguments satisfy the argument count and<br/> * types expected (provided via @typestr).<br/> *<br/> * The @typestr argument should follow the following syntax:<br/> *<br/> * simple-arg-type ::= "v" / "n" / "b" / "i" / "d" / "s" / "o" / "*"<br/> *                     ; each char represents one of the following<br/> *                     ; NPVariant types: Void, Null, Bool, Int32,<br/> *                     ; Double, String, Object and wildcard<br/> *<br/> * arg-type        ::= simple-arg-type / "(" 1*(simple-arg-type) ")"<br/> *<br/> * optional-args   ::= "[" *(arg-type) "]"<br/> *<br/> * arg-list        ::= *(arg-type) (optional-args)<br/> *<br/> *<br/> * Returns: %true if @argv matches the arg-list criteria specified in<br/> * @arglist or %false otherwise.<br/> **/<br/>static bool<br/>check_arg_list (const char *arglist, uint32_t argc, const NPVariant *argv)<br/>{<br/>    const char *inptr = arglist;<br/>    MethodArgType mask;<br/>    uint32_t i = 0;<br/>    <br/>    /* check all of the required arguments */<br/>    while (*inptr &amp;&amp; *inptr != '[' &amp;&amp; i &lt; argc) {<br/>        mask = decode_arg_type (&amp;inptr);<br/>        if (!(mask &amp; (1 &lt;&lt; argv[i].type))) {<br/>            /* argv[i] does not match any of the expected types */<br/>            return false;<br/>        }<br/>        <br/>        i++;<br/>    }<br/>    <br/>    if (*inptr &amp;&amp; *inptr != '[' &amp;&amp; i &lt; argc) {<br/>        /* we were not provided enough arguments */<br/>        return false;<br/>    }<br/>    <br/>    /* now check all of the optional arguments */<br/>    inptr++;<br/>    while (*inptr &amp;&amp; *inptr != ']' &amp;&amp; i &lt; argc) {<br/>        mask = decode_arg_type (&amp;inptr);<br/>        if (!(mask &amp; (1 &lt;&lt; argv[i].type))) {<br/>            // argv[i] does not match any of the expected types<br/>            return false;<br/>        }<br/>        <br/>        i++;<br/>    }<br/>    <br/>    if (i &lt; argc) {<br/>        /* we were provided too many arguments */<br/>        return false;<br/>    }<br/>    <br/>    return true;<br/>}<br/></pre><br/><p>An example usage might be <i>check_arg_list ("(so)i(nso)[bb]", argc, argv)</i>. In this example, the first argument is expected to be either a string or object. The second argument would be an int32. The third argument would be null, a string, or an object. The 4th and 5th arguments are both of type bool if they are present.<br/></p><p>Since the NPVariant struct is a widely-used concept in C programming, you might find my hack useful for other projects as well.<br/></p><p>Enjoy!</p></div>
+    </content>
+    <updated>2008-06-04T23:59:45Z</updated>
+    <published>2008-06-04T23:40:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="moonlight"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="programming"/>
+    <author>
+      <name>Jeffrey Stedfast</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/12271561115384429651</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-203063759820106893</id>
+      <author>
+        <name>Jeffrey Stedfast</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/12271561115384429651</uri>
+      </author>
+      <link href="http://jeffreystedfast.blogspot.com/" rel="alternate" type="text/html"/>
+      <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default?start-index=26&amp;max-results=25" rel="next" type="application/atom+xml"/>
+      <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://jeffreystedfast.blogspot.com/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>A Moment of Zen</title>
+      <updated>2008-06-08T03:00:46Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://slusnys.wordpress.com/?p=13</id>
+    <link href="http://slusnys.wordpress.com/2008/06/04/evolution-data-server-under-sysprof/" rel="alternate" type="text/html"/>
+    <title>Evolution Data Server Under Sysprof</title>
+    <summary>My gsoc task is to speed up calendar part of e-d-s. These days I have been using  evo calendar extensively. My aim was to identify the most serious bottlenecks by sysprof.
+Here are the results of my 5 minute session. The tests were carried out on big calendars, which I received from Federico.
+
+Several things should be [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div class="snap_preview"><br/><p style="text-align: left;">My gsoc task is to speed up calendar part of e-d-s. These days I have been using  evo calendar extensively. My aim was to identify the most serious bottlenecks by sysprof.</p>
+<p style="text-align: left;">Here are the results of my 5 minute session. The tests were carried out on big calendars, which I received from Federico.</p>
+<p style="text-align: left;"><a href="http://slusnys.files.wordpress.com/2008/06/start_query.png"><img alt="Sysprof analysis of evolution data server" class="aligncenter size-medium wp-image-14" height="187" src="http://slusnys.files.wordpress.com/2008/06/start_query.png?w=300&amp;h=187" width="300"/></a></p>
+<p style="text-align: left;">Several things should be noticed:</p>
+<ul style="text-align: left;">
+<li>Almost all system time is divided between Evo and Firefox</li>
+<li>About 30% of system time was spent in Evolution, 15% in e-d-s.</li>
+<li>I was using only file backend (e-d-s time was spent in <strong>e_cal_backend_file_start_query</strong> <strong>-</strong> <strong>14%</strong>)</li>
+</ul>
+<p style="text-align: left;">Analysis:</p>
+<ul style="text-align: left;">
+<li>Almost all e-d-s time was spent in <strong>e_cal_backend_start_query - 14%</strong>. This method is called by e-d-s clients (Evolution, clocks…) and does complete sweep  through the calendar. Clients want to get back calendar objects filtered by some expression (sexp).</li>
+<li> For every calendar object, test against the expression is carried out (<strong>e_cal_backend_sexp_match_comp</strong> <strong>- 11%</strong>),  generating all recurrences.  Usually, the evaluation of expression leads to test, if event occurs in some time range (<strong>func_occur_in_time_range</strong> <strong>- 6%</strong>). The second very often used function seems to be  <strong>e_cal_backend_sexp_func_make_time - 3.9%.</strong> Both  these functions sooner or later call function <strong>icaltime_as_timet_with_zone</strong>, in which is spent 3.60% and 3.13% - summing up to about 6.7% of system time. In fact, these functions are usually called together, because the typical test is “<strong>occur-in-time-range? (make-time \”ISO_DATE_STR\”) (make-time \”ISO_DATE_STR\”)”. </strong>The expression  make-time “ISO_DATE_STR” leads to calling <strong>e_cal_backend_sexp_func_make_time</strong>, which converts date from iso string to time_t value. Expression <strong>occur-in-time-range </strong>leads<strong> </strong>to calling <strong>func_occur_in_time_range</strong>.</li>
+<li>When constructing expression “<strong>occur-in-time-range? (make-time \”ISO_DATE_STR\”) (make-time \”ISO_DATE_STR\”)”, </strong>time_t value is converted to the string. Later, when evaluating expression, string is converted to time_t (by make-time).</li>
+</ul>
+<p style="text-align: left;">
+</p><p style="text-align: left;">
+</p><p style="text-align: left;"><a href="http://slusnys.files.wordpress.com/2008/06/icaltime_as_timet_with_zone.png"><img alt="Time spent in converting time formats" class="aligncenter size-medium wp-image-15" height="187" src="http://slusnys.files.wordpress.com/2008/06/icaltime_as_timet_with_zone.png?w=300&amp;h=187" width="300"/></a><a href="http://slusnys.files.wordpress.com/2008/06/icaltime_as_timet_with_zone1.png"><img alt="Time spent in converting time formats" class="aligncenter size-medium wp-image-16" height="187" src="http://slusnys.files.wordpress.com/2008/06/icaltime_as_timet_with_zone1.png?w=300&amp;h=187" width="300"/></a></p>
+<p style="text-align: left;">
+</p><p style="text-align: left;">
+</p><p style="text-align: left;">
+</p><p style="text-align: left;">Conclusions:</p>
+<ul style="text-align: left;">
+<li>In e-d-s we spent about 15% of system time, and almost 7% was spent in <strong>icaltime_as_timet_with_zone</strong>. The function is called to find out, if calendar event occurs in some time range.  There is a lot of time conversion from time_t to string and back.  The rest was spent by sweeping through the calendar objects and generating recurrences.</li>
+</ul>
+<img alt="" border="0" src="http://feeds.wordpress.com/1.0/categories/slusnys.wordpress.com/13/"/> <img alt="" border="0" src="http://feeds.wordpress.com/1.0/tags/slusnys.wordpress.com/13/"/> <a href="http://feeds.wordpress.com/1.0/gocomments/slusnys.wordpress.com/13/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/slusnys.wordpress.com/13/"/></a> <a href="http://feeds.wordpress.com/1.0/godelicious/slusnys.wordpress.com/13/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/delicious/slusnys.wordpress.com/13/"/></a> <a href="http://feeds.wordpress.com/1.0/gostumble/slusnys.wordpress.com/13/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/stumble/slusnys.wordpress.com/13/"/></a> <a href="http://feeds.wordpress.com/1.0/godigg/slusnys.wordpress.com/13/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/digg/slusnys.wordpress.com/13/"/></a> <a href="http://feeds.wordpress.com/1.0/goreddit/slusnys.wordpress.com/13/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/reddit/slusnys.wordpress.com/13/"/></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=slusnys.wordpress.com&amp;blog=3660001&amp;post=13&amp;subd=slusnys&amp;ref=&amp;feed=1"/></div></div>
+    </content>
+    <updated>2008-06-04T23:19:32Z</updated>
+    <category term="gsoc2008"/>
+    <author>
+      <name>slusnys</name>
+    </author>
+    <source>
+      <id>http://slusnys.wordpress.com</id>
+      <link href="http://slusnys.wordpress.com/feed/" rel="self" type="application/atom+xml"/>
+      <link href="http://slusnys.wordpress.com" rel="alternate" type="text/html"/>
+      <subtitle>Just another WordPress.com weblog</subtitle>
+      <title>Slusnys's Weblog</title>
+      <updated>2008-06-05T11:36:16Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-977684764667858073.post-8373536715891535651</id>
+    <link href="http://www.hadess.net/2008/06/whaaaaaappaaawooo-shoof-shoof.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=977684764667858073&amp;postID=8373536715891535651" rel="replies" type="text/html"/>
+    <link href="http://www.hadess.net/feeds/8373536715891535651/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://www.hadess.net/feeds/posts/default/8373536715891535651" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/977684764667858073/posts/default/8373536715891535651" rel="edit" type="application/atom+xml"/>
+    <title>Whaaaaaappaaawooo! Shoof shoof!</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><a href="http://us.imdb.com/title/tt0165208/"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5208157181610833234" src="http://bp1.blogger.com/_2o81e3u4ZFU/SEcXXNhQNVI/AAAAAAAAAJU/1HSBsM7Rxec/s320/MV5BMTIxNTQzNjQwNV5BMl5BanBnXkFtZTcwOTU3NTkxMQ%40%40._V1._SY400_SX600_.jpg" style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;"/></a><br/>My good friend told me two years ago that I should “<span style="font-style: italic;">check out the cast and</span><br/><span style="font-style: italic;">director it's a forgotten gem</span>”. His words.<br/><br/>I rented the DVD, and here's my checklist:<br/><ul><li>Badly dubbed, check.</li><li>Grainy picture, worse than a VHS, check.</li><li>Bad translations (they call each sister and brother, when they're married, or cousins...), check.[1]<br/></li><li>Incomprehensible story line, check.</li><li>Powerful enemies bringing you to a netherworld like in <a href="http://fr.wikipedia.org/wiki/X-or">X-Or</a>, check.</li><li>Dodgy sound effects, and badly timed ones, check.<br/></li></ul>The film is called “Deadly Snail vs. Kung Fu Killers” in one version, and “Deadly Snake Versus Kung Fu Killers” in other one. Confusing as hell. I still don't know who's supposed to be the snake/snail or the kung-fu killers.<br/><br/>I hate you Rog.<br/><br/>[1]: See also, John Woo's The Killer, french DVD version, where the translations and the dubbing don't match.</div>
+    </content>
+    <updated>2008-06-04T22:43:50Z</updated>
+    <published>2008-06-04T22:29:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="deadly snail"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="films"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="movie"/>
+    <author>
+      <name>hadess</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/14621847888418739807</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-977684764667858073</id>
+      <author>
+        <name>hadess</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/14621847888418739807</uri>
+      </author>
+      <link href="http://www.hadess.net/" rel="alternate" type="text/html"/>
+      <link href="http://www.hadess.net/feeds/posts/default?start-index=26&amp;max-results=25" rel="next" type="application/atom+xml"/>
+      <link href="http://www.hadess.net/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://www.hadess.net/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>بستيان نوصر  (hadess) | News</title>
+      <updated>2008-06-07T21:31:56Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://micke.hallendal.net/blog/?p=289</id>
+    <link href="http://micke.hallendal.net/blog/asyncrunner-for-rubyglib/" rel="alternate" type="text/html"/>
+    <title>AsyncRunner for Ruby/GLib</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div class="diggthisplugin" style="float: right; width: 42px; padding-right: 10px; margin-left: 10px; margin-bottom: 0px;">
+		</div><p>Was playing around a bit with a synchronous network library that I wanted to use from a GTK+ frontend. Obviously this wouldn’t work too well as the UI would be blocked while waiting for the library to return from it’s network calls. So I wanted to run the network operations in the background using a thread but still get the callbacks in the main thread to be able to update the UI from there.</p>
+<p>I ended up writing a small class I called <a href="http://pastie.caboo.se/208925">AsyncRunner</a> which is a small proxy to call methods in a various thread and get the callback in the main thread. It’s using the GLib Mainloop so it would only be useful in the cases where you actually have one.</p>
+<pre class="ruby" name="code">require 'thread-sync'
+class MySyncClass
+  def foo_method(arg)
+  end
+
+  def bar_method(arg1, arg2)
+  end
+end
+
+sync = MySyncClass.new
+
+# In order to get the methods of MySyncClass asynchronous it is wrapped in an AsyncRunner.
+async = AsyncRunner.new(sync)
+
+async.foo_method('test') do
+  ui_update()
+end
+
+main_loop = GLib::MainLoop.new
+main_loop.run</pre>
+Share This</div>
+    </summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div class="diggthisplugin" style="float: right; width: 42px; padding-right: 10px; margin-left: 10px; margin-bottom: 0px;">
+		</div><p>Was playing around a bit with a synchronous network library that I wanted to use from a GTK+ frontend. Obviously this wouldn’t work too well as the UI would be blocked while waiting for the library to return from it’s network calls. So I wanted to run the network operations in the background using a thread but still get the callbacks in the main thread to be able to update the UI from there.</p>
+<p>I ended up writing a small class I called <a href="http://pastie.caboo.se/208925">AsyncRunner</a> which is a small proxy to call methods in a various thread and get the callback in the main thread. It’s using the GLib Mainloop so it would only be useful in the cases where you actually have one.</p>
+<pre class="ruby" name="code">require 'thread-sync'
+class MySyncClass
+  def foo_method(arg)
+  end
+
+  def bar_method(arg1, arg2)
+  end
+end
+
+sync = MySyncClass.new
+
+# In order to get the methods of MySyncClass asynchronous it is wrapped in an AsyncRunner.
+async = AsyncRunner.new(sync)
+
+async.foo_method('test') do
+  ui_update()
+end
+
+main_loop = GLib::MainLoop.new
+main_loop.run</pre>
+<span class="akst_link"><a class="akst_share_link" href="http://micke.hallendal.net/blog/?p=289&amp;akst_action=share-this" id="akst_link_289" title="E-mail this, post to del.icio.us, etc.">Share This</a>
+</span></div>
+    </content>
+    <updated>2008-06-04T20:48:52Z</updated>
+    <category term="Programming"/>
+    <category term="Tips"/>
+    <category term="asynchronous"/>
+    <category term="glib"/>
+    <category term="hacking"/>
+    <category term="ruby"/>
+    <category term="threading"/>
+    <author>
+      <name>Mikael Hallendal</name>
+    </author>
+    <source>
+      <id>http://micke.hallendal.net/blog</id>
+      <link href="http://micke.hallendal.net/blog" rel="alternate" type="text/html"/>
+      <link href="http://feeds.feedburner.com/UpNorth" rel="self" type="application/atom+xml"/>
+      <subtitle>Personal blog of Mikael Hallendal</subtitle>
+      <title>Up North</title>
+      <updated>2008-06-05T06:41:37Z</updated>
+    </source>
+  </entry>
+
+  <entry>
+    <id>tag:blogger.com,1999:blog-830315446968948439.post-8054110802684248505</id>
+    <link href="http://bgmerrell.blogspot.com/2008/04/building-accerciser-from-source.html" rel="alternate" type="text/html"/>
+    <link href="http://www.blogger.com/comment.g?blogID=830315446968948439&amp;postID=8054110802684248505" rel="replies" type="text/html"/>
+    <link href="http://bgmerrell.blogspot.com/feeds/8054110802684248505/comments/default" rel="replies" type="application/atom+xml"/>
+    <link href="http://bgmerrell.blogspot.com/feeds/posts/default/8054110802684248505" rel="self" type="application/atom+xml"/>
+    <link href="http://www.blogger.com/feeds/830315446968948439/posts/default/8054110802684248505" rel="edit" type="application/atom+xml"/>
+    <title>Building accerciser from source</title>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">To get Accerciser working with all default plugins, do the following:<br/><br/>Manually download pygtksourceview src from sourceforge and build it.<br/><br/>Install <a href="http://live.gnome.org/Accerciser#head-79a431f68b55c5b359b9133d99ba500f742600ec">all requirements</a> from Accerciser page plus:<br/><br/>Additionally, make sure the following are installed:<br/><ul><li>autoconf</li><li>intltool</li><li>automake</li><li>gtksourceview185 (version 2 won't work here)</li><li>gnome-doc</li><li>gnome-common</li><li>get all the associated devel packages just to be sure<br/></li><li>and maybe some others...</li></ul></div>
+    </content>
+    <updated>2008-06-04T20:42:23Z</updated>
+    <published>2008-04-09T22:18:00Z</published>
+    <category scheme="http://www.blogger.com/atom/ns#" term="accessibility"/>
+    <category scheme="http://www.blogger.com/atom/ns#" term="work"/>
+    <author>
+      <name>bgmerrell</name>
+      <email>noreply@blogger.com</email>
+      <uri>http://www.blogger.com/profile/10800377722480915387</uri>
+    </author>
+    <source>
+      <id>tag:blogger.com,1999:blog-830315446968948439</id>
+      <author>
+        <name>bgmerrell</name>
+        <email>noreply@blogger.com</email>
+        <uri>http://www.blogger.com/profile/10800377722480915387</uri>
+      </author>
+      <link href="http://bgmerrell.blogspot.com/" rel="alternate" type="text/html"/>
+      <link href="http://bgmerrell.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml"/>
+      <link href="http://bgmerrell.blogspot.com/feeds/posts/default" rel="self" type="application/atom+xml"/>
+      <title>Brian's lovable online gazette</title>
+      <updated>2008-06-04T20:42:23Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/hughsie/2008/06/04/running-a-program-after-install/</id>
+    <link href="http://blogs.gnome.org/hughsie/2008/06/04/running-a-program-after-install/" rel="alternate" type="text/html"/>
+    <title>Running a program after install</title>
+    <summary>gpk-application now offers you to run the application you just installed. It uses the just-installed desktop files to try to get the executable names and localised descriptions. There’s heuristics to only show the true application rather than any importer or viewer with the same executable name. Anyway, it looks like this:
+
+New UI?
+Comments, suggestions?</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>gpk-application now offers you to run the application you just installed. It uses the just-installed desktop files to try to get the executable names and localised descriptions. There’s heuristics to only show the true application rather than any importer or viewer with the same executable name. Anyway, it looks like this:</p>
+<p style="text-align: center;"><img height="326" src="http://www.packagekit.org/temp/gpk-run-new.png" width="608"/></p>
+<p style="text-align: center;"><span style="font-style: italic;">New UI?</span></p>
+<p>Comments, suggestions?</p></div>
+    </content>
+    <updated>2008-06-04T20:40:54Z</updated>
+    <category term="Uncategorized"/>
+    <category term="PackageKit"/>
+    <author>
+      <name>hughsie</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/hughsie</id>
+      <link href="http://blogs.gnome.org/hughsie" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/hughsie/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>My fiancee is like Windows Vista: Looks pretty, difficult to understand and sometimes unpredictable...</subtitle>
+      <title>Technical Blog of Richard Hughes</title>
+      <updated>2008-06-05T08:38:20Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://blogs.gnome.org/snark/2008/06/04/on-computer-languages/</id>
+    <link href="http://blogs.gnome.org/snark/2008/06/04/on-computer-languages/" rel="alternate" type="text/html"/>
+    <title>On computer languages</title>
+    <summary>Eiffel : tearful future ahead
+As I explained some time ago, I spent quite some time doing financial simulations lately. At first, I was using python, which is pretty nice to do a simple and direct simulation, but I always feel it’s too toyish for serious use.
+So I made my more complex simulations using eiffel, and [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><h1>Eiffel : tearful future ahead</h1>
+<p>As I explained some time ago, I spent quite some time doing financial simulations lately. At first, I was using python, which is pretty nice to do a simple and direct simulation, but I always feel it’s too toyish for serious use.</p>
+<p>So I made my more complex simulations using eiffel, and more precisely smarteiffel’s compiler. This language has many good features :</p>
+<ul>
+<li>it’s garbage-collected (wink),</li>
+<li>does inheritance right (hint: no virtual keyword to make the concept half-stupid — yes, I know, optimisation : C++ is 0.001% faster in not doing the right thing!),</li>
+<li>including multiple inheritance (undefining methods, renaming them),</li>
+<li>allows determining which API parts of an object are visible to whom (not limited to a simple public/private or public/protected/private di(tri)chotomy of the world),</li>
+<li>does pre/post conditions at the method and object level (and they do get inherited correctly, and you can refine them if needed : it’s not just a hack!) ;</li>
+<li>it does generics with constraints (ie: you can tell your generic container will only accept objets of base class something — for example the compiler will let you use a SOMETHING[RECTANGLE] because you said SOMETHING[A-&gt;QUADRILATERAL] and RECTANGLE is a QUADRILATERAL, but won’t let you use a SOMETHING[HEXAGONAL]) ;</li>
+<li>it does functions-as-values (called agents),</li>
+<li>since typing is pretty strict (the only automatic/implicit ‘conversion’ is if you consider a descendant class as an ascendant), the compiler is generally able to pinpoint exactly where the problem is in the sources, so a compilable source is generally good,</li>
+<li>but even if by a surprising accident it doesn’t, then the trace you get will tell you exactly where you made a mistake.</li>
+</ul>
+<p>So what’s the catch? Well, it has a few shortcomings.</p>
+<p>One of them is that you have to give each type explicitely, which can become cumbersome when you deal with something like a COLLECTION[PAIR[INTEGER, COLLECTION[STRING, STRING]]… even though the problem is a little dampered with syntactic sugar in the form of anchored types (ie: once you told it foo was of type FOO, you can tell it that other_foo is of type “like foo”, so if you change your mind about an api, it’s easy to just change one place).</p>
+<p>Another one is that too few people know about it to reach a critical mass although it’s much much much easier and coherent to read and/or write than other more mainstream object-oriented languages (or claimed as such… wink).</p>
+<p>This last problem has gotten worse recently (since 2005) when the smarteiffel (GNU compiler for the eiffel language)  people decided they didn’t like the way ECMA (yes, that ECMA) was pushing the language, and forked it.</p>
+<p>A few weeks ago, all smarteiffel-related debian packages got orphaned, and no other eiffel compiler is in debian anymore, which means it’s getting harder to install too.</p>
+<h1>Lisaac : future ahead (!)</h1>
+<p>There is another language, with many common points with eiffel, but still pretty different, since it’s a prototype-based language : you define base objects, by declaring “slots”, which you can either write for the new object or “inherit” from a base object. Again, multiple inheritance is no problem and you can export the various API parts an object has to whatever prototype-object you want.</p>
+<p>An important difference with eiffel is that the compiler will do auto-casts for you. The main difference with C++ is that you will need to explicitly declare that casting FOO to BAR is possible (not at the place where you use obviously, or I wouldn’t call it ‘auto’), and it will only do one single cast, and not a series of them.</p>
+<p>The compiler does a quite thorough analysis of the sources, so it can spot more issues and optimize more completely, which probably explains why it’s so well-placed in the computer language shootout.</p>
+<p>Both the language and its compiler are pretty young though, so stability isn’t as good as with smarteiffel : I’ve seen it crash on some simple code (reported, of course).</p>
+<h1>OCaml : precious!</h1>
+<p>Well, I haven’t written financial simulations with OCaml : since I made some simulations with python, others with smarteiffel and others with lisaac, I do have a better view of how I should manage the little money I have! [no, I didn’t just write the same simulation in several languages over and over]</p>
+<p>Still, I couldn’t blog about languages without mentioning that one! Again, it’s a garbage-collected language, it does inheritance and multiple inheritance (not as good as eiffel, even if it has constrained inheritance), unfortunately only with a public/private dichotomy (there are ways to offset that issue using ‘modules’). It won’t cast behind your back.</p>
+<p>It’s time to mention the two main points of the language : it is a functional language, and it does type inference. The former is quite well-known, since hopefully everyone has heard of lisp and scheme, so I don’t need to tell that much about it : it’s pretty renowned to lead to terse and elegant code.</p>
+<p>The type inference can be new to some. If you decide to write a prepend function which takes two arguments : the first is an object, and the second a list containing elements of the same type as the object, which will just prepend the element at the start of the list, you’ll just write (in the interpreter) : “let prepend obj lis = obj :: lis;;” (the ‘;;’ is unneeded if you do it in a file you compile — only the interpreter needs it), you’ll get back : “val prepend : ‘a -&gt; ‘a list -&gt; ‘a list = &lt;fun&gt;” which means : prepend is a function, which takes an object of unknown (polymorphic) type (denoted ‘a), a list of object of the same type (’a list), and returns a list of objects of that same type.</p>
+<p>Some say its syntax is hard : take a look at C/C++ code with an eye as fresh as you use reading OCaml, and you’ll see none wins.</p>
+<h1>Ekiga</h1>
+<p>I spent most of my spare time thinking about making more money by managing it better, so it has been quite some time since I seriously worked on it : I saw new things mature, bugs get fixed, little improvements here and there… exciting things I haven’t taken a serious part — hopefully they left some bugs for me to work on!</p></div>
+    </content>
+    <updated>2008-06-04T20:14:02Z</updated>
+    <category term="General"/>
+    <author>
+      <name>Snark</name>
+    </author>
+    <source>
+      <id>http://blogs.gnome.org/snark</id>
+      <link href="http://blogs.gnome.org/snark" rel="alternate" type="text/html"/>
+      <link href="http://blogs.gnome.org/snark/feed/" rel="self" type="application/rss+xml"/>
+      <subtitle>Snark's gnome blog</subtitle>
+      <title>Abstract nonsense</title>
+      <updated>2008-06-07T15:59:55Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en-us">
+    <id>http://blogs.sun.com/richb/entry/wii_fit_two_weeks_in</id>
+    <link href="http://blogs.sun.com/richb/entry/wii_fit_two_weeks_in" rel="alternate" type="text/html"/>
+    <title>Wii Fit - Two Weeks In</title>
+    <summary type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>
+</p><table>
+  <tbody><tr>
+    <td>
+    <a href="http://www.amazon.com/exec/obidos/ASIN/B000VJRU44/am841-20">
+    <img alt="" src="http://blogs.sun.com/richb/resource/Wii_Fit.jpg"/></a>
+    </td>
+    <td>
+    <p>
+    You may remember from my
+    <a href="http://blogs.sun.com/richb/entry/initial_observations_on_wii_fit">initial observations</a>
+    on the 
+    <a href="http://www.amazon.com/exec/obidos/ASIN/B000VJRU44/am841-20">Wii Fit</a>
+    that I set myself the goal of losing 2 pounds in 2 weeks.
+    </p></td>
+  </tr>
+</tbody></table>
+<p>
+I ran the body test again today and I'm down 0.9 pounds from that initial
+weigh-in value. Wii Fit tells me my body weight is likely to fluctuate
+by up to 2 pounds during the day, so I should always weigh myself at the
+same time each day. I remember that for next time. My BMI is slightly
+less (25.36) but I'm still quite a way from the ideal value of 22.
+The good news is my Wii Age is down to 49 (minus 5 years from last time, and 2 years below my
+actual age).
+</p><p>
+The Wii Fit divides the exercises into four categories:
+</p><p>
+</p><ul>
+  <li>Yoga
+  </li><li>Strength Training
+  </li><li>Aerobics
+  </li><li>Balance Games
+</li></ul>
+<p>
+So far I've been mainly concentrating on the balance games (which are mostly
+fun) and the running and step exercises from the Aerobics section.
+</p><p>
+I've
+now got to the point where I can do the Ski Slalom and not miss any gates,
+but I'm still only at 2 stars (amateur). Obviously I've got to just go down
+the hill faster but it's going to take a lot more practice.
+</p><p>
+For the running (which doesn't use the Balance board -- you just stuff a
+Wii remote in your pocket), I've tried them all. 
+I actually like the Island laps the
+best because you can run on different courses if you rush ahead of your guide
+at different times. You then get to follow one of the two dogs. I love the 
+different sound effects as the surface you are running over changes. I appreciate
+that every other Mii out there is running slower than you. Watching a Mii trip
+over is funny the first time. Then it gets old.
+</p><p>
+Over the weekend, when we got the Wi Wireless connection
+<a href="http://blogs.sun.com/richb/entry/wii_wireless_now_working">finally working</a>,
+Duncan imported a load of new Mii's. It was cool to see Mii Darth
+Vader running the other way when I was exercising earlier today.
+</p><p>
+I find that the Free Lap running gets boring. It would be nice if you 
+could vary the course. If you can do this, I haven't worked out how yet.
+It would be nice if other things varied too. Like the weather. Running in
+a snow storm would be "interesting". I suspect the Wii doesn't have enough
+graphics uumph (to use the technical term) to do this.
+</p><p>
+After Duncan and I tried the two person running, I tried it by myself.
+I put two Wii's in my pockets, one on either side). Strangely enough, the
+second Mii (controlled by the right-hand Wii remote) lagged a long way
+behind the other one. I'm not sure what that's telling me. Maybe that my
+body is very unbalanced when I'm running.
+</p><p>
+My aim now is to start doing some of the strength exercises (particularly
+for the abs), and to learn how to do more of the yoga exercises. I'm a
+complete beginner in this latter category, so I'm still on the very simple
+positions.
+</p><p>
+The novelty hasn't worn off yet. Two weeks in and I'm still having fun.
+</p><p>
+<span style="font-size: smaller;">
+[<a href="http://www.technorati.com/tag/Wii Fit" rel="tag">Technorati Tag: Wii Fit</a>]
+</span>
+</p><p>
+<span style="font-size: smaller;">
+[<a href="http://www.technorati.com/tag/Exercise" rel="tag">Technorati Tag: Exercise</a>]
+</span>
+</p><p>
+<span style="font-size: smaller;">
+[<a href="http://www.technorati.com/tag/Fitness" rel="tag">Technorati Tag: Fitness</a>]
+</span>
+</p><p/></div>
+    </summary>
+    <updated>2008-06-04T20:10:28Z</updated>
+    <category term="General"/>
+    <author>
+      <name>richb</name>
+    </author>
+    <source>
+      <id>http://blogs.sun.com/richb/</id>
+      <link href="http://blogs.sun.com/richb/" rel="alternate" type="text/html"/>
+      <link href="http://blogs.sun.com/richb/feed/entries/rss" rel="self" type="application/atom+xml"/>
+      <rights>Copyright 2008</rights>
+      <subtitle>Rich Burridge's Blog</subtitle>
+      <title>Rich Burridge's Blog</title>
+      <updated>2008-06-08T05:06:06Z</updated>
+    </source>
+  </entry>
+
+  <entry xml:lang="en">
+    <id>http://clarkbw.net/blog/?p=357</id>
+    <link href="http://clarkbw.net/blog/2008/06/04/activity-is-the-new-download/" rel="alternate" type="text/html"/>
+    <title>Activity is the new download</title>
+    <summary>So hip, just like silver is the new gold
+Last week I began some work on some ideas for a richer, interactive user notification system for Thunderbird.
+Status Bar
+Currently the status bar acts as one of the only notification systems to the user.  However the status bar is a steady stream of temporal plain text messages.  The [...]</summary>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>So hip, just like <a href="http://youtube.com/watch?v=kAO4EVMlpwM">silver is the new gold</a></p>
+<p>Last week I began some work on some ideas for a richer, interactive user notification system for Thunderbird.</p>
+<p><strong>Status Bar</strong></p>
+<p>Currently the status bar acts as one of the only notification systems to the user.  However the status bar is a steady stream of temporal plain text messages.  The messages are helpful if you understand what they are indicating, otherwise to most people they only convey general activity happening.  In general the messages end up lacking meaning because there is too much information running by.</p>
+<p style="text-align: center;"><img alt="" class="alignnone size-full wp-image-358 aligncenter" height="42" src="http://clarkbw.net/blog/wp-content/uploads/2008/06/thunderbird-status-bar.png" title="Thunderbird Status Bar" width="415"/></p>
+<p><strong>A First Approach</strong></p>
+<p>Initially I took an approach of an interactive status bar that looked a little bit like the awesome bar replacing the status bar.  Instead of just giving plain text messages we could make richer messages with visualizations.</p>
+<ul>
+<li>Linked Messages</li>
+<li>Progress Meters</li>
+</ul>
+<p style="text-align: center;"><img alt="" class="alignnone size-full wp-image-360" height="34" src="http://clarkbw.net/blog/wp-content/uploads/2008/06/interactive-status-bar-with-progress.png" title="interactive-status-bar-with-progress" width="500"/></p>
+<p>The linked message could open thunderbird up to the account or message they were referring to.  Next is to add some access to status history where people can see a list of what Thunderbird had done and perform actions (like restart) on those past activities.</p>
+<ul>
+<li>History of Activity</li>
+<li>Interactive History Items</li>
+</ul>
+<p style="text-align: center;"><img alt="" class="alignnone size-full wp-image-361 aligncenter" height="91" src="http://clarkbw.net/blog/wp-content/uploads/2008/06/interactive-status-bar-history-failure.png" title="interactive-status-bar-history-failure" width="500"/></p>
+<p><strong>The New Download</strong></p>
+<p>After seeing the amazing work that has been done on the <a href="http://madhava.com/egotism/archive/005017.html">download manager in firefox</a> it seemed like a good second approach to the problem could be to reuse much of what they’ve done.</p>
+<p>The download manager in firefox is solving a similar set of problems.  We want to allow people to watch the progress of a specific set of (likely asynchronous) activities. We also want to ensure that people can view the list of past activities in case they want to manage them.</p>
+<p>Should we continue using a simple text status message?  The progress bar included in the status bar gives a visualization for time to complete an action.  But do we need to help people visualize what is happening in the background?</p>
+<p style="text-align: center;"><img alt="" class="alignnone size-full wp-image-364 aligncenter" height="42" src="http://clarkbw.net/blog/wp-content/uploads/2008/06/thunderbird-activity-manager-status.png" title="thunderbird-activity-manager-status" width="377"/></p>
+<p>And then instead of an inline popup for the history list we open up the download manager window which allows for searching and management of items inside the list.</p>
+<p style="text-align: center;"><a href="http://clarkbw.net/blog/wp-content/uploads/2008/06/thunderbird-activity-manager.png"><img alt="" class="alignnone size-medium wp-image-363 aligncenter" height="210" src="http://clarkbw.net/blog/wp-content/uploads/2008/06/thunderbird-activity-manager-300x210.png" title="thunderbird-activity-manager" width="300"/></a></p>
+<p style="text-align: left;">Nothing is set yet, most likely a final version will be taking bits of both approaches.  Still lots of work to go, more comments and ideas are always appreciated!</p></div>
+    </content>
+    <updated>2008-06-04T18:09:08Z</updated>
+    <category term="mozilla"/>
+    <category term="download manager"/>
+    <category term="Firefox"/>
+    <category term="notifications"/>
+    <category term="thunderbird"/>
+    <author>
+      <name>Bryan Clark</name>
+    </author>
+    <source>
+      <id>http://clarkbw.net/blog</id>
+      <link href="http://clarkbw.net/blog/feed/" rel="self" type="application/atom+xml"/>
+      <link href="http://clarkbw.net/blog" rel="alternate" type="text/html"/>
+      <subtitle>Little n desigN</subtitle>
+      <title>Bryan Clark</title>
+      <updated>2008-06-04T18:10:28Z</updated>
+    </source>
+  </entry>
+</feed>

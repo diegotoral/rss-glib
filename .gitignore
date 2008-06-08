@@ -30,3 +30,4 @@ rss-glib/rss-marshal.c
 rss-glib/rss-marshal.h
 rss-glib/rss-version.h
 rss-glib/stamp-rss-marshal.h
+tests/test-01

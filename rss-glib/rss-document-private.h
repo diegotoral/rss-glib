@@ -31,7 +31,8 @@
 	RssDocumentPrivate))
 
 enum {
-	ENCODING,
+	ENCODING = 1,
+	GUID,
 	TITLE,
 	DESCRIPTION,
 	LINK,
@@ -62,6 +63,7 @@ typedef struct _RssDocumentPrivate RssDocumentPrivate;
 
 struct _RssDocumentPrivate {
 	gchar *encoding;
+	gchar *guid;
 	gchar *title;
 	gchar *description;
 	gchar *link;
