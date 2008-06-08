@@ -1,6 +1,6 @@
 noinst_PROGRAMS = test-01
 
-INCLUDES = -I$(top_builddir)
+INCLUDES = -I$(top_srcdir)
 LDADD = $(top_builddir)/rss-glib/librss-glib-1.0.la
 
 AM_CFLAGS = $(RSS_CFLAGS)

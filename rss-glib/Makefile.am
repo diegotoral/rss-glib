@@ -14,9 +14,8 @@ INCLUDES = \
 LDADD = \
 	$(RSS_LT_LDFLAGS) \
 	-export-dynamic \
+	-export-symbols-regex "^rss.*"
 	-rpath $(libdir)
-
-#-export-symbols-regex "^rss.*"
 
 BUILT_SOURCES = rss-marshal.h rss-marshal.c
 
@@ -35,9 +34,9 @@ source_h_private = \
 	$(NULL)
 
 source_c = \
-	rss-parser.c \
-	rss-document.c \
-	rss-item.c \
+	$(top_srcdir)/rss-glib/rss-parser.c \
+	$(top_srcdir)/rss-glib/rss-document.c \
+	$(top_srcdir)/rss-glib/rss-item.c \
 	$(NULL)
 
 rss-marshal.h: stamp-rss-marshal.h
@@ -85,7 +84,7 @@ librss_glib_1_0_la_LIBADD = $(RSS_LIBS) $(MRSS_LIBS)
 librss_glib_1_0_la_SOURCES = \
 	$(source_c) \
 	$(source_h) \
-	$(source_h_priv) \
+	$(source_h_private) \
 	$(BUILT_SOURCES) \
 	$(NULL)
 librss_glib_1_0_la_LDFLAGS = $(LDADD)
@@ -100,6 +99,6 @@ CLEANFILES = $(STAMP_FILES) $(BUILT_SOURCES)
 DISTCLEANFILES = rss-version.h
 
 EXTRA_DIST = \
-	rss-version.h.in \
-	rss-glib.h \
-	rss-marshal.list
+	$(srcdir)/rss-version.h.in \
+	$(srcdir)/rss-glib.h \
+	$(srcdir)/rss-marshal.list
