@@ -5,8 +5,9 @@ INCLUDES = \
 	-DPREFIX=\""$(prefix)"\" 	\
 	-DLIBDIR=\""$(libdir)"\" 	\
 	-DG_DISABLE_DEPRECATED 		\
-	-DG_LOG_DOMAIN=\"Rss\" 	\
+	-DG_LOG_DOMAIN=\"Rss\" 		\
 	$(RSS_CFLAGS) 			\
+	$(MRSS_CFLAGS)			\
 	$(RSS_DEBUG_CFLAGS) 		\
 	$(NULL)
 
@@ -22,17 +23,18 @@ BUILT_SOURCES = rss-marshal.h rss-marshal.c
 STAMP_FILES = stamp-rss-marshal.h
 
 source_h = \
-	$(top_srcdir)/rss-glib/rss-generator.h \
 	$(top_srcdir)/rss-glib/rss-parser.h \
+	$(top_srcdir)/rss-glib/rss-document.h \
 	$(top_srcdir)/rss-glib/rss-version.h \
 	$(NULL)
 
 source_h_private = \
+	$(top_srcdir)/rss-glib/rss-document-private.h \
 	$(NULL)
 
 source_c = \
-	rss-generator.c \
 	rss-parser.c \
+	rss-document.c \
 	$(NULL)
 
 rss-marshal.h: stamp-rss-marshal.h
@@ -76,7 +78,7 @@ rss-enum-types.c: rss-enum-types.h
 
 lib_LTLIBRARIES = librss-glib-1.0.la
 
-librss_glib_1_0_la_LIBADD = $(RSS_LIBS)
+librss_glib_1_0_la_LIBADD = $(RSS_LIBS) $(MRSS_LIBS)
 librss_glib_1_0_la_SOURCES = \
 	$(source_c) \
 	$(source_h) \
