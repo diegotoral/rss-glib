@@ -1,1 +1,4 @@
+2008-06-24	Christian Hergert	<chris@dronelabs.com>
+
+	* rss-glib/rss-document.c: Check that our object is valid.
 

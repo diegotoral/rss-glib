@@ -386,6 +386,7 @@ rss_document_new (void)
 GList*
 rss_document_get_items (RssDocument *self)
 {
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 	return DOCUMENT_PRIVATE (self)->items;
 }
 
@@ -402,5 +403,6 @@ rss_document_get_items (RssDocument *self)
 GList*
 rss_document_get_categories (RssDocument *self)
 {
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 	return DOCUMENT_PRIVATE (self)->categories;
 }
