@@ -311,6 +311,14 @@ rss_document_dispose (GObject *object)
 	g_free (DOCUMENT_PRIVATE (object)->image_url);
 	g_free (DOCUMENT_PRIVATE (object)->image_link);
 
+	/* free the items */
+	g_list_foreach (DOCUMENT_PRIVATE (object)->items, (GFunc) g_free, NULL);
+	g_list_free (DOCUMENT_PRIVATE (object)->items);
+
+	/* free the category strings */
+	g_list_foreach (DOCUMENT_PRIVATE (object)->categories, (GFunc) g_free, NULL);
+	g_list_free (DOCUMENT_PRIVATE (object)->categories);
+
 	if (G_OBJECT_CLASS (rss_document_parent_class)->dispose)
 		G_OBJECT_CLASS (rss_document_parent_class)->dispose (object);
 }
