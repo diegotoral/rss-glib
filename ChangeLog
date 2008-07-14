@@ -1,3 +1,9 @@
+2008-07-13	Christian Hergert	<chris@dronelabs.com>
+
+	* rss-glib/rss-parser.c: Use our new error domain.
+	* rss-glib/rss-parser.h: 
+	* vala/rss-glib-1.0.vapi: 
+
 2008-06-24	Christian Hergert	<chris@dronelabs.com>
 
 	* rss-glib/rss-document.c: Check that our object is valid.

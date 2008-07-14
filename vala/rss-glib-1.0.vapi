@@ -23,10 +23,14 @@
 [Import ()]
 [CCode (cprefix = "Rss", lower_case_cprefix = "rss_", cheader_filename = "rss-glib/rss-glib.h")]
 namespace Rss {
+	public errordomain ParserError {
+		INVALID_DATA
+	}
+
 	public class Parser : GLib.Object {
 		public Parser ();
-		public bool load_from_data (string data, ulong length) throws GLib.Error;
-		public bool load_from_file (string filename) throws GLib.Error;
+		public bool load_from_data (string data, ulong length) throws Rss.ParserError;
+		public bool load_from_file (string filename) throws Rss.ParserError;
 		public Rss.Document get_document ();
 	}
 

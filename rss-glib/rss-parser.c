@@ -28,9 +28,6 @@
 #include "rss-document.h"
 #include "rss-document-private.h"
 
-#define PARSER_QUARK g_quark_from_static_string ("RssParser")
-#define parser_error_new(...) (g_error_new (PARSER_QUARK, 0, __VA_ARGS__))
-
 G_DEFINE_TYPE (RssParser, rss_parser, G_TYPE_OBJECT)
 
 #define PARSER_PRIVATE(o)				\
@@ -43,6 +40,12 @@ typedef struct _RssParserPrivate RssParserPrivate;
 struct _RssParserPrivate {
 	RssDocument *document;
 };
+
+GQuark
+rss_parser_error_quark (void)
+{
+	return g_quark_from_static_string ("rss_parser_error");
+}
 
 static void
 rss_parser_dispose (GObject *object)
@@ -187,8 +190,11 @@ rss_parser_load_from_data (RssParser  *self,
 
 	/* if there was an error parsing, set the error and return false */
 	if (MRSS_OK != res) {
-		if (error)
-			*error = parser_error_new ("Could not parse data");
+		if (error) {
+			g_set_error (error, RSS_PARSER_ERROR,
+			             RSS_PARSER_ERROR_INVALID_DATA,
+			             "Could not parse data contents");
+		}
 		return FALSE;
 	}
 
@@ -225,8 +231,11 @@ rss_parser_load_from_file (RssParser  *self,
 
 	/* if there was an error parsing, set the error and return false */
 	if (MRSS_OK != res) {
-		if (error)
-			*error = parser_error_new ("Could not parse file");
+		if (error) {
+			g_set_error (error, RSS_PARSER_ERROR,
+			             RSS_PARSER_ERROR_INVALID_DATA,
+			             "Could not parse file contents");
+		}
 		return FALSE;
 	}
 
