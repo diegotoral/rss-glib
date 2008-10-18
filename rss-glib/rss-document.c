@@ -397,7 +397,7 @@ GList*
 rss_document_get_items (RssDocument *self)
 {
 	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
-	return DOCUMENT_PRIVATE (self)->items;
+	return g_list_copy (DOCUMENT_PRIVATE (self)->items);
 }
 
 /**
