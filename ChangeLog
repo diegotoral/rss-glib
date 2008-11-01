@@ -1,5 +1,9 @@
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
 
+	* rss-glib/rss-item.c: Add documentation for RssItem.
+
+2008-10-31	Christian Hergert	<chris@dronelabs.com>
+
 	* rss-glib/rss-document.c: 
 	* rss-glib/rss-parser.c: Update docs.
 
