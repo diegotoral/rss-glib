@@ -1,6 +1,6 @@
 m4_define([rss_major_version], [0])
 m4_define([rss_minor_version], [1])
-m4_define([rss_micro_version], [1])
+m4_define([rss_micro_version], [3])
 
 m4_define([rss_version],
           [rss_major_version.rss_minor_version.rss_micro_version])
@@ -205,6 +205,9 @@ AC_CONFIG_FILES([
         rss-glib/rss-version.h
         tests/Makefile
         doc/Makefile
+        doc/reference/Makefile
+        doc/reference/rss-glib/Makefile
+        doc/reference/rss-glib/version.xml
 	bindings/Makefile
 	bindings/vala/Makefile
 	bindings/python/Makefile

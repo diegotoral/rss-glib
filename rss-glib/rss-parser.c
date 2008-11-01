@@ -20,7 +20,16 @@
  *   Christian Hergert  <chris@dronelabs.com>
  */
 
+/**
+ * SECTION:rss-parser
+ * @short_description: Parse RSS data streams
+ *
+ * #RssParser provides an object for parsing a RSS data stream, either
+ * inside a file or inside a static buffer.
+ */
+
 #include "rss-parser.h"
+#include "rss-parser-private.h"
 
 #include "rss-item.h"
 #include "rss-item-private.h"
@@ -28,24 +37,25 @@
 #include "rss-document.h"
 #include "rss-document-private.h"
 
-G_DEFINE_TYPE (RssParser, rss_parser, G_TYPE_OBJECT)
-
-#define PARSER_PRIVATE(o)				\
-	(G_TYPE_INSTANCE_GET_PRIVATE ((o),		\
-	RSS_TYPE_PARSER,				\
-	RssParserPrivate))
-
-typedef struct _RssParserPrivate RssParserPrivate;
-
-struct _RssParserPrivate {
-	RssDocument *document;
-};
+#include "rss-marshal.h"
 
 GQuark
 rss_parser_error_quark (void)
 {
 	return g_quark_from_static_string ("rss_parser_error");
 }
+
+enum
+{
+	PARSE_START,
+	PARSE_END,
+
+	LAST_SIGNAL
+};
+
+static guint parser_signals[LAST_SIGNAL] = { 0, };
+
+G_DEFINE_TYPE (RssParser, rss_parser, G_TYPE_OBJECT)
 
 static void
 rss_parser_dispose (GObject *object)
@@ -60,6 +70,38 @@ rss_parser_class_init (RssParserClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	g_type_class_add_private (klass, sizeof (RssParserPrivate));
 	object_class->dispose = rss_parser_dispose;
+
+	/**
+	 * RssParser::parse-start:
+	 * @parser: the #RssParser that received the signal
+	 *
+	 * The ::parse-signal is emitted when the parser began parsing
+	 * a RSS data stream.
+	 */
+	parser_signals[PARSE_START] =
+		g_signal_new ("parse-start",
+		              G_OBJECT_CLASS_TYPE (object_class),
+		              G_SIGNAL_RUN_LAST,
+		              G_STRUCT_OFFSET (RssParserClass, parse_start),
+		              NULL, NULL,
+		              _rss_marshal_VOID__VOID,
+		              G_TYPE_NONE, 0);
+
+	/**
+	 * RssParser::parse-end:
+	 * @parser: the #RssParser that received the signal
+	 *
+	 * The ::parse-end signal is emitted when the parser successfully
+	 * finished parsing a RSS data stream.
+	 */
+	parser_signals[PARSE_END] =
+		g_signal_new ("parse-end",
+		              G_OBJECT_CLASS_TYPE (object_class),
+		              G_SIGNAL_RUN_LAST,
+		              G_STRUCT_OFFSET (RssParserClass, parse_end),
+		              NULL, NULL,
+		              _rss_marshal_VOID__VOID,
+		              G_TYPE_NONE, 0);
 }
 
 static void
@@ -178,12 +220,14 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
  */
 gboolean
 rss_parser_load_from_data (RssParser  *self,
-			   gchar      *data,
-			   gsize       length,
-			   GError    **error)
+                           gchar      *data,
+                           gsize       length,
+                           GError    **error)
 {
 	mrss_t       *mrss;
 	mrss_error_t  res;
+
+	g_signal_emit (self, parser_signals[PARSE_START], 0);
 
 	/* parse the buffer */
 	res = mrss_parse_buffer (data, length, &mrss);
@@ -204,6 +248,8 @@ rss_parser_load_from_data (RssParser  *self,
 	/* free our mrss data */
 	mrss_free (mrss);
 
+	g_signal_emit (self, parser_signals[PARSE_END], 0);
+
 	return TRUE;
 }
 
@@ -220,11 +266,13 @@ rss_parser_load_from_data (RssParser  *self,
  */
 gboolean
 rss_parser_load_from_file (RssParser  *self,
-			   gchar      *filename,
-			   GError    **error)
+                           gchar      *filename,
+                           GError    **error)
 {
 	mrss_t       *mrss;
 	mrss_error_t  res;
+
+	g_signal_emit (self, parser_signals[PARSE_START], 0);
 
 	/* parse the buffer */
 	res = mrss_parse_file (filename, &mrss);
@@ -244,6 +292,8 @@ rss_parser_load_from_file (RssParser  *self,
 
 	/* free our mrss data */
 	mrss_free (mrss);
+
+	g_signal_emit (self, parser_signals[PARSE_END], 0);
 
 	return TRUE;
 }

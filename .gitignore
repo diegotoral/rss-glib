@@ -32,3 +32,10 @@ rss-glib/rss-version.h
 rss-glib/stamp-rss-marshal.h
 tests/test-01
 bindings/python/rss.c
+doc/reference/rss-glib/html/
+doc/reference/rss-glib/*.txt
+doc/reference/rss-glib/*.bak
+doc/reference/rss-glib/version.xml
+doc/reference/rss-glib/rss-glib.*
+doc/reference/rss-glib/xml/
+doc/reference/rss-glib/tmpl/

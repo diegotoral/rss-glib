@@ -1,4 +1,4 @@
-/* rss-generator.h
+/* rss-parser.h
  * 
  * This file is part of RSS-GLib.
  * Copyright (C) 2008  Christian Hergert <chris@dronelabs.com>
@@ -65,7 +65,23 @@ typedef struct {
 } RssParser;
 
 typedef struct {
+	/*< private >*/
 	GObjectClass parent_class;
+
+	/*< public >*/
+	void (* parse_start) (RssParser *parser);
+	void (* parse_end)   (RssParser *parser);
+
+	/*< private >*/
+	/* padding for future expansion */
+	void (* _rss_reserved1) (void);
+	void (* _rss_reserved2) (void);
+	void (* _rss_reserved3) (void);
+	void (* _rss_reserved4) (void);
+	void (* _rss_reserved5) (void);
+	void (* _rss_reserved6) (void);
+	void (* _rss_reserved7) (void);
+	void (* _rss_reserved8) (void);
 } RssParserClass;
 
 GType        rss_parser_get_type       (void);

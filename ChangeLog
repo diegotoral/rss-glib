@@ -1,5 +1,20 @@
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
 
+	* .gitignore: 
+	* configure.ac: 
+	* doc/Makefile.am: 
+	* doc/reference/Makefile.am: 
+	* doc/reference/rss-glib/Makefile.am: 
+	* doc/reference/rss-glib/rss-glib-docs.sgml: Start on docs!
+	* doc/reference/rss-glib/version.xml.in: 
+	* rss-glib/Makefile.am: 
+	* rss-glib/rss-parser-private.h: Move Private struct to a private file.
+	* rss-glib/rss-parser.c: add parse-start and parse-end signals. Also
+	start on some docs.
+	* rss-glib/rss-parser.h: add class vtable entries for the signals.
+
+2008-10-31	Christian Hergert	<chris@dronelabs.com>
+
 	* .gitignore: Update for python bindings.
 	* Makefile.am: 
 	* acinclude.m4: Add macros to aide in checking for python.

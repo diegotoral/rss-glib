@@ -31,6 +31,7 @@ source_h = \
 source_h_private = \
 	$(top_srcdir)/rss-glib/rss-document-private.h \
 	$(top_srcdir)/rss-glib/rss-item-private.h \
+	$(top_srcdir)/rss-glib/rss-parser-private.h \
 	$(NULL)
 
 source_c = \
