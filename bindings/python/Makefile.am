@@ -7,7 +7,7 @@ pkgpythondir = $(pyexecdir)/gtk-2.0
 pkgpyexecdir = $(pyexecdir)/gtk-2.0
 
 pkgpyexec_LTLIBRARIES = rss.la
-rss_la_CFLAGS = $(RSS_CFLAGS) $(GTHREAD_CFLAGS)
+rss_la_CFLAGS = $(RSS_CFLAGS) $(GTHREAD_CFLAGS) -I$(top_srcdir)
 rss_la_LDFLAGS = -module -avoid-version -export-symbols-regex initrss
 rss_la_LIBADD = $(RSS_LIBS) $(GLIB_LIBS) $(top_builddir)/rss-glib/librss-glib-1.0.la
 rss_la_SOURCES = rssmodule.c 
