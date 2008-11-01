@@ -210,6 +210,7 @@ AC_CONFIG_FILES([
         doc/reference/rss-glib/version.xml
 	bindings/Makefile
 	bindings/vala/Makefile
+	bindings/mono/Makefile
 	bindings/python/Makefile
         rss-glib.pc
 ])

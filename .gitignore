@@ -39,3 +39,4 @@ doc/reference/rss-glib/version.xml
 doc/reference/rss-glib/rss-glib.*
 doc/reference/rss-glib/xml/
 doc/reference/rss-glib/tmpl/
+bindings/mono/generated/

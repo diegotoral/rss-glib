@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<api>
+  <!--
+
+        This file was automatically generated.
+        Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
+
+-->
+  <namespace name="Rss" library="rss-glib.dll">
+    <enum name="ParserError" cname="RssParserError" type="enum">
+      <member cname="RSS_PARSER_ERROR_INVALID_DATA" name="Data" />
+    </enum>
+    <object name="Document" cname="RssDocument" parent="GObject">
+      <method name="GetCategories" cname="rss_document_get_categories">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetItems" cname="rss_document_get_items">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetType" cname="rss_document_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="rss_document_new" />
+    </object>
+    <object name="Item" cname="RssItem" parent="GObject">
+      <method name="GetCategories" cname="rss_item_get_categories">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetType" cname="rss_item_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="rss_item_new" />
+    </object>
+    <object name="Parser" cname="RssParser" parent="GObject">
+      <method name="ErrorQuark" cname="rss_parser_error_quark" shared="true">
+        <return-type type="GQuark" />
+      </method>
+      <method name="GetDocument" cname="rss_parser_get_document">
+        <return-type type="RssDocument*" />
+      </method>
+      <method name="GetType" cname="rss_parser_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="LoadFromData" cname="rss_parser_load_from_data">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gchar*" name="data" />
+          <parameter type="gsize" name="length" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+      <method name="LoadFromFile" cname="rss_parser_load_from_file">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gchar*" name="filename" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+      <constructor cname="rss_parser_new" />
+    </object>
+  </namespace>
+</api>
