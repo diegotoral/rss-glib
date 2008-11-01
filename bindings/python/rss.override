@@ -4,7 +4,7 @@ headers
 
 #include "pygobject.h"
 
-#include "../../rss-glib/rss-glib.h"
+#include "rss-glib/rss-glib.h"
 %%
 modulename rss
 %%

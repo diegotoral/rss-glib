@@ -17,7 +17,7 @@ SCAN_OPTIONS=
 SCANGOBJ_OPTIONS=--type-init-func="g_type_init()" 
 
 # The directory containing the source code. Relative to $(srcdir)
-DOC_SOURCE_DIR=../../../rss-glib
+DOC_SOURCE_DIR=$(top_srcdir)/rss-glib
 
 # Used for dependencies
 HFILE_GLOB=$(top_srcdir)/rss-glib/*.h
@@ -49,7 +49,7 @@ GTKDOC_LIBS = \
 MKDB_OPTIONS=--sgml-mode --output-format=xml
 
 # Extra SGML files that are included by $(DOC_MAIN_SGML_FILE)
-content_files =
+content_files = version.xml
 
 # Images to copy into HTML directory
 HTML_IMAGES =
