@@ -26,7 +26,7 @@ _wrap_rss_document_get_items (PyGObject *pyself)
 		return NULL;
 	}
 
-	list = rss_document_get_items (pyself->obj);
+	list = rss_document_get_items (RSS_DOCUMENT (pyself->obj));
 
 	if ((pylist = PyList_New (0)) == NULL) {
 		g_list_free (list);
@@ -42,6 +42,78 @@ _wrap_rss_document_get_items (PyGObject *pyself)
 		}
 		PyList_Append (pylist, rss_obj);
 		Py_DECREF (rss_obj);
+	}
+
+	g_list_free (list);
+
+	return pylist;
+}
+%%
+override rss_document_get_categories
+static PyObject*
+_wrap_rss_document_get_categories (PyGObject *pyself)
+{
+	GList *list, *tmp;
+	PyObject *pylist, *pystr;
+
+	if (!pygobject_check (pyself, &PyRssDocument_Type)) {
+		PyErr_SetString (PyExc_RuntimeError,
+		                 "self is not a RssDocument");
+		return NULL;
+	}
+
+	list = rss_document_get_categories (RSS_DOCUMENT (pyself->obj));
+
+	if ((pylist = PyList_New (0)) == NULL) {
+		g_list_free (list);
+		return NULL;
+	}
+
+	for (tmp = list; tmp != NULL; tmp = tmp->next) {
+		pystr = PyString_FromString ((char*) tmp->data);
+		if (pystr == NULL) {
+			g_list_free (list);
+			Py_DECREF (pylist);
+			return NULL;
+		}
+		PyList_Append (pylist, pystr);
+		Py_DECREF (pystr);
+	}
+
+	g_list_free (list);
+
+	return pylist;
+}
+%%
+override rss_item_get_categories
+static PyObject*
+_wrap_rss_item_get_categories (PyGObject *pyself)
+{
+	GList *list, *tmp;
+	PyObject *pylist, *pystr;
+
+	if (!pygobject_check (pyself, &PyRssItem_Type)) {
+		PyErr_SetString (PyExc_RuntimeError,
+		                 "self is not a RssItem");
+		return NULL;
+	}
+
+	list = rss_item_get_categories (RSS_ITEM (pyself->obj));
+
+	if ((pylist = PyList_New (0)) == NULL) {
+		g_list_free (list);
+		return NULL;
+	}
+
+	for (tmp = list; tmp != NULL; tmp = tmp->next) {
+		pystr = PyString_FromString ((char*) tmp->data);
+		if (pystr == NULL) {
+			g_list_free (list);
+			Py_DECREF (pylist);
+			return NULL;
+		}
+		PyList_Append (pylist, pystr);
+		Py_DECREF (pystr);
 	}
 
 	g_list_free (list);

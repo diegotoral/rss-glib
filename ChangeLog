@@ -1,5 +1,14 @@
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
 
+	* bindings/python/rss.override: Add overrides for
+	rss.Document.get_categories() and rss.Item.get_categories(). Categories
+	are a python list of strings describing the article.
+	* rss-glib/rss-document.c: Fix bad documentation.
+	* rss-glib/rss-item.c: Whoops, forgot to write
+	rss_item_get_categories(). Also add docs for the new method.
+
+2008-10-31	Christian Hergert	<chris@dronelabs.com>
+
 	* bindings/python/rss.override: Add override for get_items() to return a
 	python list of the individual rss items.
 

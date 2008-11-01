@@ -667,9 +667,9 @@ rss_document_get_items (RssDocument *self)
  * rss_document_get_categories:
  * @self: a #RssDocument
  *
- * Creates a #GList of categories found in the syndication. The objects
- * in the list are weak references. Consumers of those objects should
- * ref them with g_object_ref.
+ * Creates a #GList of categories found in the syndication. The strings
+ * in the list are weak references.  Consumers should duplicate them
+ * with g_strdup().
  *
  * Returns: a new #GList owned by the caller
  */
@@ -677,5 +677,5 @@ GList*
 rss_document_get_categories (RssDocument *self)
 {
 	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
-	return DOCUMENT_PRIVATE (self)->categories;
+	return g_list_copy (DOCUMENT_PRIVATE (self)->categories);
 }

@@ -403,3 +403,21 @@ rss_item_new (void)
 {
 	return g_object_new (RSS_TYPE_ITEM, NULL);
 }
+
+/**
+ * rss_item_get_categories:
+ * @self: a #RssItem
+ *
+ * Returns a copy of the list of categories for the #RssItem. The data
+ * in the linked list are pointers to strings (char*).  They are owned
+ * by the #RssItem and should not be modified.  Use g_strdup() to copy
+ * the individual strings.
+ *
+ * Returns: a new #GList which should be freed with g_list_free().
+ */
+GList*
+rss_item_get_categories (RssItem *self)
+{
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	return g_list_copy (ITEM_PRIVATE (self)->categories);
+}
