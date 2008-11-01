@@ -1,0 +1,117 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Document
+  (in-module "Rss")
+  (parent "GObject")
+  (c-name "RssDocument")
+  (gtype-id "RSS_TYPE_DOCUMENT")
+)
+
+(define-object Item
+  (in-module "Rss")
+  (parent "GObject")
+  (c-name "RssItem")
+  (gtype-id "RSS_TYPE_ITEM")
+)
+
+(define-object Parser
+  (in-module "Rss")
+  (parent "GObject")
+  (c-name "RssParser")
+  (gtype-id "RSS_TYPE_PARSER")
+)
+
+;; From rss-document.h
+
+(define-function rss_document_get_type
+  (c-name "rss_document_get_type")
+  (return-type "GType")
+)
+
+(define-function rss_document_new
+  (c-name "rss_document_new")
+  (is-constructor-of "RssDocument")
+  (return-type "RssDocument*")
+)
+
+(define-method get_items
+  (of-object "RssDocument")
+  (c-name "rss_document_get_items")
+  (return-type "GList*")
+)
+
+(define-method get_categories
+  (of-object "RssDocument")
+  (c-name "rss_document_get_categories")
+  (return-type "GList*")
+)
+
+
+
+;; From rss-item.h
+
+(define-function rss_item_get_type
+  (c-name "rss_item_get_type")
+  (return-type "GType")
+)
+
+(define-function rss_item_new
+  (c-name "rss_item_new")
+  (is-constructor-of "RssItem")
+  (return-type "RssItem*")
+)
+
+(define-method get_categories
+  (of-object "RssItem")
+  (c-name "rss_item_get_categories")
+  (return-type "GList*")
+)
+
+
+
+;; From rss-parser.h
+
+(define-function rss_parser_error_quark
+  (c-name "rss_parser_error_quark")
+  (return-type "GQuark")
+)
+
+(define-function rss_parser_get_type
+  (c-name "rss_parser_get_type")
+  (return-type "GType")
+)
+
+(define-function rss_parser_new
+  (c-name "rss_parser_new")
+  (is-constructor-of "RssParser")
+  (return-type "RssParser*")
+)
+
+(define-method load_from_data
+  (of-object "RssParser")
+  (c-name "rss_parser_load_from_data")
+  (return-type "gboolean")
+  (parameters
+    '("gchar*" "data")
+    '("gsize" "length")
+    '("GError**" "error")
+  )
+)
+
+(define-method load_from_file
+  (of-object "RssParser")
+  (c-name "rss_parser_load_from_file")
+  (return-type "gboolean")
+  (parameters
+    '("gchar*" "filename")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_document
+  (of-object "RssParser")
+  (c-name "rss_parser_get_document")
+  (return-type "RssDocument*")
+)
+
+

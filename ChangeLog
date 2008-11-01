@@ -1,3 +1,18 @@
+2008-10-31	Christian Hergert	<chris@dronelabs.com>
+
+	* .gitignore: Update for python bindings.
+	* Makefile.am: 
+	* acinclude.m4: Add macros to aide in checking for python.
+	* bindings/Makefile.am: 
+	* bindings/python/Makefile.am: 
+	* bindings/python/rss.defs: 
+	* bindings/python/rss.override: 
+	* bindings/python/rssmodule.c: New python binding for rss-glib.
+	* bindings/vala/Makefile.am: 
+	* bindings/vala/rss-glib-1.0.vapi: 
+	* bindings/vala/rss-test.vala: Moved from vala/
+	* configure.ac: Add checking for python to enable python bindings.
+
 2008-07-13	Christian Hergert	<chris@dronelabs.com>
 
 	* rss-glib/rss-parser.c: Use our new error domain.

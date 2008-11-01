@@ -67,6 +67,8 @@ PKG_CHECK_MODULES(RSS, gobject-2.0 >= glib_req_version)
 AC_SUBST(RSS_CFLAGS)
 AC_SUBST(RSS_LIBS)
 
+
+
 dnl = Enable vala ==========================================================
 has_vala=no
 PKG_CHECK_MODULES(RSS_VALA, vala-1.0, has_vala=yes, has_vala=no)
@@ -80,8 +82,77 @@ fi
 AM_CONDITIONAL(HAVE_VALA, [test "x$has_vala" = "xyes"])
 AC_SUBST(VAPI_DIR)
 
-dnl = Enable debug level ===================================================
 
+
+dnl = Enable python =======================================================
+has_python=no
+BUILD_PYTHON=true
+AC_ARG_ENABLE(python, [AS_HELP_STRING(--enable-python,Build python bindings
+		       [defualt=yes])],[
+if test x"$enableval" != xno ; then
+    BUILD_PYTHON=true
+else
+    BUILD_PYTHON=false
+fi],BUILD_PYTHON=true)
+
+if $BUILD_PYTHON ; then
+    AM_PATH_PYTHON
+    if test -z "$PYTHON" ; then
+        BUILD_PYTHON=false
+    fi  
+fi
+
+if $BUILD_PYTHON ; then
+    AC_MSG_CHECKING(for python >= 2.2)
+    prog="
+import sys, string
+minver = (2,2,0,'final',0)
+if sys.version_info < minver:
+    sys.exit(1)
+sys.exit(0)
+"
+    if $PYTHON -c "$prog" 1>&AC_FD_CC 2>&AC_FD_CC
+    then
+        AC_MSG_RESULT([okay])
+    else
+        BUILD_PYTHON=false
+        AC_MSG_RESULT([too old])
+    fi
+fi
+
+if $BUILD_PYTHON ; then
+    AM_CHECK_PYTHON_HEADERS(,BUILD_PYTHON=false)
+fi
+
+if $BUILD_PYTHON ; then
+    AC_MSG_CHECKING([for pygtk-2.0])
+    if pkg-config --exists pygtk-2.0 ; then
+        AC_MSG_RESULT([found])
+        PKG_CHECK_MODULES(PYGTK,[pygtk-2.0])
+
+        AC_PATH_PROG(PYGOBJECT_CODEGEN, pygobject-codegen-2.0, no)
+        if test "x$PYGOBJECT_CODEGEN" = xno; then
+            AC_MSG_ERROR(could not find pygobject-codegen-2.0 script)
+        fi
+    else
+        AC_MSG_RESULT([not found])
+        BUILD_PYTHON=false
+    fi
+fi
+
+if ! $BUILD_PYTHON ; then
+    AC_MSG_RESULT([Python bindings disabled.])
+else
+    has_python=yes
+fi
+
+AC_SUBST(PYTHONREV)
+AC_SUBST(PYTHONMODULES)
+AM_CONDITIONAL(BUILD_PYTHON_MODULES, $BUILD_PYTHON)
+
+
+
+dnl = Enable debug level ===================================================
 m4_define([debug_default],
           m4_if(m4_eval(rss_minor_version % 2), [1], [yes], [minimum]))
 
@@ -104,8 +175,9 @@ fi
 
 AC_SUBST(RSS_DEBUG_CFLAGS)
 
-dnl = Enable strict compiler flags =========================================
 
+
+dnl = Enable strict compiler flags =========================================
 # use strict compiler flags only on development releases
 #m4_define([maintainer_flags_default],
 #          m4_if(m4_eval(rss_minor_version % 2), [1], [yes], [no]))
@@ -121,7 +193,11 @@ else
   CPPFLAGS="$CPPFLAGS -g -Wall"
 fi
 
+
+dnl = Enable gtk-doc ======================================================
 GTK_DOC_CHECK([1.8])
+
+
 
 AC_CONFIG_FILES([
         Makefile
@@ -129,18 +205,24 @@ AC_CONFIG_FILES([
         rss-glib/rss-version.h
         tests/Makefile
         doc/Makefile
-	vala/Makefile
+	bindings/Makefile
+	bindings/vala/Makefile
+	bindings/python/Makefile
         rss-glib.pc
 ])
 
 AC_OUTPUT
 
 echo ""
-echo " Rss-GLib $VERSION"
+echo "  Rss-GLib $VERSION"
 echo ""
 echo "                Prefix: ${prefix}"
 echo "           Debug level: ${enable_debug}"
 echo "        Compiler flags: ${CPPFLAGS}"
-echo "         API reference: ${enable_gtk_doc} (No docs yet)"
-echo " Install vala bindings: ${has_vala} (${VAPI_DIR})"
+echo "         API reference: ${enable_gtk_doc}"
+echo ""
+echo "  Bindings"
+echo ""
+echo "                  Vala: ${has_vala}"
+echo "                Python: ${has_python}"
 echo ""
