@@ -13,3 +13,39 @@ import gobject.GObject as PyGObject_Type
 ignore-glob
   *_get_type
 %%
+override rss_document_get_items
+static PyObject*
+_wrap_rss_document_get_items (PyGObject *pyself)
+{
+	GList *list, *tmp;
+	PyObject *pylist, *rss_obj;
+
+	if (!pygobject_check (pyself, &PyRssDocument_Type)) {
+		PyErr_SetString (PyExc_RuntimeError,
+		                 "self is not a RssDocument");
+		return NULL;
+	}
+
+	list = rss_document_get_items (pyself->obj);
+
+	if ((pylist = PyList_New (0)) == NULL) {
+		g_list_free (list);
+		return NULL;
+	}
+
+	for (tmp = list; tmp != NULL; tmp = tmp->next) {
+		rss_obj = pygobject_new (G_OBJECT (tmp->data));
+		if (rss_obj == NULL) {
+			g_list_free (list);
+			Py_DECREF (pylist);
+			return NULL;
+		}
+		PyList_Append (pylist, rss_obj);
+		Py_DECREF (rss_obj);
+	}
+
+	g_list_free (list);
+
+	return pylist;
+}
+%%

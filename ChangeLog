@@ -1,5 +1,10 @@
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
 
+	* bindings/python/rss.override: Add override for get_items() to return a
+	python list of the individual rss items.
+
+2008-10-31	Christian Hergert	<chris@dronelabs.com>
+
 	* rss-glib/rss-item.c: Add documentation for RssItem.
 
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
