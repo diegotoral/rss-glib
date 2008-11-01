@@ -1,0 +1,22 @@
+RSS-GLib is a wrapper around the fantastic libmrss library for parsing
+rss, atom, and other syndications.  The reason for this was two-fold.
+The libmrss, while quite powerful, is a little more complex than needed
+for most projects.  For this reason RSS-GLib aims to wrap that into a
+simpler API.  The primary reason, however, is that gobject is so easy
+to wrap into various languages.
+
+Dependencies:
+
+	glib-2.0 (probably 2.15 or higher)
+	libmrss0
+
+Python example:
+
+	>>> import rss
+	>>> parser = rss.Parser()
+	>>> parser.load_from_file('/tmp/atom.xml')
+	True
+	>>> # SEE ALSO: parser.load_from_data("...")
+	>>> doc = parser.get_document()
+	>>> for item in doc.get_items(): print item.props.title
+
