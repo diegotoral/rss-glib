@@ -1,3 +1,21 @@
+2008-11-01	Christian Hergert	<chris@dronelabs.com>
+
+	* .gitignore: 
+	* bindings/Makefile.am: Check for conditionals to build subdirs list.
+	* bindings/mono/AssemblyInfo.cs.in: 
+	* bindings/mono/Global.cs: 
+	* bindings/mono/Makefile.am: 
+	* bindings/mono/rss-glib-sharp.dll.config.in: 
+	* bindings/mono/rss-glib-sharp.snk: 
+	* bindings/mono/rss-glib.metadata: 
+	* bindings/mono/rss-glib.raw: 
+	* bindings/mono/rss-glib.sources: New binding for Mono.
+	* configure.ac: Add conditional checks and Mono support.
+	* examples/console-c.c: Quick sample of C api.
+	* examples/console-mono.cs: Quick sample of .NET api.
+	* examples/console-python.py: Quick sample of python api.
+	* examples/console-vala.vala: Quick sample of Vala api.
+
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
 
 	* bindings/python/rss.override: Add overrides for

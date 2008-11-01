@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<metadata>
+  <add-node path="/api/namespace/object[@cname='RssItem']">
+    <property name="Title" cname="title" type="char*" readable="true" writeable="true" />
+    <property name="Link" cname="link" type="char*" readable="true" writeable="true" />
+    <property name="Description" cname="description" type="char*" readable="true" writeable="true" />
+    <property name="Copyright" cname="copyright" type="char*" readable="true" writeable="true" />
+    <property name="Author" cname="author" type="char*" readable="true" writeable="true" />
+    <property name="AuthorUri" cname="author_uri" type="char*" readable="true" writeable="true" />
+    <property name="AuthorEmail" cname="author_email" type="char*" readable="true" writeable="true" />
+    <property name="Contributor" cname="contributor" type="char*" readable="true" writeable="true" />
+    <property name="ContributorUri" cname="contributor_uri" type="char*" readable="true" writeable="true" />
+    <property name="ContributorEmail" cname="contributor_email" type="char*" readable="true" writeable="true" />
+    <property name="Comments" cname="comments" type="char*" readable="true" writeable="true" />
+    <property name="PubDate" cname="pub_date" type="char*" readable="true" writeable="true" />
+    <property name="Guid" cname="guid" type="char*" readable="true" writeable="true" />
+    <property name="Source" cname="source" type="char*" readable="true" writeable="true" />
+    <property name="SourceUrl" cname="source_url" type="char*" readable="true" writeable="true" />
+  </add-node>
+</metadata>

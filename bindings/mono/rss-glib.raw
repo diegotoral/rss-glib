@@ -6,7 +6,7 @@
         Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
 
 -->
-  <namespace name="Rss" library="rss-glib.dll">
+  <namespace name="Rss" library="librss-glib-1.0.dll">
     <enum name="ParserError" cname="RssParserError" type="enum">
       <member cname="RSS_PARSER_ERROR_INVALID_DATA" name="Data" />
     </enum>

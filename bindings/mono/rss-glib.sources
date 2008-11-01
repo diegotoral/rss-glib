@@ -1,6 +1,6 @@
 <gapi-parser-input>
-	<api filename="rss-glib.api">
-		<library name="rss-glib.dll">
+	<api filename="rss-glib.raw">
+		<library name="librss-glib-1.0.dll">
 			<namespace name="Rss">
 				<file>../../rss-glib/rss-parser.h</file>
 				<file>../../rss-glib/rss-document.h</file>

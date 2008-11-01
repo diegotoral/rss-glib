@@ -40,3 +40,10 @@ doc/reference/rss-glib/rss-glib.*
 doc/reference/rss-glib/xml/
 doc/reference/rss-glib/tmpl/
 bindings/mono/generated/
+bindings/mono/AssemblyInfo.cs
+bindings/mono/rss-glib.xml
+bindings/mono/rss-glib-sharp.dll
+bindings/mono/rss-glib-sharp.dll.mdb
+bindings/mono/rss-glib-sharp.dll.config
+bindings/mono/generated-stamp
+bindings/mono/rss-glib.api

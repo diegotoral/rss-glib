@@ -148,7 +148,40 @@ fi
 
 AC_SUBST(PYTHONREV)
 AC_SUBST(PYTHONMODULES)
-AM_CONDITIONAL(BUILD_PYTHON_MODULES, $BUILD_PYTHON)
+AM_CONDITIONAL(HAVE_PYTHON, $BUILD_PYTHON)
+
+
+
+dnl = Enable Mono ==========================================================
+if test `uname -s` = "Darwin"; then
+        LIB_PREFIX=
+        LIB_SUFFIX=.dylib
+else
+        LIB_PREFIX=.so
+        LIB_SUFFIX=
+fi
+AC_SUBST(LIB_PREFIX)
+AC_SUBST(LIB_SUFFIX)
+PKG_CHECK_MODULES(MONO, mono >= 1.2.6, has_mono=yes, has_mono=no)
+
+if test "x$has_mono" = "xyes"; then
+	AC_PATH_PROG(CSC, mcs, no)
+	if test "x$CSC" = "xno" ; then
+		has_mono=no
+	fi 
+
+	AC_PATH_PROG(GACUTIL, gacutil, no)
+	if test "x$GACUTIL" = "xno" ; then
+		has_mono=no
+	fi
+
+	PKG_CHECK_MODULES(GLIB_SHARP, glib-sharp-2.0 >= 1.9.0,
+			  has_gsharp=yes, has_gsharp=no)
+	if test "x$has_gsharp" = "xno" ; then
+		has_mono=no
+	fi
+fi
+AM_CONDITIONAL(HAVE_MONO, test "x$has_mono" = "xyes")
 
 
 
@@ -211,6 +244,8 @@ AC_CONFIG_FILES([
 	bindings/Makefile
 	bindings/vala/Makefile
 	bindings/mono/Makefile
+	bindings/mono/AssemblyInfo.cs
+	bindings/mono/rss-glib-sharp.dll.config
 	bindings/python/Makefile
         rss-glib.pc
 ])
@@ -229,4 +264,5 @@ echo "  Bindings"
 echo ""
 echo "                  Vala: ${has_vala}"
 echo "                Python: ${has_python}"
+echo "                  Mono: ${has_mono}"
 echo ""

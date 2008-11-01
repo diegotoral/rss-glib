@@ -1,0 +1,6 @@
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly:AssemblyVersion("@RSS_VERSION@")]
+[assembly:AssemblyDelaySign(false)]
+[assembly:AssemblyKeyFile("rss-glib-sharp.snk")]
