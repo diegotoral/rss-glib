@@ -1,5 +1,10 @@
 2008-10-31	Christian Hergert	<chris@dronelabs.com>
 
+	* rss-glib/rss-document.c: 
+	* rss-glib/rss-parser.c: Update docs.
+
+2008-10-31	Christian Hergert	<chris@dronelabs.com>
+
 	* .gitignore: 
 	* configure.ac: 
 	* doc/Makefile.am: 

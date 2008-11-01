@@ -110,6 +110,16 @@ rss_parser_init (RssParser *self)
 	PARSER_PRIVATE (self)->document = NULL;
 }
 
+/**
+ * rss_parser_new:
+ *
+ * Creates a new #RssParser instance.  You can use the #RssParser to
+ * load a RSS stream from either a file or a buffer and then walk the
+ * items discovered through the resulting RssDocument.
+ *
+ * Return value: the new created #RssParser. Use g_object_unref() to
+ *   release all the memory it allocates.
+ */
 RssParser*
 rss_parser_new (void)
 {
@@ -207,7 +217,7 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 }
 
 /**
- * RssParser::load_from_data
+ * rss_parser_load_from_data:
  * @self: a #RssParser
  * @data: a buffer containing the syndication data
  * @length: the length of the buffer
@@ -254,7 +264,7 @@ rss_parser_load_from_data (RssParser  *self,
 }
 
 /**
- * RssParser::load_from_file
+ * rss_parser_load_from_file:
  * @self: a #RssParser
  * @filename: the path to the file to parse
  * @error: a location for a newly created #GError
@@ -299,9 +309,10 @@ rss_parser_load_from_file (RssParser  *self,
 }
 
 /**
- * RssParser::get_document
+ * rss_parser_get_document:
+ * @self: a #RssParser
  *
- * Returns the document result from parsing rss data from either
+ * Retreives the document result from parsing rss data from either
  * a buffer or a file. The document's ref-count is increased, so
  * call g_object_unref when you are done.
  *
