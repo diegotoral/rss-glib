@@ -42,5 +42,11 @@ uninstall-local:
 	echo "$(GACUTIL) /u $(ASSEMBLY_NAME) /package rss-glib-sharp-1.0 /root $(DESTDIR)$(libdir)"; \
 	$(GACUTIL) /u $(ASSEMBLY_NAME) /package rss-glib-sharp-1.0 /root $(DESTDIR)$(libdir) || exit 1;
 
+monodir = $(libdir)/mono/rss-glib-sharp-1.0/
+mono_DATA = $(ASSEMBLY) $(ASSEMBLY).mdb
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = rss-glib-sharp-1.0.pc
+
 EXTRA_DIST = $(RAW_API) $(sources) $(customs) $(METADATA) AssemblyInfo.cs.in rss-glib-sharp.dll.config.in rss-glib-sharp.snk
 

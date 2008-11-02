@@ -1,0 +1,9 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+Name: 
+Description: RssGLib# - Mono bindings for rss-glib.
+Version: @VERSION@
+Requires: glib-sharp-2.0
+Libs: -r:${libdir}/mono/rss-glib-sharp-1.0/rss-glib-sharp.dll

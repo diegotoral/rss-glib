@@ -47,3 +47,5 @@ bindings/mono/rss-glib-sharp.dll.mdb
 bindings/mono/rss-glib-sharp.dll.config
 bindings/mono/generated-stamp
 bindings/mono/rss-glib.api
+bindings/mono/rss-glib-sharp-1.0.pc
+*.tar.gz

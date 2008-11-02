@@ -1,5 +1,13 @@
 2008-11-01	Christian Hergert	<chris@dronelabs.com>
 
+	* .gitignore: Ingore .tar.gz from make dist.
+	* bindings/mono/Makefile.am: Install pkgconfig file and dll.
+	* bindings/mono/rss-glib-sharp-1.0.pc.in: New pkgconfig file for mono
+	bindings.
+	* configure.ac: Add new .in files.
+
+2008-11-01	Christian Hergert	<chris@dronelabs.com>
+
 	* .gitignore: 
 	* bindings/Makefile.am: Check for conditionals to build subdirs list.
 	* bindings/mono/AssemblyInfo.cs.in: 
