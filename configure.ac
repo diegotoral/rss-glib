@@ -131,7 +131,12 @@ if $BUILD_PYTHON ; then
 
         AC_PATH_PROG(PYGOBJECT_CODEGEN, pygobject-codegen-2.0, no)
         if test "x$PYGOBJECT_CODEGEN" = xno; then
-            AC_MSG_ERROR(could not find pygobject-codegen-2.0 script)
+            AC_PATH_PROG(PYGTK_CODEGEN, pygtk-codegen-2.0, no)
+            if test "x$PYGTK_CODEGEN" = xno; then
+                AC_MSG_ERROR(could not find pygobject-codegen-2.0 or pygtk-codegen-2.0 script)
+            else
+                PYGOBJECT_CODEGEN=$PYGTK_CODEGEN
+            fi
         fi
     else
         AC_MSG_RESULT([not found])
