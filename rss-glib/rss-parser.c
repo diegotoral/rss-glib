@@ -60,6 +60,13 @@ G_DEFINE_TYPE (RssParser, rss_parser, G_TYPE_OBJECT)
 static void
 rss_parser_dispose (GObject *object)
 {
+	RssParserPrivate *priv = PARSER_PRIVATE (object);
+
+	if (priv->document) {
+		g_object_unref (priv->document);
+		priv->document = NULL;
+	}
+
 	if (G_OBJECT_CLASS (rss_parser_parent_class)->dispose)
 		G_OBJECT_CLASS (rss_parser_parent_class)->dispose (object);
 }
