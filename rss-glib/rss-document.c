@@ -26,7 +26,7 @@
  * @see_also: rss_parser_get_document()
  *
  * #RssDocument is the representation of the resource that was parsed. It
- * contains a list of RssItem's which in turn contain article information.
+ * contains a list of #RssItem<!-- -->s which in turn contain article information.
  */
 
 #include "rss-document.h"
@@ -635,7 +635,7 @@ rss_document_init (RssDocument *self)
  *
  * Creates a new instance of #RssDocument.  This isn't incredibly useful
  * currently, but is here none-the-less.  The desire is to create an
- * rss generator that will allow for building rss streams out of the
+ * RSS generator that will allow for building RSS streams out of the
  * document hierarchy.
  *
  * Returns: a new #RssDocument. Use g_object_unref() when you are done.
@@ -650,7 +650,7 @@ rss_document_new (void)
  * rss_document_get_items:
  * @self: a #RssDocument
  *
- * Creates a #GList of items that were found in the syndication. The objects
+ * Creates a #GList of #RssItem<!-- -->s that were found in the syndication. The objects
  * in the list are weak references. Consumers of those objects should ref
  * them with g_object_ref.
  *
