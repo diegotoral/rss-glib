@@ -169,7 +169,7 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 	if (NULL != (cat = mrss->category)) {
 		list = NULL;
 		do {
-			list = g_list_insert (list, g_strdup (cat->category), 0);
+			list = g_list_prepend (list, g_strdup (cat->category));
 		} while (NULL != (cat = cat->next));
 		DOCUMENT_PRIVATE (document)->categories = list;
 	}
@@ -203,12 +203,12 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 			if (NULL != (cat = item->category)) {
 				list2 = NULL;
 				do {
-					list2 = g_list_insert (list2, g_strdup (cat->category), 0);
+					list2 = g_list_prepend (list2, g_strdup (cat->category));
 				} while (NULL != (cat = cat->next));
 				ITEM_PRIVATE (rss_item)->categories = list2;
 			}
 
-			list = g_list_insert (list, rss_item, 0);
+			list = g_list_prepend (list, rss_item);
 		} while (NULL != (item = item->next));
 		DOCUMENT_PRIVATE (document)->items = list;
 	}
