@@ -86,10 +86,10 @@ typedef struct {
 
 GType        rss_parser_get_type       (void);
 RssParser*   rss_parser_new            (void);
-gboolean     rss_parser_load_from_data (RssParser   *self,
-                                        gchar       *data,
-                                        gsize        length,
-				        GError     **error);
+gboolean     rss_parser_load_from_data (RssParser   * self,
+                                        const gchar *data,
+                                        gsize         length,
+				        GError      **error);
 gboolean     rss_parser_load_from_file (RssParser   *self,
                                         gchar       *filename,
 				        GError     **error);

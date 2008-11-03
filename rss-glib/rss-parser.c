@@ -229,10 +229,10 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
  * Returns: TRUE on success.
  */
 gboolean
-rss_parser_load_from_data (RssParser  *self,
-                           gchar      *data,
-                           gsize       length,
-                           GError    **error)
+rss_parser_load_from_data (RssParser   *self,
+                           const gchar *data,
+                           gsize        length,
+                           GError     **error)
 {
 	mrss_t       *mrss;
 	mrss_error_t  res;
@@ -240,7 +240,7 @@ rss_parser_load_from_data (RssParser  *self,
 	g_signal_emit (self, parser_signals[PARSE_START], 0);
 
 	/* parse the buffer */
-	res = mrss_parse_buffer (data, length, &mrss);
+	res = mrss_parse_buffer ((char*)data, length, &mrss);
 
 	/* if there was an error parsing, set the error and return false */
 	if (MRSS_OK != res) {
