@@ -216,10 +216,30 @@ rss_item_set_property (GObject      *object,
 }
 
 static void
-rss_item_dispose (GObject *object)
+rss_item_finalize (GObject *object)
 {
-	if (G_OBJECT_CLASS (rss_item_parent_class)->dispose)
-		G_OBJECT_CLASS (rss_item_parent_class)->dispose (object);
+  RssItemPrivate *priv = ITEM_PRIVATE (object);
+
+  g_free (priv->guid);
+  g_free (priv->title);
+  g_free (priv->link);
+  g_free (priv->description);
+  g_free (priv->copyright);
+  g_free (priv->author);
+  g_free (priv->author_uri);
+  g_free (priv->author_email);
+  g_free (priv->contributor);
+  g_free (priv->contributor_uri);
+  g_free (priv->contributor_email);
+  g_free (priv->comments);
+  g_free (priv->pub_date);
+  g_free (priv->source);
+  g_free (priv->source_url);
+  
+  g_list_foreach (priv->categories, (GFunc)g_free, NULL);
+  g_list_free (priv->categories);
+
+  G_OBJECT_CLASS (rss_item_parent_class)->finalize (object);
 }
 
 static void
@@ -229,7 +249,7 @@ rss_item_class_init (RssItemClass *klass)
 	g_type_class_add_private (klass, sizeof (RssItemPrivate));
 	gobject_class->get_property = rss_item_get_property;
 	gobject_class->set_property = rss_item_set_property;
-	gobject_class->dispose = rss_item_dispose;
+	gobject_class->finalize = rss_item_finalize;
 
 	/**
 	 * RssItem:title:
