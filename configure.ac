@@ -87,8 +87,7 @@ AC_SUBST(VAPI_DIR)
 dnl = Enable python =======================================================
 has_python=no
 BUILD_PYTHON=true
-AC_ARG_ENABLE(python, [AS_HELP_STRING(--enable-python,Build python bindings
-		       [defualt=yes])],[
+AC_ARG_ENABLE(python, [AS_HELP_STRING([--disable-python],[Disable python bindings [default=yes]])],[
 if test x"$enableval" != xno ; then
     BUILD_PYTHON=true
 else
