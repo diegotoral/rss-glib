@@ -693,3 +693,394 @@ rss_document_get_categories (RssDocument *self)
 
 	return g_list_copy (self->priv->categories);
 }
+
+/**
+ * rss_document_get_guid:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:guid field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_guid (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->guid;
+}
+
+/**
+ * rss_document_get_about:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:about field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_about (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->about;
+}
+
+/**
+ * rss_document_get_title:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:title field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_title (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->title;
+}
+
+/**
+ * rss_document_get_description:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:description field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_description (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->description;
+}
+
+/**
+ * rss_document_get_link:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:link field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_link (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->link;
+}
+
+/**
+ * rss_document_get_encoding:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:encoding field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_encoding (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->encoding;
+}
+
+/**
+ * rss_document_get_language:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:language field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_language (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->language;
+}
+
+/**
+ * rss_document_get_rating:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:rating field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_rating (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->rating;
+}
+
+/**
+ * rss_document_get_copyright:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:copyright field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_copyright (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->copyright;
+}
+
+/**
+ * rss_document_get_pub_date:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:pub-date field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_pub_date (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->pub_date;
+}
+
+/**
+ * rss_document_get_editor_name:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:editor field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_editor_name (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->editor;
+}
+
+/**
+ * rss_document_get_editor_email:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:editor-email field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_editor_email (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->editor_email;
+}
+
+/**
+ * rss_document_get_editor_uri:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:editor-uri field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_editor_uri (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->editor_uri;
+}
+
+/**
+ * rss_document_get_contributor:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:contributor field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_contributor_name (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->contributor;
+}
+
+/**
+ * rss_document_get_contributor_email:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:contributor-email field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_contributor_email (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->contributor_email;
+}
+
+/**
+ * rss_document_get_contributor_uri:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:contributor-uri field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_contributor_uri (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->contributor_uri;
+}
+
+/**
+ * rss_document_get_generator_name:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:generator-name field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_generator_name (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->generator;
+}
+
+/**
+ * rss_document_get_generator_uri:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:generator-uri field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_generator_uri (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->generator_uri;
+}
+
+/**
+ * rss_document_get_generator_version:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:generator-version field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_generator_version (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->generator_version;
+}
+
+/**
+ * rss_document_get_image_title:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:image-title field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_image_title (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->image_title;
+}
+
+/**
+ * rss_document_get_image_url:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:image-url field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_image_url (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->image_url;
+}
+
+/**
+ * rss_document_get_image_link:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:image-link field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+G_CONST_RETURN gchar *
+rss_document_get_image_link (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+
+        return self->priv->image_link;
+}
+
+/**
+ * rss_document_get_ttl:
+ * @self: a #RssDocument
+ *
+ * Retrieves the #RssDocument:ttl field.
+ *
+ * Return value: the contents of the field. The returned string is
+ *   owned by the #RssDocument and should never be modified of freed
+ */
+gint
+rss_document_get_ttl (RssDocument *self)
+{
+        g_return_val_if_fail (RSS_IS_DOCUMENT (self), 0);
+
+        return self->priv->ttl;
+}

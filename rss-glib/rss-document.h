@@ -70,10 +70,35 @@ struct _RssDocumentClass
         GObjectClass parent_class;
 };
 
-GType        rss_document_get_type       (void);
-RssDocument* rss_document_new            (void);
-GList*       rss_document_get_items      (RssDocument *self);
-GList*       rss_document_get_categories (RssDocument *self);
+GType                 rss_document_get_type       (void);
+RssDocument*          rss_document_new            (void);
+
+G_CONST_RETURN gchar *rss_document_get_guid              (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_about             (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_title             (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_description       (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_link              (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_encoding          (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_language          (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_rating            (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_copyright         (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_pub_date          (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_editor_name       (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_editor_email      (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_editor_uri        (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_contributor_name  (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_contributor_email (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_contributor_uri   (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_generator_name    (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_generator_uri     (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_generator_version (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_image_title       (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_image_url         (RssDocument *self);
+G_CONST_RETURN gchar *rss_document_get_image_link        (RssDocument *self);
+gint                  rss_document_get_ttl               (RssDocument *self);
+
+GList *               rss_document_get_items             (RssDocument *self);
+GList *               rss_document_get_categories        (RssDocument *self);
 
 G_END_DECLS
 
