@@ -72,7 +72,23 @@ struct _RssItemClass
 
 GType    rss_item_get_type       (void);
 RssItem* rss_item_new            (void);
-GList*   rss_item_get_categories (RssItem *self);
+
+G_CONST_RETURN gchar *rss_item_get_guid              (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_title             (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_link              (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_description       (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_copyright         (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_author_name       (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_author_uri        (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_author_email      (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_contributor_name  (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_contributor_uri   (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_contributor_email (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_comments          (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_pub_date          (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_source            (RssItem *self);
+G_CONST_RETURN gchar *rss_item_get_source_url        (RssItem *self);
+GList*                rss_item_get_categories        (RssItem *self);
 
 G_END_DECLS
 

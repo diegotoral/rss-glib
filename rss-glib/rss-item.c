@@ -466,6 +466,261 @@ rss_item_new (void)
 }
 
 /**
+ * rss_item_get_guid:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:guid field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_guid (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->guid;
+}
+
+/**
+ * rss_item_get_title:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:title field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_title (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->title;
+}
+
+/**
+ * rss_item_get_link:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:link field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_link (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->link;
+}
+
+/**
+ * rss_item_get_description:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:description field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_description (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->description;
+}
+
+/**
+ * rss_item_get_copyright:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:copyright field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_copyright (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->copyright;
+}
+
+/**
+ * rss_item_get_author_name:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:author field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_author_name (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->author;
+}
+
+/**
+ * rss_item_get_author_uri:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:author-uri field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_author_uri (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->author_uri;
+}
+
+/**
+ * rss_item_get_author_email:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:author-email field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_author_email (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->author_email;
+}
+
+/**
+ * rss_item_get_contributor_name:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:contributor field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_contributor_name (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->contributor;
+}
+
+/**
+ * rss_item_get_contributor_uri:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:contributor-uri field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_contributor_uri (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->contributor_uri;
+}
+
+/**
+ * rss_item_get_contributor_email:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:contributor-email field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_contributor_email (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->contributor_email;
+}
+
+/**
+ * rss_item_get_comments:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:comments field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_comments (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->comments;
+}
+
+/**
+ * rss_item_get_pub_date:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:pub-date field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_pub_date (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->pub_date;
+}
+
+/**
+ * rss_item_get_source:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:source field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_source (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->source;
+}
+
+/**
+ * rss_item_get_source_url:
+ * @self: a #RssItem
+ *
+ * Retrieves the #RssItem:source-url field.
+ *
+ * Return value: the value of the field. The returned string is
+ *   owned by the #RssItem and should never be modified or freed.
+ */
+G_CONST_RETURN gchar *
+rss_item_get_source_url (RssItem *self)
+{
+        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+
+        return self->priv->source_url;
+}
+
+/**
  * rss_item_get_categories:
  * @self: a #RssItem
  *
