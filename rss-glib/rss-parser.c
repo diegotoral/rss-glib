@@ -178,7 +178,7 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 		do {
 			list = g_list_prepend (list, g_strdup (cat->category));
 		} while (NULL != (cat = cat->next));
-		DOCUMENT_PRIVATE (document)->categories = list;
+		document->priv->categories = list;
 	}
 
 	/* build the list of items */
@@ -217,7 +217,7 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 
 			list = g_list_prepend (list, rss_item);
 		} while (NULL != (item = item->next));
-		DOCUMENT_PRIVATE (document)->items = list;
+		document->priv->items = list;
 	}
 
 	return document;

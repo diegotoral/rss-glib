@@ -52,13 +52,23 @@ G_BEGIN_DECLS
 	RSS_TYPE_DOCUMENT,				\
 	RssDocumentClass))
 
-typedef struct {
-	GObject parent;
-} RssDocument;
+typedef struct _RssDocument             RssDocument;
+typedef struct _RssDocumentPrivate      RssDocumentPrivate;
+typedef struct _RssDocumentClass        RssDocumentClass;
 
-typedef struct {
-	GObjectClass parent_class;
-} RssDocumentClass;
+struct _RssDocument
+{
+        /*< private >*/
+        GObject parent_instance;
+
+        RssDocumentPrivate *priv;
+};
+
+struct _RssDocumentClass
+{
+        /*< private >*/
+        GObjectClass parent_class;
+};
 
 GType        rss_document_get_type       (void);
 RssDocument* rss_document_new            (void);

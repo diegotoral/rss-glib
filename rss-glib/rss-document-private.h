@@ -25,14 +25,8 @@
 
 #include <mrss.h>
 
-#define DOCUMENT_PRIVATE(o)				\
-	(G_TYPE_INSTANCE_GET_PRIVATE ((o),		\
-	RSS_TYPE_DOCUMENT,				\
-	RssDocumentPrivate))
-
-typedef struct _RssDocumentPrivate RssDocumentPrivate;
-
-struct _RssDocumentPrivate {
+struct _RssDocumentPrivate
+{
 	gchar *encoding;
 	gchar *guid;
 	gchar *title;

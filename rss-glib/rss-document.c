@@ -32,7 +32,7 @@
 #include "rss-document.h"
 #include "rss-document-private.h"
 
-G_DEFINE_TYPE (RssDocument, rss_document, G_TYPE_OBJECT)
+G_DEFINE_TYPE (RssDocument, rss_document, G_TYPE_OBJECT);
 
 enum {
 	PROP_0,
@@ -69,97 +69,77 @@ rss_document_get_property (GObject    *object,
                            GValue     *value,
                            GParamSpec *pspec)
 {
+        RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
+
 	switch (property_id) {
 	case PROP_ENCODING:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->encoding);
+		g_value_set_string (value, priv->encoding);
 		break;
 	case PROP_GUID:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->guid);
+		g_value_set_string (value, priv->guid);
 		break;
 	case PROP_TITLE:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->title);
+		g_value_set_string (value, priv->title);
 		break;
 	case PROP_DESCRIPTION:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->description);
+		g_value_set_string (value, priv->description);
 		break;
 	case PROP_LINK:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->link);
+		g_value_set_string (value, priv->link);
 		break;
 	case PROP_LANGUAGE:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->language);
+		g_value_set_string (value, priv->language);
 		break;
 	case PROP_RATING:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->rating);
+		g_value_set_string (value, priv->rating);
 		break;
 	case PROP_COPYRIGHT:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->copyright);
+		g_value_set_string (value, priv->copyright);
 		break;
 	case PROP_PUB_DATE:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->pub_date);
+		g_value_set_string (value, priv->pub_date);
 		break;
 	case PROP_EDITOR:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->editor);
+		g_value_set_string (value, priv->editor);
 		break;
 	case PROP_EDITOR_EMAIL:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->editor_email);
+		g_value_set_string (value, priv->editor_email);
 		break;
 	case PROP_EDITOR_URI:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->editor_uri);
+		g_value_set_string (value, priv->editor_uri);
 		break;
 	case PROP_ABOUT:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->about);
+		g_value_set_string (value, priv->about);
 		break;
 	case PROP_CONTRIBUTOR:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->contributor);
+		g_value_set_string (value, priv->contributor);
 		break;
 	case PROP_CONTRIBUTOR_EMAIL:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->contributor_email);
+		g_value_set_string (value, priv->contributor_email);
 		break;
 	case PROP_CONTRIBUTOR_URI:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->contributor_uri);
+		g_value_set_string (value, priv->contributor_uri);
 		break;
 	case PROP_GENERATOR:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->generator);
+		g_value_set_string (value, priv->generator);
 		break;
 	case PROP_GENERATOR_URI:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->generator_uri);
+		g_value_set_string (value, priv->generator_uri);
 		break;
 	case PROP_GENERATOR_VERSION:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->generator_version);
+		g_value_set_string (value, priv->generator_version);
 		break;
 	case PROP_IMAGE_TITLE:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->image_title);
+		g_value_set_string (value, priv->image_title);
 		break;
 	case PROP_IMAGE_URL:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->image_url);
+		g_value_set_string (value, priv->image_url);
 		break;
 	case PROP_IMAGE_LINK:
-		g_value_set_string (value,
-			DOCUMENT_PRIVATE (object)->image_link);
+		g_value_set_string (value, priv->image_link);
 		break;
 	case PROP_TTL:
-		g_value_set_int (value, DOCUMENT_PRIVATE (object)->ttl);
+		g_value_set_int (value, priv->ttl);
 		break;
 
 	default:
@@ -173,120 +153,99 @@ rss_document_set_property (GObject      *object,
                            const GValue *value,
                            GParamSpec   *pspec)
 {
+        RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
+
 	switch (property_id) {
 	case PROP_ENCODING:
-		g_free (DOCUMENT_PRIVATE (object)->encoding);
-		DOCUMENT_PRIVATE (object)->encoding
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->encoding);
+		priv->encoding = g_value_dup_string (value);
 		break;
 	case PROP_GUID:
-		g_free (DOCUMENT_PRIVATE (object)->guid);
-		DOCUMENT_PRIVATE (object)->guid
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->guid);
+		priv->guid = g_value_dup_string (value);
 		break;
 	case PROP_TITLE:
-		g_free (DOCUMENT_PRIVATE (object)->title);
-		DOCUMENT_PRIVATE (object)->title
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->title);
+		priv->title = g_value_dup_string (value);
 		break;
 	case PROP_DESCRIPTION:
-		g_free (DOCUMENT_PRIVATE (object)->description);
-		DOCUMENT_PRIVATE (object)->description
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->description);
+		priv->description = g_value_dup_string (value);
 		break;
 	case PROP_LINK:
-		g_free (DOCUMENT_PRIVATE (object)->link);
-		DOCUMENT_PRIVATE (object)->link
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->link);
+		priv->link = g_value_dup_string (value);
 		break;
 	case PROP_LANGUAGE:
-		g_free (DOCUMENT_PRIVATE (object)->language);
-		DOCUMENT_PRIVATE (object)->language
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->language);
+		priv->language = g_value_dup_string (value);
 		break;
 	case PROP_RATING:
-		g_free (DOCUMENT_PRIVATE (object)->rating);
-		DOCUMENT_PRIVATE (object)->rating
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->rating);
+		priv->rating = g_value_dup_string (value);
 		break;
 	case PROP_COPYRIGHT:
-		g_free (DOCUMENT_PRIVATE (object)->copyright);
-		DOCUMENT_PRIVATE (object)->copyright
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->copyright);
+		priv->copyright = g_value_dup_string (value);
 		break;
 	case PROP_PUB_DATE:
-		g_free (DOCUMENT_PRIVATE (object)->pub_date);
-		DOCUMENT_PRIVATE (object)->pub_date
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->pub_date);
+		priv->pub_date = g_value_dup_string (value);
 		break;
 	case PROP_EDITOR:
-		g_free (DOCUMENT_PRIVATE (object)->editor);
-		DOCUMENT_PRIVATE (object)->editor
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->editor);
+		priv->editor = g_value_dup_string (value);
 		break;
 	case PROP_EDITOR_EMAIL:
-		g_free (DOCUMENT_PRIVATE (object)->editor_email);
-		DOCUMENT_PRIVATE (object)->editor_email
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->editor_email);
+		priv->editor_email = g_value_dup_string (value);
 		break;
 	case PROP_EDITOR_URI:
-		g_free (DOCUMENT_PRIVATE (object)->editor_uri);
-		DOCUMENT_PRIVATE (object)->editor_uri
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->editor_uri);
+		priv->editor_uri = g_value_dup_string (value);
 		break;
 	case PROP_ABOUT:
-		g_free (DOCUMENT_PRIVATE (object)->about);
-		DOCUMENT_PRIVATE (object)->about
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->about);
+		priv->about = g_value_dup_string (value);
 		break;
 	case PROP_CONTRIBUTOR:
-		g_free (DOCUMENT_PRIVATE (object)->contributor);
-		DOCUMENT_PRIVATE (object)->contributor
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->contributor);
+		priv->contributor = g_value_dup_string (value);
 		break;
 	case PROP_CONTRIBUTOR_EMAIL:
-		g_free (DOCUMENT_PRIVATE (object)->contributor_email);
-		DOCUMENT_PRIVATE (object)->contributor_email
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->contributor_email);
+		priv->contributor_email = g_value_dup_string (value);
 		break;
 	case PROP_CONTRIBUTOR_URI:
-		g_free (DOCUMENT_PRIVATE (object)->contributor_uri);
-		DOCUMENT_PRIVATE (object)->contributor_uri
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->contributor_uri);
+		priv->contributor_uri = g_value_dup_string (value);
 		break;
 	case PROP_GENERATOR:
-		g_free (DOCUMENT_PRIVATE (object)->generator);
-		DOCUMENT_PRIVATE (object)->generator
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->generator);
+		priv->generator = g_value_dup_string (value);
 		break;
 	case PROP_GENERATOR_URI:
-		g_free (DOCUMENT_PRIVATE (object)->generator_uri);
-		DOCUMENT_PRIVATE (object)->generator_uri
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->generator_uri);
+		priv->generator_uri = g_value_dup_string (value);
 		break;
 	case PROP_GENERATOR_VERSION:
-		g_free (DOCUMENT_PRIVATE (object)->generator_version);
-		DOCUMENT_PRIVATE (object)->generator_version
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->generator_version);
+		priv->generator_version = g_value_dup_string (value);
 		break;
 	case PROP_IMAGE_TITLE:
-		g_free (DOCUMENT_PRIVATE (object)->image_title);
-		DOCUMENT_PRIVATE (object)->image_title
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->image_title);
+		priv->image_title = g_value_dup_string (value);
 		break;
 	case PROP_IMAGE_URL:
-		g_free (DOCUMENT_PRIVATE (object)->image_url);
-		DOCUMENT_PRIVATE (object)->image_url
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->image_url);
+		priv->image_url = g_value_dup_string (value);
 		break;
 	case PROP_IMAGE_LINK:
-		g_free (DOCUMENT_PRIVATE (object)->image_link);
-		DOCUMENT_PRIVATE (object)->image_link
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->image_link);
+		priv->image_link = g_value_dup_string (value);
 		break;
 	case PROP_TTL:
-		DOCUMENT_PRIVATE (object)->ttl
-			= g_value_get_int (value);
+		priv->ttl = g_value_get_int (value);
 		break;
 
 	default:
@@ -297,48 +256,49 @@ rss_document_set_property (GObject      *object,
 static void
 rss_document_dispose (GObject *object)
 {
-	g_free (DOCUMENT_PRIVATE (object)->encoding);
-	g_free (DOCUMENT_PRIVATE (object)->guid);
-	g_free (DOCUMENT_PRIVATE (object)->title);
-	g_free (DOCUMENT_PRIVATE (object)->description);
-	g_free (DOCUMENT_PRIVATE (object)->link);
-	g_free (DOCUMENT_PRIVATE (object)->language);
-	g_free (DOCUMENT_PRIVATE (object)->rating);
-	g_free (DOCUMENT_PRIVATE (object)->copyright);
-	g_free (DOCUMENT_PRIVATE (object)->pub_date);
-	g_free (DOCUMENT_PRIVATE (object)->editor);
-	g_free (DOCUMENT_PRIVATE (object)->editor_email);
-	g_free (DOCUMENT_PRIVATE (object)->editor_uri);
-	g_free (DOCUMENT_PRIVATE (object)->about);
-	g_free (DOCUMENT_PRIVATE (object)->contributor);
-	g_free (DOCUMENT_PRIVATE (object)->contributor_email);
-	g_free (DOCUMENT_PRIVATE (object)->contributor_uri);
-	g_free (DOCUMENT_PRIVATE (object)->generator);
-	g_free (DOCUMENT_PRIVATE (object)->generator_uri);
-	g_free (DOCUMENT_PRIVATE (object)->generator_version);
-	g_free (DOCUMENT_PRIVATE (object)->image_title);
-	g_free (DOCUMENT_PRIVATE (object)->image_url);
-	g_free (DOCUMENT_PRIVATE (object)->image_link);
+        RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
+
+	g_free (priv->encoding);
+	g_free (priv->guid);
+	g_free (priv->title);
+	g_free (priv->description);
+	g_free (priv->link);
+	g_free (priv->language);
+	g_free (priv->rating);
+	g_free (priv->copyright);
+	g_free (priv->pub_date);
+	g_free (priv->editor);
+	g_free (priv->editor_email);
+	g_free (priv->editor_uri);
+	g_free (priv->about);
+	g_free (priv->contributor);
+	g_free (priv->contributor_email);
+	g_free (priv->contributor_uri);
+	g_free (priv->generator);
+	g_free (priv->generator_uri);
+	g_free (priv->generator_version);
+	g_free (priv->image_title);
+	g_free (priv->image_url);
+	g_free (priv->image_link);
 
 	/* free the items */
-	g_list_foreach (DOCUMENT_PRIVATE (object)->items,
-	                (GFunc) g_object_unref, NULL);
-	g_list_free (DOCUMENT_PRIVATE (object)->items);
+	g_list_foreach (priv->items, (GFunc) g_object_unref, NULL);
+	g_list_free (priv->items);
 
 	/* free the category strings */
-	g_list_foreach (DOCUMENT_PRIVATE (object)->categories,
-	                (GFunc) g_free, NULL);
-	g_list_free (DOCUMENT_PRIVATE (object)->categories);
+	g_list_foreach (priv->categories, (GFunc) g_free, NULL);
+	g_list_free (priv->categories);
 
-	if (G_OBJECT_CLASS (rss_document_parent_class)->dispose)
-		G_OBJECT_CLASS (rss_document_parent_class)->dispose (object);
+	G_OBJECT_CLASS (rss_document_parent_class)->dispose (object);
 }
 
 static void
 rss_document_class_init (RssDocumentClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+
 	g_type_class_add_private (klass, sizeof (RssDocumentPrivate));
+
 	gobject_class->get_property = rss_document_get_property;
 	gobject_class->set_property = rss_document_set_property;
 	gobject_class->dispose = rss_document_dispose;
@@ -628,6 +588,9 @@ rss_document_class_init (RssDocumentClass *klass)
 static void
 rss_document_init (RssDocument *self)
 {
+        self->priv =
+                G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_DOCUMENT,
+                                             RssDocumentPrivate);
 }
 
 /**
@@ -660,7 +623,8 @@ GList*
 rss_document_get_items (RssDocument *self)
 {
 	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
-	return g_list_copy (DOCUMENT_PRIVATE (self)->items);
+
+	return g_list_copy (self->priv->items);
 }
 
 /**
@@ -677,5 +641,6 @@ GList*
 rss_document_get_categories (RssDocument *self)
 {
 	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
-	return g_list_copy (DOCUMENT_PRIVATE (self)->categories);
+
+	return g_list_copy (self->priv->categories);
 }
