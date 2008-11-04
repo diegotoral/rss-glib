@@ -23,13 +23,6 @@
 #ifndef __RSS_ITEM_PRIVATE_H__
 #define __RSS_ITEM_PRIVATE_H__
 
-#define ITEM_PRIVATE(o) 			\
-	(G_TYPE_INSTANCE_GET_PRIVATE ((o),	\
-	RSS_TYPE_ITEM,				\
-	RssItemPrivate))
-
-typedef struct _RssItemPrivate RssItemPrivate;
-
 struct _RssItemPrivate {
 	gchar *guid;
 	gchar *title;

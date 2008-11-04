@@ -32,7 +32,7 @@
 #include "rss-item.h"
 #include "rss-item-private.h"
 
-G_DEFINE_TYPE (RssItem, rss_item, G_TYPE_OBJECT)
+G_DEFINE_TYPE (RssItem, rss_item, G_TYPE_OBJECT);
 
 enum {
 	PROP_0,
@@ -60,66 +60,53 @@ rss_item_get_property (GObject    *object,
                        GValue     *value,
                        GParamSpec *pspec)
 {
+        RssItemPrivate *priv = RSS_ITEM (object)->priv;
+
 	switch (property_id) {
 	case PROP_TITLE:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->title);
+		g_value_set_string (value, priv->title);
 		break;
 	case PROP_LINK:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->link);
+		g_value_set_string (value, priv->link);
 		break;
 	case PROP_DESCRIPTION:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->description);
+		g_value_set_string (value, priv->description);
 		break;
 	case PROP_COPYRIGHT:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->copyright);
+		g_value_set_string (value, priv->copyright);
 		break;
 	case PROP_AUTHOR:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->author);
+		g_value_set_string (value, priv->author);
 		break;
 	case PROP_AUTHOR_URI:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->author_uri);
+		g_value_set_string (value, priv->author_uri);
 		break;
 	case PROP_AUTHOR_EMAIL:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->author_email);
+		g_value_set_string (value, priv->author_email);
 		break;
 	case PROP_CONTRIBUTOR:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->contributor);
+		g_value_set_string (value, priv->contributor);
 		break;
 	case PROP_CONTRIBUTOR_URI:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->contributor_uri);
+		g_value_set_string (value, priv->contributor_uri);
 		break;
 	case PROP_CONTRIBUTOR_EMAIL:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->contributor_email);
+		g_value_set_string (value, priv->contributor_email);
 		break;
 	case PROP_COMMENTS:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->comments);
+		g_value_set_string (value, priv->comments);
 		break;
 	case PROP_PUB_DATE:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->pub_date);
+		g_value_set_string (value, priv->pub_date);
 		break;
 	case PROP_GUID:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->guid);
+		g_value_set_string (value, priv->guid);
 		break;
 	case PROP_SOURCE:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->source);
+		g_value_set_string (value, priv->source);
 		break;
 	case PROP_SOURCE_URL:
-		g_value_set_string (value,
-		                    ITEM_PRIVATE (object)->source_url);
+		g_value_set_string (value, priv->source_url);
 		break;
 
 	default:
@@ -133,81 +120,68 @@ rss_item_set_property (GObject      *object,
                        const GValue *value,
 		       GParamSpec   *pspec)
 {
+        RssItemPrivate *priv = RSS_ITEM (object)->priv;
+
 	switch (property_id) {
 	case PROP_TITLE:
-		g_free (ITEM_PRIVATE (object)->title);
-		ITEM_PRIVATE (object)->title
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->title);
+		priv->title = g_value_dup_string (value);
 		break;
 	case PROP_LINK:
-		g_free (ITEM_PRIVATE (object)->link);
-		ITEM_PRIVATE (object)->link
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->link);
+		priv->link = g_value_dup_string (value);
 		break;
 	case PROP_DESCRIPTION:
-		g_free (ITEM_PRIVATE (object)->description);
-		ITEM_PRIVATE (object)->description
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->description);
+		priv->description = g_value_dup_string (value);
 		break;
 	case PROP_COPYRIGHT:
-		g_free (ITEM_PRIVATE (object)->copyright);
-		ITEM_PRIVATE (object)->copyright
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->copyright);
+		priv->copyright = g_value_dup_string (value);
 		break;
 	case PROP_AUTHOR:
-		g_free (ITEM_PRIVATE (object)->author);
-		ITEM_PRIVATE (object)->author
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->author);
+		priv->author = g_value_dup_string (value);
 		break;
 	case PROP_AUTHOR_URI:
-		g_free (ITEM_PRIVATE (object)->author_uri);
-		ITEM_PRIVATE (object)->author_uri
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->author_uri);
+		priv->author_uri = g_value_dup_string (value);
 		break;
 	case PROP_AUTHOR_EMAIL:
-		g_free (ITEM_PRIVATE (object)->author_email);
-		ITEM_PRIVATE (object)->author_email
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->author_email);
+		priv->author_email = g_value_dup_string (value);
 		break;
 	case PROP_CONTRIBUTOR:
-		g_free (ITEM_PRIVATE (object)->contributor);
-		ITEM_PRIVATE (object)->contributor
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->contributor);
+		priv->contributor = g_value_dup_string (value);
 		break;
 	case PROP_CONTRIBUTOR_URI:
-		g_free (ITEM_PRIVATE (object)->contributor_uri);
-		ITEM_PRIVATE (object)->contributor_uri
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->contributor_uri);
+		priv->contributor_uri = g_value_dup_string (value);
 		break;
 	case PROP_CONTRIBUTOR_EMAIL:
-		g_free (ITEM_PRIVATE (object)->contributor_email);
-		ITEM_PRIVATE (object)->contributor_email
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->contributor_email);
+		priv->contributor_email = g_value_dup_string (value);
 		break;
 	case PROP_COMMENTS:
-		g_free (ITEM_PRIVATE (object)->comments);
-		ITEM_PRIVATE (object)->comments
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->comments);
+		priv->comments = g_value_dup_string (value);
 		break;
 	case PROP_PUB_DATE:
-		g_free (ITEM_PRIVATE (object)->pub_date);
-		ITEM_PRIVATE (object)->pub_date
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->pub_date);
+		priv->pub_date = g_value_dup_string (value);
 		break;
 	case PROP_GUID:
-		g_free (ITEM_PRIVATE (object)->guid);
-		ITEM_PRIVATE (object)->guid
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->guid);
+		priv->guid = g_value_dup_string (value);
 		break;
 	case PROP_SOURCE:
-		g_free (ITEM_PRIVATE (object)->source);
-		ITEM_PRIVATE (object)->source
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->source);
+		priv->source = g_value_dup_string (value);
 		break;
 	case PROP_SOURCE_URL:
-		g_free (ITEM_PRIVATE (object)->source_url);
-		ITEM_PRIVATE (object)->source_url
-			= g_strdup (g_value_get_string (value));
+		g_free (priv->source_url);
+		priv->source_url = g_value_dup_string (value);
 		break;
 
 	default:
@@ -218,7 +192,7 @@ rss_item_set_property (GObject      *object,
 static void
 rss_item_finalize (GObject *object)
 {
-  RssItemPrivate *priv = ITEM_PRIVATE (object);
+  RssItemPrivate *priv = RSS_ITEM (object)->priv;
 
   g_free (priv->guid);
   g_free (priv->title);
@@ -236,7 +210,7 @@ rss_item_finalize (GObject *object)
   g_free (priv->source);
   g_free (priv->source_url);
   
-  g_list_foreach (priv->categories, (GFunc)g_free, NULL);
+  g_list_foreach (priv->categories, (GFunc) g_free, NULL);
   g_list_free (priv->categories);
 
   G_OBJECT_CLASS (rss_item_parent_class)->finalize (object);
@@ -378,35 +352,49 @@ rss_item_class_init (RssItemClass *klass)
 	 * The guid of the item. Many feed engines will use the url here
 	 * plus some tag metadata.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_GUID,
-		g_param_spec_string ("guid", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("guid",
+                                     "GUID",
+                                     "The guid of the item",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_GUID,
+                                         pspec);
 
 	/**
 	 * RssItem:source:
 	 *
 	 * The name of the source of the item.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_SOURCE,
-		g_param_spec_string ("source", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("source",
+                                     "Source",
+                                     "Source of the item",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_SOURCE,
+                                         pspec);
 
 	/**
 	 * RssItem:source-url:
 	 *
 	 * The url of the source of the item.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_SOURCE_URL,
-		g_param_spec_string ("source-url", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("source-url",
+                                     "Source URL",
+                                     "URL of the source",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_SOURCE_URL,
+                                         pspec);
 }
 
 static void
 rss_item_init (RssItem *self)
 {
+  self->priv =
+    G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_ITEM, RssItemPrivate);
 }
 
 /**
@@ -439,5 +427,6 @@ GList*
 rss_item_get_categories (RssItem *self)
 {
 	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
-	return g_list_copy (ITEM_PRIVATE (self)->categories);
+
+	return g_list_copy (self->priv->categories);
 }

@@ -212,7 +212,7 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 				do {
 					list2 = g_list_prepend (list2, g_strdup (cat->category));
 				} while (NULL != (cat = cat->next));
-				ITEM_PRIVATE (rss_item)->categories = list2;
+				rss_item->priv->categories = list2;
 			}
 
 			list = g_list_prepend (list, rss_item);

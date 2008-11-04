@@ -52,13 +52,23 @@ G_BEGIN_DECLS
 	RSS_TYPE_ITEM,				\
 	RssItemClass))
 
-typedef struct {
-	GObject parent;
-} RssItem;
+typedef struct _RssItem         RssItem;
+typedef struct _RssItemPrivate  RssItemPrivate;
+typedef struct _RssItemClass    RssItemClass;
 
-typedef struct {
+struct _RssItem
+{
+        /*< private >*/
+	GObject parent_instance;
+
+        RssItemPrivate *priv;
+};
+
+struct _RssItemClass
+{
+        /*< private >*/
 	GObjectClass parent_class;
-} RssItemClass;
+};
 
 GType    rss_item_get_type       (void);
 RssItem* rss_item_new            (void);
