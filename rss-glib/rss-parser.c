@@ -55,26 +55,26 @@ enum
 
 static guint parser_signals[LAST_SIGNAL] = { 0, };
 
-G_DEFINE_TYPE (RssParser, rss_parser, G_TYPE_OBJECT)
+G_DEFINE_TYPE (RssParser, rss_parser, G_TYPE_OBJECT);
 
 static void
 rss_parser_dispose (GObject *object)
 {
-	RssParserPrivate *priv = PARSER_PRIVATE (object);
+	RssParserPrivate *priv = RSS_PARSER (object)->priv;
 
 	if (priv->document) {
 		g_object_unref (priv->document);
 		priv->document = NULL;
 	}
 
-	if (G_OBJECT_CLASS (rss_parser_parent_class)->dispose)
-		G_OBJECT_CLASS (rss_parser_parent_class)->dispose (object);
+	G_OBJECT_CLASS (rss_parser_parent_class)->dispose (object);
 }
 
 static void
 rss_parser_class_init (RssParserClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
 	g_type_class_add_private (klass, sizeof (RssParserPrivate));
 	object_class->dispose = rss_parser_dispose;
 
@@ -114,7 +114,9 @@ rss_parser_class_init (RssParserClass *klass)
 static void
 rss_parser_init (RssParser *self)
 {
-	PARSER_PRIVATE (self)->document = NULL;
+        self->priv =
+                G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_PARSER,
+                                             RssParserPrivate);
 }
 
 /**
@@ -260,7 +262,7 @@ rss_parser_load_from_data (RssParser   *self,
 	}
 
 	/* keep a copy of our parsed document */
-	PARSER_PRIVATE (self)->document = rss_parser_parse (self, mrss);
+	self->priv->document = rss_parser_parse (self, mrss);
 
 	/* free our mrss data */
 	mrss_free (mrss);
@@ -305,7 +307,7 @@ rss_parser_load_from_file (RssParser  *self,
 	}
 
 	/* keep a copy of our parsed document */
-	PARSER_PRIVATE (self)->document = rss_parser_parse (self, mrss);
+	self->priv->document = rss_parser_parse (self, mrss);
 
 	/* free our mrss data */
 	mrss_free (mrss);
@@ -328,5 +330,7 @@ rss_parser_load_from_file (RssParser  *self,
 RssDocument*
 rss_parser_get_document (RssParser *self)
 {
-	return g_object_ref (PARSER_PRIVATE (self)->document);
+        g_return_val_if_fail (RSS_IS_PARSER (self), NULL);
+
+	return g_object_ref (self->priv->document);
 }

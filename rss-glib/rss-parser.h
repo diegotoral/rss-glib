@@ -60,11 +60,20 @@ typedef enum {
 #define RSS_PARSER_ERROR rss_parser_error_quark()
 GQuark rss_parser_error_quark (void);
 
-typedef struct {
-	GObject parent;
-} RssParser;
+typedef struct _RssParser               RssParser;
+typedef struct _RssParserPrivate        RssParserPrivate;
+typedef struct _RssParserClass          RssParserClass;
 
-typedef struct {
+struct _RssParser
+{
+        /*< private >*/
+        GObject parent_instance;
+
+        RssParserPrivate *priv;
+};
+
+struct _RssParserClass
+{
 	/*< private >*/
 	GObjectClass parent_class;
 
@@ -82,7 +91,7 @@ typedef struct {
 	void (* _rss_reserved6) (void);
 	void (* _rss_reserved7) (void);
 	void (* _rss_reserved8) (void);
-} RssParserClass;
+};
 
 GType        rss_parser_get_type       (void);
 RssParser*   rss_parser_new            (void);

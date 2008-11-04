@@ -27,13 +27,6 @@
 
 G_BEGIN_DECLS
 
-#define PARSER_PRIVATE(o)				\
-	(G_TYPE_INSTANCE_GET_PRIVATE ((o),		\
-	RSS_TYPE_PARSER,				\
-	RssParserPrivate))
-
-typedef struct _RssParserPrivate RssParserPrivate;
-
 struct _RssParserPrivate
 {
 	RssDocument *document;
