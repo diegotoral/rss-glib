@@ -220,7 +220,10 @@ static void
 rss_item_class_init (RssItemClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+        GParamSpec *pspec;
+
 	g_type_class_add_private (klass, sizeof (RssItemPrivate));
+
 	gobject_class->get_property = rss_item_get_property;
 	gobject_class->set_property = rss_item_set_property;
 	gobject_class->finalize = rss_item_finalize;
@@ -230,20 +233,28 @@ rss_item_class_init (RssItemClass *klass)
 	 *
 	 * The title of the item.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_TITLE,
-		g_param_spec_string ("title", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("title",
+                                     "Title",
+                                     "Title of the item",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_TITLE,
+                                         pspec);
 
 	/**
 	 * RssItem:link:
 	 *
 	 * The link to the upstream source of the item.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_LINK,
-		g_param_spec_string ("link", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("link",
+                                     "Link",
+                                     "Link to the upstream source",
+                                     NULL,
+                                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_LINK,
+                                         pspec);
 
 	/**
 	 * RssItem:description:
@@ -251,100 +262,141 @@ rss_item_class_init (RssItemClass *klass)
 	 * The description of the item.  This is often where the actual
 	 * content for the item is stored.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_DESCRIPTION,
-		g_param_spec_string ("description", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("description",
+                                     "Description",
+                                     "Description of the item",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_DESCRIPTION,
+                                         pspec);
 
 	/**
 	 * RssItem:copyright:
 	 *
 	 * Any associated copyright that may exist for the content.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_COPYRIGHT,
-		g_param_spec_string ("copyright", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("copyright",
+                                     "Copyright",
+                                     "Any associated copyright for "
+                                     "the content",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_COPYRIGHT,
+                                         pspec);
 
 	/**
 	 * RssItem:author:
 	 *
-	 * The authors name.
+	 * The author's name.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_AUTHOR,
-		g_param_spec_string ("author", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("author",
+                                     "Author",
+                                     "The name of the author",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_AUTHOR,
+                                         pspec);
 
 	/**
 	 * RssItem:author-uri:
 	 *
 	 * The authors uri, often a website.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_AUTHOR_URI,
-		g_param_spec_string ("author-uri", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("author-uri",
+                                     "Author URI",
+                                     "The URI of the author",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_AUTHOR_URI,
+                                         pspec);
 
 	/**
 	 * RssItem:author-email:
 	 *
 	 * The authors email.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_AUTHOR_EMAIL,
-		g_param_spec_string ("author-email", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("author-email",
+                                     "Author Email",
+                                     "The email address of the author",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_AUTHOR_EMAIL,
+                                         pspec);
 
 	/**
 	 * RssItem:contributor:
 	 *
 	 * The contributors name.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_CONTRIBUTOR,
-		g_param_spec_string ("contributor", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("contributor",
+                                     "Contributor",
+                                     "The name of the contributor",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_CONTRIBUTOR,
+                                         pspec);
 
 	/**
 	 * RssItem:contributor-uri:
 	 *
 	 * The contributors uri, often a website.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_CONTRIBUTOR_URI,
-		g_param_spec_string ("contributor-uri", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("contributor-uri",
+                                     "Contributor URI",
+                                     "The URI of the contributor",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_CONTRIBUTOR_URI,
+                                         pspec);
 
 	/**
 	 * RssItem:contributor-email:
 	 *
 	 * The contributors email.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_CONTRIBUTOR_EMAIL,
-		g_param_spec_string ("contributor-email", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("contributor-email",
+                                     "Contributor Email",
+                                     "The email of the contributor",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_CONTRIBUTOR_EMAIL,
+                                         pspec);
 
 	/**
 	 * RssItem:comments:
 	 *
 	 * Any comments that may have been associated with the item.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_COMMENTS,
-		g_param_spec_string ("comments", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("comments",
+                                     "Comments",
+                                     "Any comment associated to the item",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_COMMENTS,
+                                         pspec);
 
 	/**
 	 * RssItem:pub-date:
 	 *
 	 * The string representation of the publish date.
 	 */
-	g_object_class_install_property (
-		gobject_class, PROP_PUB_DATE,
-		g_param_spec_string ("pub-date", NULL, NULL, NULL,
-		                     G_PARAM_READABLE | G_PARAM_WRITABLE));
+        pspec = g_param_spec_string ("pub-date",
+                                     "Publication Date",
+                                     "The date of publication",
+                                     NULL,
+		                     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+                                         PROP_PUB_DATE,
+                                         pspec);
 
 	/**
 	 * RssItem:guid:
@@ -393,8 +445,9 @@ rss_item_class_init (RssItemClass *klass)
 static void
 rss_item_init (RssItem *self)
 {
-  self->priv =
-    G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_ITEM, RssItemPrivate);
+        self->priv =
+                G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_ITEM,
+                                             RssItemPrivate);
 }
 
 /**
