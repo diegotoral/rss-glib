@@ -1,3 +1,10 @@
+2008-11-04	Christian Hergert	<chris@dronelabs.com>
+
+	*  doc/reference/rss-glib/Makefile.am: 
+	*  rss-glib/rss-parser-private.h: 
+	*  rss-glib/rss-parser.h: Move error types to the -private.h and
+	properly ignore private headers in the documentation.
+
 2008-11-01	Christian Hergert	<chris@dronelabs.com>
 
 	* .gitignore: Ingore .tar.gz from make dist.

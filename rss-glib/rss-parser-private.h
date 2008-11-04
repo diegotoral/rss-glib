@@ -32,6 +32,14 @@ struct _RssParserPrivate
 	RssDocument *document;
 };
 
+typedef enum
+{
+	RSS_PARSER_ERROR_INVALID_DATA,
+} RssParserError;
+
+#define RSS_PARSER_ERROR rss_parser_error_quark()
+GQuark rss_parser_error_quark (void);
+
 G_END_DECLS
 
 #endif /* __RSS_PARSER_PRIVATE_H__ */

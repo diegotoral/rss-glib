@@ -53,13 +53,6 @@ G_BEGIN_DECLS
 	RSS_TYPE_PARSER,				\
 	RssParserClass))
 
-typedef enum {
-	RSS_PARSER_ERROR_INVALID_DATA,
-} RssParserError;
-
-#define RSS_PARSER_ERROR rss_parser_error_quark()
-GQuark rss_parser_error_quark (void);
-
 typedef struct _RssParser               RssParser;
 typedef struct _RssParserPrivate        RssParserPrivate;
 typedef struct _RssParserClass          RssParserClass;

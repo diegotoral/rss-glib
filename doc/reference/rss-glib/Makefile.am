@@ -24,11 +24,12 @@ HFILE_GLOB=$(top_srcdir)/rss-glib/*.h
 CFILE_GLOB=$(top_srcdir)/rss-glib/*.c
 
 # Header files to ignore when scanning
-IGNORE_HFILES=			\
-	rss-glib.h		\
-	rss-item-private.h	\
-	rss-marshal.h		\
-	rss-document-private.h	\
+IGNORE_HFILES=						\
+	$(top_srcdir)/rss-glib/rss-glib.h		\
+	$(top_srcdir)/rss-glib/rss-item-private.h	\
+	$(top_srcdir)/rss-glib/rss-parser-private.h	\
+	$(top_srcdir)/rss-glib/rss-marshal.h		\
+	$(top_srcdir)/rss-glib/rss-document-private.h	\
 	$(NULL)
 
 # CFLAGS and LDFLAGS for compiling scan program. Only needed
