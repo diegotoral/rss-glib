@@ -25,6 +25,7 @@
 
 /**
  * SECTION:rss-version
+ * @title: Versioning
  * @short_description: RSS-GLib version checking
  *
  * RSS-GLib provides macros to check the version of the library
