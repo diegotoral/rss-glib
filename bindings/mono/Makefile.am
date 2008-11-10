@@ -23,14 +23,16 @@ all: generated-stamp $(ASSEMBLY)
 $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 	cp $(srcdir)/$(RAW_API) $(API)
 	chmod u+w $(API)
-	$(FIXUP) --api=$(srcdir)/$(API) --metadata=$(srcdir)/$(METADATA)
+	$(FIXUP) --api=$(API) --metadata=$(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
-	$(CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) \
+	$(CODEGEN) --generate $(API) $(GLIB_SHARP_CFLAGS) \
 	--outdir=generated --customdir=$(srcdir) \
 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
-$(ASSEMBLY): $(build_sources) generated-stamp
+$(ASSEMBLY): $(build_sources) generated-stamp rss-glib-sharp.snk
+	cp $(srcdir)/rss-glib-sharp.snk rss-glib-sharp.snk
+	chmod u+w rss-glib-sharp.snk
 	$(CSC) -out:$@ -unsafe -target:library -debug+ $(GLIB_SHARP_LIBS) \
 	$(build_sources) $(builddir)/generated/*.cs
 
