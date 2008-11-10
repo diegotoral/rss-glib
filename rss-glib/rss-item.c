@@ -60,7 +60,7 @@ rss_item_get_property (GObject    *object,
                        GValue     *value,
                        GParamSpec *pspec)
 {
-        RssItemPrivate *priv = RSS_ITEM (object)->priv;
+	RssItemPrivate *priv = RSS_ITEM (object)->priv;
 
 	switch (property_id) {
 	case PROP_TITLE:
@@ -118,9 +118,9 @@ static void
 rss_item_set_property (GObject      *object,
                        guint         property_id,
                        const GValue *value,
-		       GParamSpec   *pspec)
+                       GParamSpec   *pspec)
 {
-        RssItemPrivate *priv = RSS_ITEM (object)->priv;
+	RssItemPrivate *priv = RSS_ITEM (object)->priv;
 
 	switch (property_id) {
 	case PROP_TITLE:
@@ -192,35 +192,35 @@ rss_item_set_property (GObject      *object,
 static void
 rss_item_finalize (GObject *object)
 {
-  RssItemPrivate *priv = RSS_ITEM (object)->priv;
+	RssItemPrivate *priv = RSS_ITEM (object)->priv;
 
-  g_free (priv->guid);
-  g_free (priv->title);
-  g_free (priv->link);
-  g_free (priv->description);
-  g_free (priv->copyright);
-  g_free (priv->author);
-  g_free (priv->author_uri);
-  g_free (priv->author_email);
-  g_free (priv->contributor);
-  g_free (priv->contributor_uri);
-  g_free (priv->contributor_email);
-  g_free (priv->comments);
-  g_free (priv->pub_date);
-  g_free (priv->source);
-  g_free (priv->source_url);
+	g_free (priv->guid);
+	g_free (priv->title);
+	g_free (priv->link);
+	g_free (priv->description);
+	g_free (priv->copyright);
+	g_free (priv->author);
+	g_free (priv->author_uri);
+	g_free (priv->author_email);
+	g_free (priv->contributor);
+	g_free (priv->contributor_uri);
+	g_free (priv->contributor_email);
+	g_free (priv->comments);
+	g_free (priv->pub_date);
+	g_free (priv->source);
+	g_free (priv->source_url);
   
-  g_list_foreach (priv->categories, (GFunc) g_free, NULL);
-  g_list_free (priv->categories);
+	g_list_foreach (priv->categories, (GFunc) g_free, NULL);
+	g_list_free (priv->categories);
 
-  G_OBJECT_CLASS (rss_item_parent_class)->finalize (object);
+	G_OBJECT_CLASS (rss_item_parent_class)->finalize (object);
 }
 
 static void
 rss_item_class_init (RssItemClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-        GParamSpec *pspec;
+	GParamSpec *pspec;
 
 	g_type_class_add_private (klass, sizeof (RssItemPrivate));
 
@@ -233,28 +233,28 @@ rss_item_class_init (RssItemClass *klass)
 	 *
 	 * The title of the item.
 	 */
-        pspec = g_param_spec_string ("title",
-                                     "Title",
-                                     "Title of the item",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("title",
+	                             "Title",
+	                             "Title of the item",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_TITLE,
-                                         pspec);
+	                                 PROP_TITLE,
+	                                 pspec);
 
 	/**
 	 * RssItem:link:
 	 *
 	 * The link to the upstream source of the item.
 	 */
-        pspec = g_param_spec_string ("link",
-                                     "Link",
-                                     "Link to the upstream source",
-                                     NULL,
-                                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("link",
+	                             "Link",
+	                             "Link to the upstream source",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_LINK,
-                                         pspec);
+                                     PROP_LINK,
+                                     pspec);
 
 	/**
 	 * RssItem:description:
@@ -262,141 +262,141 @@ rss_item_class_init (RssItemClass *klass)
 	 * The description of the item.  This is often where the actual
 	 * content for the item is stored.
 	 */
-        pspec = g_param_spec_string ("description",
-                                     "Description",
-                                     "Description of the item",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("description",
+	                             "Description",
+	                             "Description of the item",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_DESCRIPTION,
-                                         pspec);
+                                     PROP_DESCRIPTION,
+                                     pspec);
 
 	/**
 	 * RssItem:copyright:
 	 *
 	 * Any associated copyright that may exist for the content.
 	 */
-        pspec = g_param_spec_string ("copyright",
-                                     "Copyright",
-                                     "Any associated copyright for "
-                                     "the content",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("copyright",
+	                             "Copyright",
+	                             "Any associated copyright for "
+	                             "the content",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_COPYRIGHT,
-                                         pspec);
+                                     PROP_COPYRIGHT,
+                                     pspec);
 
 	/**
 	 * RssItem:author:
 	 *
 	 * The author's name.
 	 */
-        pspec = g_param_spec_string ("author",
-                                     "Author",
-                                     "The name of the author",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("author",
+	                             "Author",
+	                             "The name of the author",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_AUTHOR,
-                                         pspec);
+                                     PROP_AUTHOR,
+                                     pspec);
 
 	/**
 	 * RssItem:author-uri:
 	 *
 	 * The authors uri, often a website.
 	 */
-        pspec = g_param_spec_string ("author-uri",
-                                     "Author URI",
-                                     "The URI of the author",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("author-uri",
+	                             "Author URI",
+	                             "The URI of the author",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_AUTHOR_URI,
-                                         pspec);
+                                     PROP_AUTHOR_URI,
+                                     pspec);
 
 	/**
 	 * RssItem:author-email:
 	 *
 	 * The authors email.
 	 */
-        pspec = g_param_spec_string ("author-email",
-                                     "Author Email",
-                                     "The email address of the author",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("author-email",
+	                             "Author Email",
+	                             "The email address of the author",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_AUTHOR_EMAIL,
-                                         pspec);
+                                     PROP_AUTHOR_EMAIL,
+                                     pspec);
 
 	/**
 	 * RssItem:contributor:
 	 *
 	 * The contributors name.
 	 */
-        pspec = g_param_spec_string ("contributor",
-                                     "Contributor",
-                                     "The name of the contributor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("contributor",
+	                             "Contributor",
+	                             "The name of the contributor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_CONTRIBUTOR,
-                                         pspec);
+                                     PROP_CONTRIBUTOR,
+                                     pspec);
 
 	/**
 	 * RssItem:contributor-uri:
 	 *
 	 * The contributors uri, often a website.
 	 */
-        pspec = g_param_spec_string ("contributor-uri",
-                                     "Contributor URI",
-                                     "The URI of the contributor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("contributor-uri",
+	                             "Contributor URI",
+	                             "The URI of the contributor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_CONTRIBUTOR_URI,
-                                         pspec);
+                                     PROP_CONTRIBUTOR_URI,
+                                     pspec);
 
 	/**
 	 * RssItem:contributor-email:
 	 *
 	 * The contributors email.
 	 */
-        pspec = g_param_spec_string ("contributor-email",
-                                     "Contributor Email",
-                                     "The email of the contributor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("contributor-email",
+	                             "Contributor Email",
+	                             "The email of the contributor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_CONTRIBUTOR_EMAIL,
-                                         pspec);
+                                     PROP_CONTRIBUTOR_EMAIL,
+                                     pspec);
 
 	/**
 	 * RssItem:comments:
 	 *
 	 * Any comments that may have been associated with the item.
 	 */
-        pspec = g_param_spec_string ("comments",
-                                     "Comments",
-                                     "Any comment associated to the item",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("comments",
+	                             "Comments",
+	                             "Any comment associated to the item",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_COMMENTS,
-                                         pspec);
+                                     PROP_COMMENTS,
+                                     pspec);
 
 	/**
 	 * RssItem:pub-date:
 	 *
 	 * The string representation of the publish date.
 	 */
-        pspec = g_param_spec_string ("pub-date",
-                                     "Publication Date",
-                                     "The date of publication",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("pub-date",
+	                             "Publication Date",
+	                             "The date of publication",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_PUB_DATE,
-                                         pspec);
+                                     PROP_PUB_DATE,
+                                     pspec);
 
 	/**
 	 * RssItem:guid:
@@ -404,50 +404,48 @@ rss_item_class_init (RssItemClass *klass)
 	 * The guid of the item. Many feed engines will use the url here
 	 * plus some tag metadata.
 	 */
-        pspec = g_param_spec_string ("guid",
-                                     "GUID",
-                                     "The guid of the item",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("guid",
+	                             "GUID",
+	                             "The guid of the item",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_GUID,
-                                         pspec);
+                                     PROP_GUID,
+                                     pspec);
 
 	/**
 	 * RssItem:source:
 	 *
 	 * The name of the source of the item.
 	 */
-        pspec = g_param_spec_string ("source",
-                                     "Source",
-                                     "Source of the item",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("source",
+	                             "Source",
+	                             "Source of the item",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_SOURCE,
-                                         pspec);
+                                     PROP_SOURCE,
+                                     pspec);
 
 	/**
 	 * RssItem:source-url:
 	 *
 	 * The url of the source of the item.
 	 */
-        pspec = g_param_spec_string ("source-url",
-                                     "Source URL",
-                                     "URL of the source",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("source-url",
+	                             "Source URL",
+	                             "URL of the source",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_SOURCE_URL,
-                                         pspec);
+                                     PROP_SOURCE_URL,
+                                     pspec);
 }
 
 static void
 rss_item_init (RssItem *self)
 {
-        self->priv =
-                G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_ITEM,
-                                             RssItemPrivate);
+	self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_ITEM, RssItemPrivate);
 }
 
 /**
@@ -477,9 +475,9 @@ rss_item_new (void)
 G_CONST_RETURN gchar *
 rss_item_get_guid (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->guid;
+	return self->priv->guid;
 }
 
 /**
@@ -494,9 +492,9 @@ rss_item_get_guid (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_title (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->title;
+	return self->priv->title;
 }
 
 /**
@@ -528,9 +526,9 @@ rss_item_get_link (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_description (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->description;
+	return self->priv->description;
 }
 
 /**
@@ -545,9 +543,9 @@ rss_item_get_description (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_copyright (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->copyright;
+	return self->priv->copyright;
 }
 
 /**
@@ -562,9 +560,9 @@ rss_item_get_copyright (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_author_name (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->author;
+	return self->priv->author;
 }
 
 /**
@@ -579,9 +577,9 @@ rss_item_get_author_name (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_author_uri (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->author_uri;
+	return self->priv->author_uri;
 }
 
 /**
@@ -596,9 +594,9 @@ rss_item_get_author_uri (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_author_email (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->author_email;
+	return self->priv->author_email;
 }
 
 /**
@@ -613,9 +611,9 @@ rss_item_get_author_email (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_contributor_name (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->contributor;
+	return self->priv->contributor;
 }
 
 /**
@@ -630,9 +628,9 @@ rss_item_get_contributor_name (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_contributor_uri (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->contributor_uri;
+	return self->priv->contributor_uri;
 }
 
 /**
@@ -647,9 +645,9 @@ rss_item_get_contributor_uri (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_contributor_email (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->contributor_email;
+	return self->priv->contributor_email;
 }
 
 /**
@@ -664,9 +662,9 @@ rss_item_get_contributor_email (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_comments (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->comments;
+	return self->priv->comments;
 }
 
 /**
@@ -681,9 +679,9 @@ rss_item_get_comments (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_pub_date (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->pub_date;
+	return self->priv->pub_date;
 }
 
 /**
@@ -698,9 +696,9 @@ rss_item_get_pub_date (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_source (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->source;
+	return self->priv->source;
 }
 
 /**
@@ -715,9 +713,9 @@ rss_item_get_source (RssItem *self)
 G_CONST_RETURN gchar *
 rss_item_get_source_url (RssItem *self)
 {
-        g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
+	g_return_val_if_fail (RSS_IS_ITEM (self), NULL);
 
-        return self->priv->source_url;
+	return self->priv->source_url;
 }
 
 /**
