@@ -69,7 +69,7 @@ rss_document_get_property (GObject    *object,
                            GValue     *value,
                            GParamSpec *pspec)
 {
-        RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
+	RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
 
 	switch (property_id) {
 	case PROP_ENCODING:
@@ -153,7 +153,7 @@ rss_document_set_property (GObject      *object,
                            const GValue *value,
                            GParamSpec   *pspec)
 {
-        RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
+	RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
 
 	switch (property_id) {
 	case PROP_ENCODING:
@@ -256,7 +256,7 @@ rss_document_set_property (GObject      *object,
 static void
 rss_document_dispose (GObject *object)
 {
-        RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
+	RssDocumentPrivate *priv = RSS_DOCUMENT (object)->priv;
 
 	g_free (priv->encoding);
 	g_free (priv->guid);
@@ -296,7 +296,7 @@ static void
 rss_document_class_init (RssDocumentClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-        GParamSpec *pspec;
+	GParamSpec *pspec;
 
 	g_type_class_add_private (klass, sizeof (RssDocumentPrivate));
 
@@ -309,14 +309,14 @@ rss_document_class_init (RssDocumentClass *klass)
 	 *
 	 * The encoding of the #RssDocument.
 	 */
-        pspec = g_param_spec_string ("encoding",
-		                     "Encoding",
-                                     "Encoding of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("encoding",
+	                             "Encoding",
+	                             "Encoding of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_ENCODING,
-                                         pspec);
+	                                 PROP_ENCODING,
+	                                 pspec);
 
 	/**
 	 * RssDocument:guid:
@@ -324,42 +324,42 @@ rss_document_class_init (RssDocumentClass *klass)
 	 * The guid associated with the feed. This is often the url of the
 	 * feed.
 	 */
-        pspec = g_param_spec_string ("guid",
-                                     "GUID",
-                                     "The GUID of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("guid",
+	                             "GUID",
+	                             "The GUID of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_GUID,
-                                         pspec);
+	                                 PROP_GUID,
+	                                 pspec);
 
 	/**
 	 * RssDocument:title:
 	 *
 	 * The title of the #RssDocument.
 	 */
-        pspec = g_param_spec_string ("title",
-                                     "Title",
-                                     "Title of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("title",
+	                             "Title",
+	                             "Title of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_TITLE,
-                                         pspec);
+	                                 PROP_TITLE,
+	                                 pspec);
 
 	/**
 	 * RssDocument:description:
 	 *
 	 * The description of the #RssDocument.
 	 */
-        pspec = g_param_spec_string ("description",
-                                     "Description",
-                                     "Description of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("description",
+	                             "Description",
+	                             "Description of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_DESCRIPTION,
-                                         pspec);
+	                                 PROP_DESCRIPTION,
+	                                 pspec);
 
 	/**
 	 * RssDocument:link:
@@ -367,224 +367,224 @@ rss_document_class_init (RssDocumentClass *klass)
 	 * The link to the source document.  This is parsed from the actual
 	 * document and can point to whatever the source publisher choses.
 	 */
-        pspec = g_param_spec_string ("link",
-		                     "Link",
-                                     "The link to the source document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("link",
+	                             "Link",
+	                             "The link to the source document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_LINK,
-                                         pspec);
+	                                 PROP_LINK,
+	                                 pspec);
 
 	/**
 	 * RssDocument:language:
 	 *
 	 * The language the #RssDocument was published in.
 	 */
-        pspec = g_param_spec_string ("language",
-		                     "Language",
-                                     "Language of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("language",
+	                             "Language",
+	                             "Language of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_LANGUAGE,
-                                         pspec);
+	                                 PROP_LANGUAGE,
+	                                 pspec);
 
 	/**
 	 * RssDocument:rating:
 	 *
 	 * The rating associated with the #RssDocument.
 	 */
-        pspec = g_param_spec_string ("rating",
-		                     "Rating",
-                                     "Rating of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("rating",
+	                             "Rating",
+	                             "Rating of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_RATING,
-                                         pspec);
+	                                 PROP_RATING,
+	                                 pspec);
 
 	/**
 	 * RssDocument:copyright:
 	 *
 	 * The copyright of the #RssDocument.
 	 */
-        pspec = g_param_spec_string ("copyright",
-		                     "Copyright",
-                                     "Copyright of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("copyright",
+	                             "Copyright",
+	                             "Copyright of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_COPYRIGHT,
-                                         pspec);
+	                                 PROP_COPYRIGHT,
+	                                 pspec);
 
 	/**
 	 * RssDocument:pub-date:
 	 *
 	 * The string representation of the date the document was published.
 	 */
-        pspec = g_param_spec_string ("pub-date",
-		                     "Publication Date",
-                                     "Publication date of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("pub-date",
+	                             "Publication Date",
+	                             "Publication date of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_PUB_DATE,
-                                         pspec);
+	                                 PROP_PUB_DATE,
+	                                 pspec);
 
 	/**
 	 * RssDocument:editor:
 	 *
 	 * The name of the editor.
 	 */
-        pspec = g_param_spec_string ("editor",
-		                     "Editor",
-                                     "Editor of the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("editor",
+	                             "Editor",
+	                             "Editor of the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_EDITOR,
-                                         pspec);
+	                                 PROP_EDITOR,
+	                                 pspec);
 
 	/**
 	 * RssDocument:editor-email:
 	 *
 	 * The email address of the editor.
 	 */
-        pspec = g_param_spec_string ("editor-email",
-		                     "Editor Email",
-                                     "Email of the editor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("editor-email",
+	                             "Editor Email",
+	                             "Email of the editor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_EDITOR_EMAIL,
-                                         pspec);
+	                                 PROP_EDITOR_EMAIL,
+	                                 pspec);
 
 	/**
 	 * RssDocument:editor-uri:
 	 *
 	 * The uri for more information about the editor.
 	 */
-        pspec = g_param_spec_string ("editor-uri",
-                                     "Editor URI",
-                                     "The URI of the editor",
-                                     NULL,
-                                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("editor-uri",
+	                             "Editor URI",
+	                             "The URI of the editor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_EDITOR_URI,
-                                         pspec);
+	                                 PROP_EDITOR_URI,
+	                                 pspec);
 
 	/**
 	 * RssDocument:about:
 	 *
 	 * Information about the #RssDocument.
 	 */
-        pspec = g_param_spec_string ("about",
-		                     "About",
-                                     "Information about the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("about",
+	                             "About",
+	                             "Information about the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_ABOUT,
-                                         pspec);
+	                                 PROP_ABOUT,
+	                                 pspec);
 
 	/**
 	 * RssDocument:contributor:
 	 *
 	 * The name of the particular contributor.
 	 */
-        pspec = g_param_spec_string ("contributor",
-                                     "Contributor",
-		                     "Name of the contributor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("contributor",
+	                             "Contributor",
+	                             "Name of the contributor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_CONTRIBUTOR,
-                                         pspec);
+	                                 PROP_CONTRIBUTOR,
+	                                 pspec);
 
 	/**
 	 * RssDocument:contributor-email:
 	 *
 	 * The email of the particular contributor.
 	 */
-        pspec = g_param_spec_string ("contributor-email",
-		                     "Contributor Email",
-                                     "Email of the contributor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("contributor-email",
+	                             "Contributor Email",
+	                             "Email of the contributor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_CONTRIBUTOR_EMAIL,
-                                         pspec);
+	                                 PROP_CONTRIBUTOR_EMAIL,
+	                                 pspec);
 
 	/**
 	 * RssDocument:contributor-uri:
 	 *
 	 * The uri to more information on the particular contributer.
 	 */
-        pspec = g_param_spec_string ("contributor-uri",
-		                     "Contributor URI",
-                                     "URI of the contributor",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("contributor-uri",
+	                             "Contributor URI",
+	                             "URI of the contributor",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_CONTRIBUTOR_URI,
-                                         pspec);
+	                                 PROP_CONTRIBUTOR_URI,
+	                                 pspec);
 
 	/**
 	 * RssDocument:generator:
 	 *
 	 * The name of the generator on the server side.
 	 */
-        pspec = g_param_spec_string ("generator",
-		                     "Generator",
-                                     "Name of the document generator",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("generator",
+	                             "Generator",
+	                             "Name of the document generator",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_GENERATOR,
-                                         pspec);
+	                                 PROP_GENERATOR,
+	                                 pspec);
 
 	/**
 	 * RssDocument:generator-uri:
 	 *
 	 * Url to more information about the generator on the server side.
 	 */
-        pspec = g_param_spec_string ("generator-uri",
-		                     "Generator URI",
-                                     "URI of the document generator",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("generator-uri",
+	                             "Generator URI",
+	                             "URI of the document generator",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_GENERATOR_URI,
-                                         pspec);
+	                                 PROP_GENERATOR_URI,
+	                                 pspec);
 
 	/**
 	 * RssDocument:generator-version:
 	 *
 	 * The version of the server side generator.
 	 */
-        pspec = g_param_spec_string ("generator-version",
-                                     "Generator Version",
-                                     "Version of the document generator",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("generator-version",
+	                             "Generator Version",
+	                             "Version of the document generator",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_GENERATOR_VERSION,
-                                         pspec);
+	                                 PROP_GENERATOR_VERSION,
+	                                 pspec);
 
 	/**
 	 * RssDocument:image-title:
 	 *
 	 * The title for the image.  This is often the alt="" tag in HTML.
 	 */
-        pspec = g_param_spec_string ("image-title",
-		                     "Image Title",
-                                     "Title of the image for the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("image-title",
+	                             "Image Title",
+	                             "Title of the image for the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_IMAGE_TITLE,
-                                         pspec);
+	                                 PROP_IMAGE_TITLE,
+	                                 pspec);
 
 	/**
 	 * RssDocument:image-url:
@@ -592,14 +592,14 @@ rss_document_class_init (RssDocumentClass *klass)
 	 * A url to the image for the RssDocument.  Use this before checking
 	 * for a favicon.ico.
 	 */
-        pspec = g_param_spec_string ("image-url",
-		                     "Image URL",
-                                     "URL of the image for the document",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("image-url",
+	                             "Image URL",
+	                             "URL of the image for the document",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_IMAGE_URL,
-                                         pspec);
+	                                 PROP_IMAGE_URL,
+	                                 pspec);
 
 	/**
 	 * RssDocument:image-link:
@@ -608,14 +608,14 @@ rss_document_class_init (RssDocumentClass *klass)
 	 * for the #RssDocument.  Of course, its up to UI designers if they
 	 * wish to implement this in any sort of way.
 	 */
-        pspec = g_param_spec_string ("image-link",
-		                     "Image Link",
-                                     "URL for document image link",
-                                     NULL,
-		                     G_PARAM_READWRITE);
+	pspec = g_param_spec_string ("image-link",
+	                             "Image Link",
+	                             "URL for document image link",
+	                             NULL,
+	                             G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_IMAGE_LINK,
-                                         pspec);
+	                                 PROP_IMAGE_LINK,
+	                                 pspec);
 
 	/**
 	 * RssDocument:ttl:
@@ -624,22 +624,21 @@ rss_document_class_init (RssDocumentClass *klass)
 	 * to respect this value and not update feeds any more often than
 	 * necessary.
 	 */
-        pspec = g_param_spec_int ("ttl",
-                                  "TTL",
-                                  "Time to live for the document",
-                                  0, G_MAXINT32, 0,
-                                  G_PARAM_READWRITE);
+	pspec = g_param_spec_int ("ttl",
+	                          "TTL",
+	                          "Time to live for the document",
+	                          0, G_MAXINT32, 0,
+	                          G_PARAM_READWRITE);
 	g_object_class_install_property (gobject_class,
-                                         PROP_TTL,
-                                         pspec);
+	                                 PROP_TTL,
+	                                 pspec);
 }
 
 static void
 rss_document_init (RssDocument *self)
 {
-        self->priv =
-                G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_DOCUMENT,
-                                             RssDocumentPrivate);
+	self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, RSS_TYPE_DOCUMENT,
+	                                          RssDocumentPrivate);
 }
 
 /**
@@ -706,9 +705,9 @@ rss_document_get_categories (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_guid (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->guid;
+	return self->priv->guid;
 }
 
 /**
@@ -723,9 +722,9 @@ rss_document_get_guid (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_about (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->about;
+	return self->priv->about;
 }
 
 /**
@@ -740,9 +739,9 @@ rss_document_get_about (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_title (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->title;
+	return self->priv->title;
 }
 
 /**
@@ -757,9 +756,9 @@ rss_document_get_title (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_description (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->description;
+	return self->priv->description;
 }
 
 /**
@@ -774,9 +773,9 @@ rss_document_get_description (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_link (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->link;
+	return self->priv->link;
 }
 
 /**
@@ -791,9 +790,9 @@ rss_document_get_link (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_encoding (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->encoding;
+	return self->priv->encoding;
 }
 
 /**
@@ -808,9 +807,9 @@ rss_document_get_encoding (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_language (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->language;
+	return self->priv->language;
 }
 
 /**
@@ -825,9 +824,9 @@ rss_document_get_language (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_rating (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->rating;
+	return self->priv->rating;
 }
 
 /**
@@ -842,9 +841,9 @@ rss_document_get_rating (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_copyright (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->copyright;
+	return self->priv->copyright;
 }
 
 /**
@@ -859,9 +858,9 @@ rss_document_get_copyright (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_pub_date (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->pub_date;
+	return self->priv->pub_date;
 }
 
 /**
@@ -876,9 +875,9 @@ rss_document_get_pub_date (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_editor_name (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->editor;
+	return self->priv->editor;
 }
 
 /**
@@ -893,9 +892,9 @@ rss_document_get_editor_name (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_editor_email (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->editor_email;
+	return self->priv->editor_email;
 }
 
 /**
@@ -910,9 +909,9 @@ rss_document_get_editor_email (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_editor_uri (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->editor_uri;
+	return self->priv->editor_uri;
 }
 
 /**
@@ -927,9 +926,9 @@ rss_document_get_editor_uri (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_contributor_name (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->contributor;
+	return self->priv->contributor;
 }
 
 /**
@@ -944,9 +943,9 @@ rss_document_get_contributor_name (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_contributor_email (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->contributor_email;
+	return self->priv->contributor_email;
 }
 
 /**
@@ -961,9 +960,9 @@ rss_document_get_contributor_email (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_contributor_uri (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->contributor_uri;
+	return self->priv->contributor_uri;
 }
 
 /**
@@ -978,9 +977,9 @@ rss_document_get_contributor_uri (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_generator_name (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->generator;
+	return self->priv->generator;
 }
 
 /**
@@ -995,9 +994,9 @@ rss_document_get_generator_name (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_generator_uri (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->generator_uri;
+	return self->priv->generator_uri;
 }
 
 /**
@@ -1012,9 +1011,9 @@ rss_document_get_generator_uri (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_generator_version (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->generator_version;
+	return self->priv->generator_version;
 }
 
 /**
@@ -1029,9 +1028,9 @@ rss_document_get_generator_version (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_image_title (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->image_title;
+	return self->priv->image_title;
 }
 
 /**
@@ -1046,9 +1045,9 @@ rss_document_get_image_title (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_image_url (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->image_url;
+	return self->priv->image_url;
 }
 
 /**
@@ -1063,9 +1062,9 @@ rss_document_get_image_url (RssDocument *self)
 G_CONST_RETURN gchar *
 rss_document_get_image_link (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), NULL);
 
-        return self->priv->image_link;
+	return self->priv->image_link;
 }
 
 /**
@@ -1080,7 +1079,7 @@ rss_document_get_image_link (RssDocument *self)
 gint
 rss_document_get_ttl (RssDocument *self)
 {
-        g_return_val_if_fail (RSS_IS_DOCUMENT (self), 0);
+	g_return_val_if_fail (RSS_IS_DOCUMENT (self), 0);
 
-        return self->priv->ttl;
+	return self->priv->ttl;
 }

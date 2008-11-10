@@ -152,27 +152,27 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 
 	/* set our document level properties */
 	g_object_set (document,
-		      "encoding",		mrss->encoding,
-		      "guid",			mrss->id,
-		      "title",			mrss->title,
-		      "description",		mrss->description,
-		      "link",			mrss->link,
-		      "language",		mrss->language,
-		      "rating",			mrss->rating,
-		      "copyright",		mrss->copyright,
-		      "pub-date",		mrss->pubDate,
-		      "ttl",			mrss->ttl,
-		      "about",			mrss->about,
-		      "contributor",		mrss->contributor,
-		      "contributor-email",	mrss->contributor_email,
-		      "contributor-uri",	mrss->contributor_uri,
-		      "generator",		mrss->generator,
-		      "generator-uri",		mrss->generator_uri,
-		      "generator-version",	mrss->generator_version,
-		      "image-title",		mrss->image_title,
-		      "image-url",		mrss->image_url,
-		      "image-link",		mrss->image_link,
-		      NULL);
+	              "encoding",           mrss->encoding,
+	              "guid",               mrss->id,
+	              "title",              mrss->title,
+	              "description",        mrss->description,
+	              "link",               mrss->link,
+	              "language",           mrss->language,
+	              "rating",             mrss->rating,
+	              "copyright",          mrss->copyright,
+	              "pub-date",           mrss->pubDate,
+	              "ttl",                mrss->ttl,
+	              "about",              mrss->about,
+	              "contributor",        mrss->contributor,
+	              "contributor-email",  mrss->contributor_email,
+	              "contributor-uri",    mrss->contributor_uri,
+	              "generator",          mrss->generator,
+	              "generator-uri",      mrss->generator_uri,
+	              "generator-version",  mrss->generator_version,
+	              "image-title",        mrss->image_title,
+	              "image-url",          mrss->image_url,
+	              "image-link",         mrss->image_link,
+	              NULL);
 
 	/* build the list of categories */
 	if (NULL != (cat = mrss->category)) {
@@ -191,22 +191,22 @@ rss_parser_parse (RssParser *self, mrss_t *mrss)
 
 			/* set the rss item properties */
 			g_object_set (rss_item,
-				      "guid",			item->guid,
-				      "title",			item->title,
-				      "link",			item->link,
-				      "description",		item->description,
-				      "copyright",		item->copyright,
-				      "author",			item->author,
-				      "author-uri",		item->author_uri,
-				      "author-email",		item->author_email,
-				      "contributor",		item->contributor,
-				      "contributor-uri",	item->contributor_uri,
-				      "contributor-email",	item->contributor_email,
-				      "comments",		item->comments,
-				      "pub-date",		item->pubDate,
-				      "source",			item->source,
-				      "source-url",		item->source_url,
-				      NULL);
+			              "guid",              item->guid,
+			              "title",             item->title,
+			              "link",              item->link,
+			              "description",       item->description,
+			              "copyright",         item->copyright,
+			              "author",            item->author,
+			              "author-uri",        item->author_uri,
+			              "author-email",      item->author_email,
+			              "contributor",       item->contributor,
+			              "contributor-uri",   item->contributor_uri,
+			              "contributor-email", item->contributor_email,
+			              "comments",          item->comments,
+			              "pub-date",          item->pubDate,
+			              "source",	           item->source,
+			              "source-url",        item->source_url,
+			              NULL);
 
 			/* parse the items categories */
 			if (NULL != (cat = item->category)) {
@@ -330,7 +330,7 @@ rss_parser_load_from_file (RssParser  *self,
 RssDocument*
 rss_parser_get_document (RssParser *self)
 {
-        g_return_val_if_fail (RSS_IS_PARSER (self), NULL);
+	g_return_val_if_fail (RSS_IS_PARSER (self), NULL);
 
 	return g_object_ref (self->priv->document);
 }
