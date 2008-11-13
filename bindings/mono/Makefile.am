@@ -30,8 +30,10 @@ generated-stamp: $(API)
 	--outdir=generated --customdir=$(srcdir) \
 	--assembly-name=$(ASSEMBLY_NAME) && touch generated-stamp
 
-$(ASSEMBLY): $(build_sources) generated-stamp rss-glib-sharp.snk
+rss-glib-sharp.snk:
 	cp $(srcdir)/rss-glib-sharp.snk rss-glib-sharp.snk
+
+$(ASSEMBLY): $(build_sources) generated-stamp rss-glib-sharp.snk
 	chmod u+w rss-glib-sharp.snk
 	$(CSC) -out:$@ -unsafe -target:library -debug+ $(GLIB_SHARP_LIBS) \
 	$(build_sources) $(builddir)/generated/*.cs
