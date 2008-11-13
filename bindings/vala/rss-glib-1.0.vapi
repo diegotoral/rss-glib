@@ -82,7 +82,7 @@ namespace Rss {
 		[NoAccessorMethod]
 		public string image_link { get; set; }
 		public Document ();
-		public GLib.List<Rss.Item> get_items ();
+		public GLib.List<weak Rss.Item> get_items ();
 		public GLib.List<string> get_categories ();
 	}
 
