@@ -252,6 +252,7 @@ AC_CONFIG_FILES([
 	bindings/mono/rss-glib-sharp.dll.config
 	bindings/mono/rss-glib-sharp-1.0.pc
 	bindings/python/Makefile
+	examples/Makefile
         rss-glib.pc
 ])
 
