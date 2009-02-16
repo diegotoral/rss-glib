@@ -1,0 +1,65 @@
+Source: rss-glib
+Section: libs
+Priority: optional
+Maintainer: Christian Hergert <chris@dronelabs.com>
+Uploaders: Christian Hergert <chris@dronelabs.com>
+Build-Depends: cdbs (>= 0.4.41),
+               debhelper (>= 5),
+               gnome-pkg-tools (>= 0.11),
+               pkg-config (>= 0.14),
+               libglib2.0-dev (>= 2.16.0),
+               libvala-dev,
+               gtk-doc-tools (>= 1.9),
+               libmrss0-dev (>= 0.19),
+               python-dev (>= 2.2),
+               python-gtk2-dev,
+               python-gobject-dev,
+               python-central,
+               dpkg-dev (>= 1.14.13)
+Standards-Version: 3.8.0
+Homepage: http://github.com/chergert/rss-glib/wikis
+XS-Python-Version: >= 2.2
+
+Package: librss-glib-1.0-0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Rss-GLib is a library for parsing rss and atom feeds.
+ .
+ This package contains the shared libraries.
+
+Package: librss-glib-dev
+Section: libdevel
+Architecture: any
+Depends: librss-glib-1.0-0 (= ${binary:Version}),
+         ${misc:Depends},
+         libglib2.0-dev (>= 2.16.0)
+Suggests: libunique-doc, vala
+Description: Rss-GLib is a library for parsing rss and atom feeds.
+ .
+ This package contains the headers and development libraries needed to
+ build applications using the Rss-GLib library
+
+Package: librss-glib-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: librss-glib-1.0-0
+Suggests: devhelp
+Description: Rss-GLib is a library for parsing rss and atom feeds.
+ .
+ This package contains the HTML documentation for the Rss-GLib library
+
+Package: python-rss-glib
+Section: python
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ${python:Depends}
+Provides: ${python:Provides}
+XB-Python-Version: ${python:Versions}
+Description: Rss-GLib is a library for parsing rss and atom feeds.
+ .
+ This package contains the Python bindings for the Rss-GLib library
+
