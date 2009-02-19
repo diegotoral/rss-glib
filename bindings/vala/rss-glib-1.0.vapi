@@ -36,51 +36,51 @@ namespace Rss {
 
 	public class Document : GLib.Object {
 		[NoAccessorMethod]
-		public string encoding { get; set; }
+		public string encoding { owned get; set; }
 		[NoAccessorMethod]
-		public string guid { get; set; }
+		public string guid { owned get; set; }
 		[NoAccessorMethod]
-		public string title { get; set; }
+		public string title { owned get; set; }
 		[NoAccessorMethod]
-		public string description { get; set; }
+		public string description { owned get; set; }
 		[NoAccessorMethod]
-		public string link { get; set; }
+		public string link { owned get; set; }
 		[NoAccessorMethod]
-		public string language { get; set; }
+		public string language { owned get; set; }
 		[NoAccessorMethod]
-		public string rating { get; set; }
+		public string rating { owned get; set; }
 		[NoAccessorMethod]
-		public string copyright { get; set; }
+		public string copyright { owned get; set; }
 		[NoAccessorMethod]
-		public string pub_date { get; set; }
+		public string pub_date { owned get; set; }
 		[NoAccessorMethod]
-		public string editor { get; set; }
+		public string editor { owned get; set; }
 		[NoAccessorMethod]
-		public string editor_email { get; set; }
+		public string editor_email { owned get; set; }
 		[NoAccessorMethod]
-		public string editor_uri { get; set; }
+		public string editor_uri { owned get; set; }
 		[NoAccessorMethod]
-		public int ttl { get; set; }
+		public int ttl { owned get; set; }
 		[NoAccessorMethod]
-		public string about { get; set; }
+		public string about { owned get; set; }
 		[NoAccessorMethod]
-		public string contributor { get; set; }
+		public string contributor { owned get; set; }
 		[NoAccessorMethod]
-		public string contributor_email { get; set; }
+		public string contributor_email { owned get; set; }
 		[NoAccessorMethod]
-		public string contributor_uri { get; set; }
+		public string contributor_uri { owned get; set; }
 		[NoAccessorMethod]
-		public string generator { get; set; }
+		public string generator { owned get; set; }
 		[NoAccessorMethod]
-		public string generator_uri { get; set; }
+		public string generator_uri { owned get; set; }
 		[NoAccessorMethod]
-		public string generator_version { get; set; }
+		public string generator_version { owned get; set; }
 		[NoAccessorMethod]
-		public string image_title { get; set; }
+		public string image_title { owned get; set; }
 		[NoAccessorMethod]
-		public string image_url { get; set; }
+		public string image_url { owned get; set; }
 		[NoAccessorMethod]
-		public string image_link { get; set; }
+		public string image_link { owned get; set; }
 		public Document ();
 		public GLib.List<weak Rss.Item> get_items ();
 		public GLib.List<string> get_categories ();
@@ -88,35 +88,35 @@ namespace Rss {
 
 	public class Item : GLib.Object {
 		[NoAccessorMethod]
-		public string guid { get; set; }
+		public string guid { owned get; set; }
 		[NoAccessorMethod]
-		public string title { get; set; }
+		public string title { owned get; set; }
 		[NoAccessorMethod]
-		public string link { get; set; }
+		public string link { owned get; set; }
 		[NoAccessorMethod]
-		public string description { get; set; }
+		public string description { owned get; set; }
 		[NoAccessorMethod]
-		public string copyright{ get; set; }
+		public string copyright{ owned get; set; }
 		[NoAccessorMethod]
-		public string author { get; set; }
+		public string author { owned get; set; }
 		[NoAccessorMethod]
-		public string author_uri { get; set; }
+		public string author_uri { owned get; set; }
 		[NoAccessorMethod]
-		public string author_email { get; set; }
+		public string author_email { owned get; set; }
 		[NoAccessorMethod]
-		public string contributor { get; set; }
+		public string contributor { owned get; set; }
 		[NoAccessorMethod]
-		public string contributor_uri { get; set; }
+		public string contributor_uri { owned get; set; }
 		[NoAccessorMethod]
-		public string contributor_email { get; set; }
+		public string contributor_email { owned get; set; }
 		[NoAccessorMethod]
-		public string comments { get; set; }
+		public string comments { owned get; set; }
 		[NoAccessorMethod]
-		public string pub_date { get; set; }
+		public string pub_date { owned get; set; }
 		[NoAccessorMethod]
-		public string source { get; set; }
+		public string source { owned get; set; }
 		[NoAccessorMethod]
-		public string source_url { get; set; }
+		public string source_url { owned get; set; }
 		public Item ();
 		public GLib.List<string> get_categories ();
 	}
