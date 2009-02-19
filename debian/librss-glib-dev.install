@@ -1,0 +1,5 @@
+debian/tmp/usr/include/rss-glib-1.0/*
+debian/tmp/usr/lib/librss-glib-1.0.a
+debian/tmp/usr/lib/librss-glib-1.0.so
+debian/tmp/usr/lib/pkgconfig/rss-glib-1.0*
+debian/tmp/usr/share/vala/vapi
